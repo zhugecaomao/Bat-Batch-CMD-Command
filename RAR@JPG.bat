@@ -1,17 +1,17 @@
 echo off
 :loop
 cls
-echo ÇëÍÏÈëÍ¼ÏñÎÄ¼şºó»Ø³µ£º
+echo è¯·æ‹–å…¥å›¾åƒæ–‡ä»¶åå›è½¦ï¼š
 set /p imagefile=
-echo ÇëÍÏÈërarÎÄ¼şºó»Ø³µ£º
+echo è¯·æ‹–å…¥raræ–‡ä»¶åå›è½¦ï¼š
 set /p rarfile=
 
 copy /b %imagefile% + %rarfile% %rarfile%.jpg
 
-echo OK!ÒÑ¾­½«%rarfile%ºÏ²¢µ½%imagefile%¡£
-echo ºÏ²¢ºóµÄÎÄ¼şÎª£º%rarfile%.jpg
+echo OK!å·²ç»å°†%rarfile%åˆå¹¶åˆ°%imagefile%ã€‚
+echo åˆå¹¶åçš„æ–‡ä»¶ä¸ºï¼š%rarfile%.jpg
 
 ::del /f /s /q %imagefile%
 ::copy temp.jpg %imagefile:~0,-4%jpg
 ::del /f /s /q temp.jpg
-goto loop
+Goto loop
