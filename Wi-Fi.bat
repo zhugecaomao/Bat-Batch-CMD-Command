@@ -1,19 +1,19 @@
 @echo off
 color 0b
 mode con: cols=70 lines=22
-title Öî¸ð²ÝÃ± ÐéÄâ Wi-Fi ÈÈµã(ÎÞÏßÍøÂç) ¿ªÆôÉèÖÃ¹¤¾ß
+title è¯¸è‘›è‰å¸½ è™šæ‹Ÿ Wi-Fi çƒ­ç‚¹(æ— çº¿ç½‘ç»œ) å¼€å¯è®¾ç½®å·¥å…·
 @echo.
-@echo       Windows 7 ÐéÄâ Wi-Fi ÈÈµã¿ªÆôÉèÖÃ¹¤¾ß   By Öî¸ð²ÝÃ±
+@echo       Windows 7 è™šæ‹Ÿ Wi-Fi çƒ­ç‚¹å¼€å¯è®¾ç½®å·¥å…·   By è¯¸è‘›è‰å¸½
 @echo.
 :start
 @echo ______________________________________________________________________
-@echo ´´½¨Ò»¸öÐÂµÄÎÞÏßÍøÂç[N]      Æô¶¯ÒÑÓÐÎÞÏßÍøÂç[S]      ¹Ø±ÕÎÞÏßÍøÂç[C]
+@echo åˆ›å»ºä¸€ä¸ªæ–°çš„æ— çº¿ç½‘ç»œ[N]      å¯åŠ¨å·²æœ‰æ— çº¿ç½‘ç»œ[S]      å…³é—­æ— çº¿ç½‘ç»œ[C]
 @echo.
-@echo ²é¿´µ±Ç°ÎÞÏßÍøÂç×´Ì¬[V]      ´ò¿ªÍøÂçÅäÖÃ´°¿Ú[T]      Ð¶ÔØÎÞÏßÍøÂç[U]
+@echo æŸ¥çœ‹å½“å‰æ— çº¿ç½‘ç»œçŠ¶æ€[V]      æ‰“å¼€ç½‘ç»œé…ç½®çª—å£[T]      å¸è½½æ— çº¿ç½‘ç»œ[U]
 @echo.
-@echo ²é¿´ÎÞÏßÍøÂçÉèÖÃ°ïÖú[H]      ¼ì²éÈí¼þ¸üÐÂ×´Ì¬[Z]      ÊäÈëÆäËû¼üÍË³ö
+@echo æŸ¥çœ‹æ— çº¿ç½‘ç»œè®¾ç½®å¸®åŠ©[H]      æ£€æŸ¥è½¯ä»¶æ›´æ–°çŠ¶æ€[Z]      è¾“å…¥å…¶ä»–é”®é€€å‡º
 @echo ______________________________________________________________________
-set /p choice=ÇëÊäÈëÄãµÄÑ¡Ôñ£¿
+set /p choice=è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼Ÿ
 if /i "%choice%"=="n" goto :n
 if /i "%choice%"=="s" goto :s
 if /i "%choice%"=="c" goto :c
@@ -26,35 +26,35 @@ exit
 
 :n
 @echo.
-echo ÄãÑ¡ÔñÁËÐÂ½¨ÎÞÏßÍøÂç
+echo ä½ é€‰æ‹©äº†æ–°å»ºæ— çº¿ç½‘ç»œ
 @echo.
-set /p ssid= ÇëÊäÈëÓÃ»§Ãû
+set /p ssid= è¯·è¾“å…¥ç”¨æˆ·å
 @echo.
-set /p key=  ÇëÊäÈëÃÜÂë
+set /p key=  è¯·è¾“å…¥å¯†ç 
 @echo.
 netsh wlan set hostednetwork mode=allow ssid=%ssid% key=%key%
 @echo.
-@echo ¿ªÆôÎÞÏßÍøÂçÖ®ºóÇë²é¿´ÒÔÏÂ½Ì³Ì£¬ÒÔ¹²Ïí±¾µØÍøÂç
+@echo å¼€å¯æ— çº¿ç½‘ç»œä¹‹åŽè¯·æŸ¥çœ‹ä»¥ä¸‹æ•™ç¨‹ï¼Œä»¥å…±äº«æœ¬åœ°ç½‘ç»œ
 start help.doc
 @echo.
-@echo °´ÈÎÒâ¼ü´ò¿ªÍøÂçÅäÖÃ´°¿Ú
+@echo æŒ‰ä»»æ„é”®æ‰“å¼€ç½‘ç»œé…ç½®çª—å£
 @echo.
 pause
 start Ncpa.cpl
 goto start
 
 :s
-echo ÄãÑ¡ÔñÁËÆôÓÃÎÞÏßÍøÂç
+echo ä½ é€‰æ‹©äº†å¯ç”¨æ— çº¿ç½‘ç»œ
 netsh wlan start hostednetwork
 goto start
 
 :c
-echo ÄãÑ¡ÔñÁË¹Ø±ÕÎÞÏßÍøÂç
+echo ä½ é€‰æ‹©äº†å…³é—­æ— çº¿ç½‘ç»œ
 netsh wlan stop hostednetwork
 goto start
 
 :v
-echo ÄãÑ¡ÔñÁË²é¿´ÎÞÏßÍøÂç
+echo ä½ é€‰æ‹©äº†æŸ¥çœ‹æ— çº¿ç½‘ç»œ
 netsh wlan show hostednetwork
 goto start
 
