@@ -1,0 +1,14 @@
+
+DCOMAPP - DCOM 程序管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+DCOMAPP ASSOC [<format specifier>]
+DCOMAPP CREATE <assign list>
+DCOMAPP DELETE
+DCOMAPP GET [<property list>] [<get switches>]
+DCOMAPP LIST [<list format>] [<list switches>]
+

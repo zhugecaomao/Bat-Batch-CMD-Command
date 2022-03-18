@@ -1,0 +1,29 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    On disks with master boot record (MBR) disk formatting, marks 
+    the partition with focus as inactive.
+
+Syntax:  INACTIVE
+
+    The computer may start from the next option specified in the BIOS such as a
+    CD-ROM drive or a Pre-Boot eXecution Environment (PXE)-based boot
+    environment (such as Remote Installation Services (RIS)) when you restart
+    the computer.
+
+    A partition must be selected for this operation to succeed.
+
+    Caution:
+
+        Your computer might not start without an active partition. Do not mark
+        a system or boot partition as inactive unless you are an experienced
+        user with a thorough understanding of Windows storage management.
+
+Example:
+
+    INACTIVE
+
+DISKPART> 

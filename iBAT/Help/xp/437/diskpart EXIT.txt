@@ -1,0 +1,8 @@
+
+Microsoft DiskPart version 5.1.3565
+
+Copyright (C) 1999-2003 Microsoft Corporation.
+On computer: iBat
+
+DISKPART> 
+Leaving DiskPart...

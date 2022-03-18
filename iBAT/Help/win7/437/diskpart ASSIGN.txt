@@ -1,0 +1,42 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Assigns a drive letter or mounted folder pathname to the volume with focus.
+
+Syntax:  ASSIGN [LETTER=<D> | MOUNT=<PATH>] [NOERR]
+
+    LETTER=<D>  The drive letter to assign to the volume.
+
+    MOUNT=<PATH>
+
+                The mounted folder pathname to assign to the volume.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    If no drive letter or mounted folder is specified, the next available drive
+    letter is assigned. If the drive letter or mounted folder is already in use,
+    an error is generated.
+
+    By using the ASSIGN command, you can change the drive letter associated
+    with a removable drive.
+
+    You cannot assign drive letters to boot volumes or 
+    volumes that contain the paging file. In addition, you cannot assign
+    a drive letter to an Original Equipment Manufacturer (OEM) partition
+    unless booted to Windows PE, or any GUID Partition Table (GPT) partition 
+    other than a basic data partition, an ESP partition or a recovery 
+    partition.
+
+    A volume must be selected for this operation to succeed.
+
+Example:
+
+    ASSIGN LETTER=D
+
+DISKPART> 

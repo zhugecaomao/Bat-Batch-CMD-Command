@@ -1,0 +1,50 @@
+
+GPRESULT [/S system [/U username [/P [password]]]] [/SCOPE scope]
+         [/USER targetusername] [/V | /Z]
+
+描述:
+    此命令行工具显示目标用户和计算机的
+    策略 (RSoP) 的结果集。
+
+参数列表:
+    /S        system           指定要连接到的远程
+                               系统。
+
+    /U        [domain\]user    指定执行命令的
+                               用户上下文。
+
+    /P        [password]       为给定的用户上下文指
+                               定密码。如果省略则提示输入。
+
+    /USER     [domain\]user    指定要显示 RSOP 的
+                               用户名称。
+
+    /SCOPE    scope            指定是否要显示
+                               用户或计算机的
+                               设置。
+                               有效值: "USER"，"COMPUTER"。
+
+    /V                         指定要显示详细
+                               详细信息详细描述
+                               已经应用的优先权
+                               是 1 的设置。
+
+    /Z                         指定要显示超详细信息。
+                               超详细信息显示应用的
+                               优先级为 1 或更
+                               高的设置的详细信
+                               息。这将允许
+                               您查看是否在多处
+                               设置。参见组策略
+                               联机帮助获得更多信息。
+
+    /?                         显示帮助/用法。
+
+注意: 如果不带参数运行 GPresult，它将返回运行
+      该命令的计算机上的当前登录用户的 RSoP 数据。
+
+示例:
+    GPRESULT
+    GPRESULT /USER targetusername /V
+    GPRESULT /S system /USER targetusername /SCOPE COMPUTER /Z
+    GPRESULT /S system /U username /P password /SCOPE USER /V

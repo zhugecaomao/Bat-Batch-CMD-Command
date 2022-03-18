@@ -1,0 +1,54 @@
+
+BOOTCFG /parameter [arguments]
+
+描述:
+    此命令行工具可以用来在 BOOT.INI 文件中配置，查询，
+    更改或删除启动项目设置。
+
+参数列表:
+    /Copy       生成一个现有的启动项目 [operating systems] 部分的副本，
+                您可以在上面添加操作系统选项。
+
+    /Delete     在 BOOT.INI 文件的 [operating systems] 部分
+                删除一个现有的启动项目。
+                您必须指定要删除的项目号。
+
+    /Query      显示当前启动项目和它们的设置。
+
+    /Raw        允许用户为特定的启动项目指定
+                1394 端口调试。
+
+    /Timeout    允许用户更改超时值。
+
+    /Default    允许用户更改默认启动项目。
+
+    /EMS        允许用户为启动项目的无头支持
+                配置 -/redirect 开关。
+
+    /Debug      允许用户为特定的启动项目指定
+                远程调试的端口和波特率。
+
+    /Addsw      允许用户为特定的启动项目添加
+                预定义开关。
+
+    /Rmsw       允许用户为特定的启动项目删除
+                预定义开关。
+
+    /Dbg1394    允许用户为特定的启动项目配置 
+                1394 端口调试。
+
+    /?          显示帮助/用法。
+
+示例:
+    BOOTCFG /Copy /?
+    BOOTCFG /Delete /?
+    BOOTCFG /Query /?
+    BOOTCFG /Raw /?
+    BOOTCFG /Timeout /?
+    BOOTCFG /EMS /?
+    BOOTCFG /Debug /?
+    BOOTCFG /Addsw /?
+    BOOTCFG /Rmsw /?
+    BOOTCFG /Dbg1394 /?
+    BOOTCFG /Default /?
+    BOOTCFG /?

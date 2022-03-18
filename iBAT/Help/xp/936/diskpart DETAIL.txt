@@ -1,0 +1,14 @@
+
+Microsoft DiskPart 版本 5.1.3565
+
+版权所有 (C) 1999-2003 Microsoft Corporation.
+位于计算机: iBat
+
+DISKPART> 
+Microsoft DiskPart 版本 5.1.3565
+
+DISK        - 打印磁盘上的卷的列表。
+PARTITION   - 显示当前分区的详细信息。
+VOLUME      - 打印构成这个卷的磁盘的列表。
+
+DISKPART> 

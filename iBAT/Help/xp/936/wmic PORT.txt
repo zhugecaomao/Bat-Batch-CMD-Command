@@ -1,0 +1,14 @@
+
+PORT - I/O 端口管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+PORT ASSOC [<format specifier>]
+PORT CREATE <assign list>
+PORT DELETE
+PORT GET [<property list>] [<get switches>]
+PORT LIST [<list format>] [<list switches>]
+

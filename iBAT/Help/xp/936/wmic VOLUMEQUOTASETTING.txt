@@ -1,0 +1,14 @@
+
+VOLUMEQUOTASETTING - 将某一磁盘卷与磁盘配额设置关联。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+VOLUMEQUOTASETTING ASSOC [<format specifier>]
+VOLUMEQUOTASETTING CREATE <assign list>
+VOLUMEQUOTASETTING DELETE
+VOLUMEQUOTASETTING GET [<property list>] [<get switches>]
+VOLUMEQUOTASETTING LIST [<list format>] [<list switches>]
+

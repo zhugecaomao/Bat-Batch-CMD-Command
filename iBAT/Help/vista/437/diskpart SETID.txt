@@ -1,0 +1,78 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Changes the partition type field for the partition with focus.
+
+Syntax:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
+
+    ID={<BYTE> | <GUID>}
+
+                Specifies the new partition type.
+
+                For master boot record (MBR) disks, you can specify a partition
+                type byte, in hexadecimal form, for the partition. Any
+                partition type byte can be specified with this parameter except
+                for type 42 (LDM partition).
+
+                For GUID partition table (GPT) disks you can specify a
+                partition type GUID for the partition. Recognized GUIDs
+                include:
+
+                    EFI System partition:
+                        c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+
+                    Basic data partition:
+                        ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+
+                Any partition type GUID can be specified with this parameter
+                except for the following:
+
+                    Microsoft Reserved partition:
+                        e3c9e316-0b5c-4db8-817d-f92df00215ae
+
+                    LDM Metadata partition on a dynamic disk:
+                        5808c8aa-7e8f-42e0-85d2-e1e90434cfb3
+
+                    LDM Data partition on a dynamic disk:
+                        af9b60a0-1431-4f62-bc68-3311714a69ad
+
+                Other than the limitations mentioned, DiskPart otherwise does
+                not check the partition type for validity except to ensure that
+                it is a byte in hexadecimal form or a GUID.
+
+    OVERRIDE    Enables DiskPart to force the volume to dismount first if
+                necessary. All opened handles to the volume will become
+                invalid.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    Intended for Original Equipment Manufacturer (OEM) use only.
+
+    A partition must be selected for this operation to succeed.
+
+    Caution:
+
+        Changing partition type fields with this parameter might cause your
+        computer to fail or be unable to start up. Unless you are an OEM or an
+        IT professional experienced with GPT disks, do not change partition
+        type fields on GPT disks using this parameter. Instead, always use the
+        CREATE PARTITION EFI command to create EFI System partitions, the
+        CREATE PARTITION MSR command to create Microsoft Reserved partitions,
+        and the CREATE PARTITION PRIMARY command without the ID parameter to
+        create primary partitions on GPT disks.
+
+    This command does not work on dynamic disks nor on Microsoft Reserved
+    partitions.
+
+    Example:
+
+    SET ID=07 OVERRIDE
+    SET ID=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+
+DISKPART> 

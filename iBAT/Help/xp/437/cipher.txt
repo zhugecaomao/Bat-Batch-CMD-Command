@@ -1,0 +1,69 @@
+Displays or alters the encryption of directories [files] on NTFS partitions.
+
+  CIPHER [/E | /D] [/S:directory] [/A] [/I] [/F] [/Q] [/H] [pathname [...]]
+
+  CIPHER /K
+
+  CIPHER /R:filename
+
+  CIPHER /U [/N]
+
+  CIPHER /W:directory
+
+  CIPHER /X[:efsfile] [filename]
+
+    /A        Operates on files as well as directories. The encrypted file
+              could become decrypted when it is modified if the parent
+              directory is not encrypted. It is recommended that you encrypt
+              the file and the parent directory.
+    /D        Decrypts the specified directories. Directories will be marked
+              so that files added afterward will not be encrypted.
+    /E        Encrypts the specified directories. Directories will be marked
+              so that files added afterward will be encrypted.
+    /F        Forces the encryption operation on all specified objects, even
+              those which are already encrypted.  Already-encrypted objects
+              are skipped by default.
+    /H        Displays files with the hidden or system attributes.  These
+              files are omitted by default.
+    /I        Continues performing the specified operation even after errors
+              have occurred.  By default, CIPHER stops when an error is
+              encountered.
+    /K        Creates new file encryption key for the user running CIPHER. If
+              this option is chosen, all the other options will be ignored.
+    /N        This option only works with /U. This will prevent keys being
+              updated. This is used to find all the encrypted files on the
+              local drives.
+    /Q        Reports only the most essential information.
+    /R        Generates an EFS recovery agent key and certificate, then writes
+              them to a .PFX file (containing certificate and private key) and
+              a .CER file (containing only the certificate). An administrator
+              may add the contents of the .CER to the EFS recovery policy to
+              create the recovery agent for users, and import the .PFX to
+              recover individual files.
+    /S        Performs the specified operation on directories in the given
+              directory and all subdirectories.
+    /U        Tries to touch all the encrypted files on local drives. This will
+              update user's file encryption key or recovery agent's key to the
+              current ones if they are changed. This option does not work with
+              other options except /N.
+    /W        Removes data from available unused disk space on the entire
+              volume. If this option is chosen, all other options are ignored.
+              The directory specified can be anywhere in a local volume. If it
+              is a mount point or points to a directory in another volume, the
+              data on that volume will be removed.
+    /X        Backup EFS certificate and keys into file filename. If efsfile is
+              provided, the current user's certificate(s) used to encrypt the
+              file will be backed up. Otherwise, the user's current EFS
+              certificate and keys will be backed up.
+
+
+    directory A directory path.
+    filename  A filename without extensions.
+    pathname  Specifies a pattern, file or directory.
+    efsfile   An encrypted file path.
+
+    Used without parameters, CIPHER displays the encryption state of
+    the current directory and any files it contains. You may use multiple
+    directory names and wildcards.  You must put spaces between multiple
+    parameters.
+

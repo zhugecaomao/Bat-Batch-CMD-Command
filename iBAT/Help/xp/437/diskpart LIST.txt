@@ -1,0 +1,14 @@
+
+Microsoft DiskPart version 5.1.3565
+
+Copyright (C) 1999-2003 Microsoft Corporation.
+On computer: iBat
+
+DISKPART> 
+Microsoft DiskPart version 5.1.3565
+
+DISK        - Prints out a list of disks.
+PARTITION   - Prints out a list of partitions on the current disk.
+VOLUME      - Print a list of volumes.
+
+DISKPART> 

@@ -1,0 +1,14 @@
+
+Microsoft DiskPart 版本 5.1.3565
+
+版权所有 (C) 1999-2003 Microsoft Corporation.
+位于计算机: iBat
+
+DISKPART> 
+Microsoft DiskPart 版本 5.1.3565
+
+DISK        - 从磁盘列表删除遗失的磁盘。
+PARTITION   - 删除所选分区。
+VOLUME      - 删除所选卷。
+
+DISKPART> 

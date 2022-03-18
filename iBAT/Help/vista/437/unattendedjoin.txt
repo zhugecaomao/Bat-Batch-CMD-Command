@@ -1,0 +1,5 @@
+Usage: unattendedjoin.exe [/OPTIONS]
+
+        /TEST - Test mode, NetJoinDomain is not actually called
+        /FORCEERROR - Test mode only, NetJoinDomain failure simulated
+

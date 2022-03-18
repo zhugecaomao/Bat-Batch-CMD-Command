@@ -1,0 +1,32 @@
+RUNAS 用法:
+
+RUNAS [ [/noprofile | /profile] [/env] [/netonly] ]
+        /user:<UserName> program
+
+RUNAS [ [/noprofile | /profile] [/env] [/netonly] ]
+        /smartcard [/user:<UserName>] program
+
+   /noprofile        指定不应该加载用户的配置文件。
+                     这会加速应用程序加载，但
+                     可能会造成一些应用程序运行不正常。
+   /profile          指定应该加载用户的配置文件。
+                     这是默认值。
+   /env              要使用当前环境，而不是用户的环境。
+   /netonly          只在指定的凭据限于远程访问的情况下才使用。
+
+   /savecred         用用户以前保存的凭据。
+                     Windows XP Home Edition 上没有这个选项。
+                     该选项会被忽略。
+   /smartcard        如果凭据是智能卡提供的，则使用这个选项。
+
+   /user             <UserName> 应使用 USER@DOMAIN 或 DOMAIN\USER 形式
+   program         EXE. 的命令行。请参阅下面的例子
+
+例如:
+> runas /noprofile /user:mymachine\administrator cmd
+> runas /profile /env /user:mydomain\admin "mmc %windir%\system32\dsa.msc"
+> runas /env /user:user@domain.microsoft.com "notepad \"my file.txt\""
+
+注意:  只在得到提示时才输入用户的密码。
+注意:  USER@DOMAIN 跟 /netonly 不兼容。
+注意:  /profile 跟 /netonly 不兼容。

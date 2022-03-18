@@ -1,0 +1,12 @@
+Microsoft PnP Utility
+Usage:
+------
+pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name> 
+Examples:
+pnputil.exe -a a:\usbcam\USBCAM.INF      -> Add package specified by USBCAM.INF
+pnputil.exe -a c:\drivers\*.inf          -> Add all packages in c:\drivers\
+pnputil.exe -i -a a:\usbcam\USBCAM.INF   -> Add and install driver package
+pnputil.exe -e                           -> Enumerate all 3rd party packages
+pnputil.exe -d oem0.inf                  -> Delete package oem0.inf
+pnputil.exe -f -d oem0.inf               -> Force delete package oem0.inf
+pnputil.exe -?                           -> This usage screen

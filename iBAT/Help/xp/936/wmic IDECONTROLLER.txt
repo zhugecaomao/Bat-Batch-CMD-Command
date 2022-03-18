@@ -1,0 +1,14 @@
+
+IDECONTROLLER - IDE 控制器管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+IDECONTROLLER ASSOC [<format specifier>]
+IDECONTROLLER CREATE <assign list>
+IDECONTROLLER DELETE
+IDECONTROLLER GET [<property list>] [<get switches>]
+IDECONTROLLER LIST [<list format>] [<list switches>]
+

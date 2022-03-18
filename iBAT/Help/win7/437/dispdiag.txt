@@ -1,0 +1,9 @@
+Logs display information to a file in the current directory.
+
+Usage: dispdiag [-testacpi] [-d] [-delay <seconds>] [-out <FilePath>]
+        -testacpi            runs hotkey diagnostics test
+        -d                   generates a dmp file as well with additional data.
+        -delay               delays the collection of data by specified time in seconds.
+        -out <FilePath>      path where the dispdiag file should be saved, including filename. This must be the last parameter
+Output:
+        Name of the saved file.

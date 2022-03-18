@@ -1,0 +1,15 @@
+
+SYSDRIVER - 基本服务的系统驱动程序管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SYSDRIVER ASSOC [<format specifier>]
+SYSDRIVER CALL <method name> [<actual param list>]
+SYSDRIVER CREATE <assign list>
+SYSDRIVER DELETE
+SYSDRIVER GET [<property list>] [<get switches>]
+SYSDRIVER LIST [<list format>] [<list switches>]
+

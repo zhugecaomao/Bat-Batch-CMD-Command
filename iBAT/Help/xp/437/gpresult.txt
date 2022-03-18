@@ -1,0 +1,50 @@
+
+GPRESULT [/S system [/U username [/P [password]]]] [/SCOPE scope]
+         [/USER targetusername] [/V | /Z]
+
+Description:
+    This command line tool displays the Resultant Set of Policy (RSoP)
+    for a target user and computer.
+
+Parameter List:
+    /S        system           Specifies the remote system to connect
+                               to.
+
+    /U        [domain\]user    Specifies the user context under which
+                               the command should execute.
+
+    /P        [password]       Specifies the password for the given 
+                               user context. Prompts for input if omitted.
+
+    /USER     [domain\]user    Specifies the user name for which the
+                               RSOP data is to be displayed.
+
+    /SCOPE    scope            Specifies whether the user or the
+                               computer settings needs to be
+                               displayed.
+                               Valid values: "USER", "COMPUTER".
+
+    /V                         Specifies that the verbose information
+                               is to be displayed. Verbose information
+                               details specific settings that have
+                               been applied with a precedence of 1.
+
+    /Z                         Specifies that the super-verbose
+                               information is to be displayed. Super-
+                               verbose information details specific
+                               settings that have been applied with a
+                               precedence of 1 and higher. This allows
+                               you to see if a setting was set in
+                               multiple places. See the Group Policy
+                               online help for more information.
+
+    /?                         Displays this help/usage.
+
+NOTE: If you run GPRESULT without parameters, it returns the RSoP data
+      for the current logged-on user on the computer it was run on.
+
+Examples:
+    GPRESULT
+    GPRESULT /USER targetusername /V
+    GPRESULT /S system /USER targetusername /SCOPE COMPUTER /Z
+    GPRESULT /S system /U username /P password /SCOPE USER /V

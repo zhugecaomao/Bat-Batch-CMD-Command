@@ -1,0 +1,4 @@
+---- 支持的 VOLUME 命令 ----
+
+dismount        卸载卷
+diskfree        查询卷的可用空间

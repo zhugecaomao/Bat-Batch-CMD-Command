@@ -1,0 +1,21 @@
+
+EVENTTRIGGERS /parameter [arguments]
+
+Description:
+    This command-line tool enables an administrator to display and
+    configure "Event Triggers" on local or remote system.
+
+Parameter List:
+    /Create     Create a new Event Trigger that will monitor and act
+                upon the occurrence of NT Log Events of given criteria.
+
+    /Delete     Deletes an Event Trigger by its trigger ID.
+
+    /Query      Displays the Event Trigger properties and settings.
+
+    /?          Displays this help/usage.
+
+Examples:
+    EVENTTRIGGERS /Create /?
+    EVENTTRIGGERS /Delete /?
+    EVENTTRIGGERS /Query  /?

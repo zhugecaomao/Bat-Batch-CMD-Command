@@ -1,0 +1,6 @@
+
+The following commands are available:
+
+Commands in this context:
+show alias     - Lists all defined aliases.
+show helper    - Lists all the top-level helpers.

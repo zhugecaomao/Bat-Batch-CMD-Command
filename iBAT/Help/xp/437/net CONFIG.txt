@@ -1,0 +1,6 @@
+The syntax of this command is:
+
+
+NET CONFIG 
+[SERVER | WORKSTATION]
+

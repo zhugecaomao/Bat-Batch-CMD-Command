@@ -1,0 +1,12 @@
+Invalid keyboard code specified
+Starts a new instance of the MS-DOS command interpreter.
+
+COMMAND [[drive:]path] [device] [/E:nnnnn] [/P] [/C string] [/MSG]
+
+  [drive:]path    Specifies the directory containing COMMAND.COM file.
+  device          Specifies the device to use for command input and output.
+  /E:nnnnn        Sets the initial environment size to nnnnn bytes.
+  /P              Makes the new command interpreter permanent (can't exit).
+  /C string       Carries out the command specified by string, and then stops.
+  /MSG            Specifies that all error messages be stored in memory. You
+                  need to specify /P with this switch.

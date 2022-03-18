@@ -1,0 +1,14 @@
+WinSxs 跟踪实用工具。
+用法: SxsTrace [选项]
+选项:
+   Trace -logfile:FileName [-nostop]
+       为 sxs 启用跟踪。
+       将跟踪日志保存到 FileName。
+       如果指定 -nostop，则不会提示停止跟踪。
+   Parse -logfile:FileName -outfile:ParsedFile  [-filter:AppName]
+       将原始跟踪文件转换成用户可读的格式并将结果保存到 ParsedFile。
+       使用 -filter 选项筛选输出。
+   Stoptrace
+       停止跟踪(如果以前未停止过跟踪)。
+示例:  SxsTrace Trace -logfile:SxsTrace.etl
+       SxsTrace Parse -logfile:SxsTrace.etl -outfile:SxsTrace.txt

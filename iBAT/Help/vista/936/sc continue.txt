@@ -1,0 +1,4 @@
+描述:
+        发送 CONTINUE 控制请求到服务。
+用法:
+        sc <server> continue [service name]

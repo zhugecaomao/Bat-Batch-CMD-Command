@@ -1,0 +1,7 @@
+/? is an invalid parameter.
+---- Commands Supported ----
+
+list            List objects
+transaction     Commands related to transactions
+resolve         Resolve
+forget          Forget a committed transaction

@@ -1,0 +1,54 @@
+
+BOOTCFG /parameter [arguments]
+
+Description:
+    This command line tool can be used to configure, query, change or 
+    delete the boot entry settings in the BOOT.INI file.
+
+Parameter List:
+    /Copy       Makes a copy of an existing boot entry [operating 
+                systems] section for which you can add OS options to.
+
+    /Delete     Deletes an existing boot entry in the [operating 
+                systems] section of the BOOT.INI file. You must specify
+                the entry# to delete.
+
+    /Query      Displays the current boot entries and their settings.
+
+    /Raw        Allows the user to specify any switch options to be 
+                added for a specified boot entry.
+
+    /Timeout    Allows the user to change the Timeout value.
+
+    /Default    Allows the user to change the Default boot entry.
+
+    /EMS        Allows the user to configure the /redirect switch
+                for headless support for a boot entry.
+
+    /Debug      Allows the user to specify the port and baudrate for 
+                remote debugging for a specified boot entry.
+
+    /Addsw      Allows the user to add predefined switches for 
+                a specific boot entry.
+
+    /Rmsw       Allows the user to remove predefined switches for a 
+                specific boot entry.
+
+    /Dbg1394    Allows the user to configure 1394 port debugging 
+                for a specified boot entry.
+
+    /?          Displays this help/usage.
+
+Examples:
+    BOOTCFG /Copy /?
+    BOOTCFG /Delete /?
+    BOOTCFG /Query /?
+    BOOTCFG /Raw /?
+    BOOTCFG /Timeout /?
+    BOOTCFG /EMS /?
+    BOOTCFG /Debug /?
+    BOOTCFG /Addsw /?
+    BOOTCFG /Rmsw /?
+    BOOTCFG /Dbg1394 /?
+    BOOTCFG /Default /?
+    BOOTCFG /?

@@ -1,0 +1,5 @@
+The syntax of this command is:
+
+NET STATISTICS
+[WORKSTATION | SERVER] 
+ 

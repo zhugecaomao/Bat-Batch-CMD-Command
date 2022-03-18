@@ -1,0 +1,6 @@
+---- 支持的 REPAIR 命令 ----
+
+query          查询卷的自疗状态
+set            设置卷的自疗状态
+wait           等待修复完成
+initiate       启动文件修复

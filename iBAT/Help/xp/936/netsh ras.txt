@@ -1,0 +1,22 @@
+
+下列指令有效:
+
+此上下文中的命令:
+?              - 显示命令列表。
+aaaa           - 更改到 `netsh ras aaaa' 上下文。
+add            - 将项目添加到表。
+appletalk      - 更改到 `netsh ras appletalk' 上下文。
+delete         - 将项目从表中删除。
+dump           - 显示一个配置脚本。
+help           - 显示命令列表。
+ip             - 更改到 `netsh ras ip' 上下文。
+ipx            - 更改到 `netsh ras ipx' 上下文。
+set            - 设置配置信息。
+show           - 显示信息。
+
+下列的子上下文可用:
+ aaaa appletalk ip ipx
+
+若需要命令的更多帮助信息，请键入命令，
+后面跟 ?。
+

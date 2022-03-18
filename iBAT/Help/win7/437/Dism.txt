@@ -1,0 +1,55 @@
+
+Deployment Image Servicing and Management tool
+Version: 6.1.7600.16385
+
+
+DISM.exe [dism_options] {WIM_command} [<WIM_arguments>]
+DISM.exe {/Image:<path_to_offline_image> | /Online} [dism_options] 
+         {servicing_command} [<servicing_arguments>]
+
+DESCRIPTION:
+
+  DISM enumerates, installs, uninstalls, configures, and updates features
+  and packages in Windows images. The commands that are available depend 
+  on the image being serviced and whether the image is offline or running.
+
+WIM COMMANDS:
+
+  /Get-MountedWimInfo     - Displays information about mounted WIM images.
+  /Get-WimInfo            - Displays information about images in a WIM file.
+  /Commit-Wim             - Saves changes to a mounted WIM image.
+  /Unmount-Wim            - Unmounts a mounted WIM image.
+  /Mount-Wim              - Mounts an image from a WIM file.
+  /Remount-Wim            - Recovers an orphaned WIM mount directory.
+  /Cleanup-Wim            - Deletes resources associated with mounted WIM
+                            images that are corrupt.
+
+IMAGE SPECIFICATIONS:
+
+  /Online                 - Targets the running operating system.
+  /Image                  - Specifies the path to the root directory of an
+                            offline Windows image.
+
+DISM OPTIONS:
+
+  /English                - Displays command line output in English.
+  /Format                 - Specifies the report output format.
+  /WinDir                 - Specifies the path to the Windows directory.
+  /SysDriveDir            - Specifies the path to the system-loader file named
+                            BootMgr.
+  /LogPath                - Specifies the logfile path.
+  /LogLevel               - Specifies the output level shown in the log (1-4).
+  /NoRestart              - Suppresses automatic reboots and reboot prompts.
+  /Quiet                  - Suppresses all output except for error messages.
+  /ScratchDir             - Specifies the path to a scratch directory.
+
+For more information about these DISM options and their arguments, specify an
+option immediately before /?.
+
+  Examples:     
+    DISM.exe /Mount-Wim /?
+    DISM.exe /ScratchDir /?
+    DISM.exe /Image:C:\test\offline /?
+    DISM.exe /Online /?
+
+

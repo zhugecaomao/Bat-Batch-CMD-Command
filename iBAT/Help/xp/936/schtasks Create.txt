@@ -1,0 +1,111 @@
+
+SCHTASKS /Create [/S system [/U username [/P password]]]
+    [/RU username [/RP password]] /SC schedule [/MO modifier] [/D day]
+    [/I idletime] /TN taskname /TR taskrun [/ST starttime] [/M months]
+    [/SD startdate] [/ED enddate]
+
+描述:
+    启用管理员以在本地或远程系统上
+    创建计划任务。
+
+参数列表:
+    /S           system            指定要连接到的远程
+                                   系统。如果省略这个
+                                   系统参数，默认是本地
+                                   系统。
+
+    /U           username          指定命令执行的
+                                   用户上下文。
+
+    /P           password          指定给定用户上下文
+                                   的密码。
+
+    /RU          username          指定任务运行的用户
+                                   帐户 (用户上下文)。
+                                   对于系统帐户，有效值是 ""， 
+                                   "NT AUTHORITY\SYSTEM" 或
+                                   "SYSTEM"。
+
+    /RP          password          指定用户密码。
+                                   要提示输入密码，值
+                                   必须是 "*" 或没有。
+                                   密码将不会对系统帐户
+                                   起作用。
+
+    /SC          schedule          指定计划频率。
+                                   有效计划任务: MINUTE, HOURLY,
+                                   DAILY, WEEKLY, MONTHLY, ONCE,
+                                   ONSTART, ONLOGON, ONIDLE。
+
+    /MO          modifier          改进计划类型以允许
+                                   更好地控制计划重复
+                                   周期。有效值列于
+                                   下面"Modifiers" 部分中。
+
+    /D           days              指定该周内运行任务的
+                                   日期。有效值: MON, TUE,
+                                   WED, THU, FRI, SAT, SUN
+                                   和对 MONTHLY 计划的 1 - 31
+                                   (某月中的日期)。
+
+    /M           months            指定一年内的某月。
+                                   默认是该月的第一天。
+                                   有效值: JAN, FEB, MAR,
+                                   APR, MAY, JUN, JUL, AUG, SEP, OCT,
+                                   NOV, DEC。
+
+    /I           idletime          指定运行一个已计划的 
+                                   ONIDLE 任务之前要等待
+                                   的空闲时间。
+                                   有效值范围: 1 到 999 分钟。
+
+    /TN          taskname          指定唯一识别这个计划
+                                   任务的名称。
+
+    /TR          taskrun           指定这个计划的任务
+                                   运行的程序的路径和
+                                   文件名。
+                                   示例: C:\windows\system32\calc.exe
+
+    /ST          starttime         指定运行这个任务的时间。
+                                   时间格式是 HH:MM:SS (24
+                                   小时时间) 例如，14:30:00
+                                   是下午 2:30 PM。
+
+    /SD          startdate         指定第一次运行这个
+                                   任务的日期。格式为
+                                   "yyyy/mm/dd"。
+
+    /ED          enddate           指定上次运行这个
+                                   任务的日期。格式为
+                                   "yyyy/mm/dd"。
+
+    /?                             显示帮助/用法。
+
+修改者: 按计划类型的 /MO 开关的有效值:
+    MINUTE:  1 到 1439 分钟。
+    HOURLY:  1 到 23 小时。
+    DAILY:   1 到 365 天。
+    WEEKLY:  1 到 52 周。
+    ONCE:    无修改者。
+    ONSTART: 无修改者。
+    ONLOGON: 无修改者。
+    ONIDLE:  无修改者。
+    MONTHLY: 1 到 12，或
+             FIRST, SECOND, THIRD, FOURTH, LAST, LASTDAY。
+
+示例:
+    SCHTASKS /Create /S system /U user /P password /RU runasuser 
+             /RP runaspassword /SC HOURLY /TN rtest1 /TR notepad 
+    SCHTASKS /Create /S system /U domain\user /P password /SC MINUTE
+             /MO 5 /TN rtest2 /TR calc.exe /ST 12:00:00 
+             /SD 2001/12/30 /ED 2001/12/30 /RU runasuser /RP 
+    SCHTASKS /Create /SC MONTHLY /MO first /D SUN /TN game 
+             /TR c:\windows\system32\freecell
+    SCHTASKS /Create /S system /U user /P password /RU runasuser
+             /RP runaspassword /SC WEEKLY /TN test1 /TR notepad.exe
+    SCHTASKS /Create /S system /U domain\user /P password /SC MINUTE
+             /MO 5 /TN test2 /TR c:\windows\system32\notepad.exe 
+             /ST 18:30:00 /RU runasuser /RP *
+    SCHTASKS /Create /SC MONTHLY /MO first /D SUN /TN cell 
+             /TR c:\windows\system32\freecell /RU runasuser

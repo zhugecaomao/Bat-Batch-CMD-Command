@@ -1,0 +1,15 @@
+Converts FAT volumes to NTFS.
+
+CONVERT volume /FS:NTFS [/V] [/CvtArea:filename] [/NoSecurity] [/X]
+
+  volume      Specifies the drive letter (followed by a colon),
+              mount point, or volume name.
+  /FS:NTFS    Specifies that the volume is to be converted to NTFS.
+  /V          Specifies that Convert should be run in verbose mode.
+  /CvtArea:filename
+              Specifies a contiguous file in the root directory to be
+              the place holder for NTFS system files.
+  /NoSecurity Specifies the converted files and directories security
+              settings to be accessible by everyone.
+  /X          Forces the volume to dismount first if necessary.
+              All opened handles to the volume would then be invalid.

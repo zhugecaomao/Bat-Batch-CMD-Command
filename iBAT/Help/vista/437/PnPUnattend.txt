@@ -1,0 +1,10 @@
+DESCRIPTION:
+AuditSystem, Unattend online driver install 
+
+USAGE:
+   PnPUnattend.exe [/auditSystem | /help /? /h] [/s] [/L]
+       /auditSystem   Online driver install.
+       /help /? /h    This help.
+       /s             Search without installing.
+       /L             Print Logging information to the command line.
+

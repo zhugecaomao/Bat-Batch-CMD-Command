@@ -1,0 +1,53 @@
+
+EVENTCREATE [/S system [/U username [/P [password]]]] /ID eventid
+            [/L logname] [/SO srcname] /T type /D description
+
+Description:
+    This command line tool enables an administrator to create
+    a custom event ID and message in a specified event log.
+
+Parameter List:
+    /S    system           Specifies the remote system to connect to.
+
+    /U    [domain\]user    Specifies the user context under which
+                           the command should execute.
+
+    /P    [password]       Specifies the password for the given
+                           user context. Prompts for input if omitted.
+
+    /L    logname          Specifies the event log to create
+                           an event in.
+
+    /T    type             Specifies the type of event to create.
+                           Valid types: ERROR, WARNING, INFORMATION.
+
+    /SO   source           Specifies the source to use for the
+                           event. A valid source can be any string 
+                           and should represent the application or 
+                           component that is generating the event.
+
+    /ID   id               Specifies the event ID for the event. A
+                           valid custom message ID is in the range
+                           of 1 - 1000.
+
+    /D    description      Specifies the description to be set for
+                           the newly creating event.
+
+    /?                     Displays this help/usage.
+
+
+Examples:
+    EVENTCREATE /T ERROR /ID 100
+        /L APPLICATION /D "Create an event in application log"
+
+    EVENTCREATE /T ERROR /ID 999 /L APPLICATION
+        /SO WinWord /D "new source Winword in application log"
+
+    EVENTCREATE /S system /T ERROR /ID 100
+        /L APPLICATION /D "Remote system without user credentials"
+
+    EVENTCREATE /S system /U user /P password /ID 100 /T ERROR
+        /L APPLICATION /D "Remote machine with user credentials"
+
+    EVENTCREATE /S system /U domain\user /ID 100 /T WARNING
+        /SO MyBatchFile.cmd /D "Maintenance script user logon failed"

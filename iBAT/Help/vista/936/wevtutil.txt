@@ -1,0 +1,58 @@
+Windows Events Command Line Utility.
+
+Enables you to retrieve information about event logs and publishers, install
+and uninstall event manifests, run queries, and export, archive and clear logs.
+
+Usage:
+
+You can use either the short (i.e. ep /uni) or long (i.e. enum-publishers /unicode)
+version of the command and option names. Commands, options and option values are
+case-insensitive.
+
+(ALL UPPER-CASE = VARIABLE)
+
+wevtutil COMMAND [ARGUMENT [ARGUMENT] ...] [/OPTION:VALUE [/OPTION:VALUE] ...]
+
+Commands:
+
+el (enum-logs)          List log names.
+gl (get-log)            Get log configuration information.
+sl (set-log)            Modify configuration of a log.
+ep (enum-publishers)    List event publishers.
+gp (get-publisher)      Get publisher configuration information.
+im (install-manifest)   Install event publishers and logs from manifest.
+um (uninstall-manifest) Uninstall event publishers and logs from manifest.
+qe (query-events)       Query events from a log or log file.
+gli (get-log-info)      Get log status information.
+epl (export-log)        Export a log.
+al (archive-log)        Archive an exported log.
+cl (clear-log)          Clear a log.
+
+Common options:
+
+/r:VALUE (remote)
+If specified, run command on a remote computer. VALUE is the remote computer name.
+Note, im (install-manifest) and um (uninstall-manifest) do not support remote
+operation.
+
+/u:VALUE (username)
+Specify a different user to log on to remote computer. VALUE is a user name
+in the form domain\user or user. Only applicable when option /r (remote) is
+specified.
+
+/p:VALUE (password)
+Password for the specified user. If not specified or VALUE is "*", user will be
+prompted to enter a password. Only applicable when /u (username) option is
+specified.
+
+/a:VALUE (authentication)
+Authentication type for connecting to remote computer. VALUE can be Default,
+Negotiate, Kerberos or NTLM. The default is Negotiate.
+
+/uni:VALUE (unicode)
+Display output in Unicode. VALUE can be true or false. If VALUE is true then output
+is in Unicode. 
+
+To learn more about a specific command, type the following:
+
+wevtutil COMMAND /?

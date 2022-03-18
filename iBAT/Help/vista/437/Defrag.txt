@@ -1,0 +1,37 @@
+Description:  Locates and consolidates fragmented files on local volumes to
+              improve system performance.
+
+Syntax:  Defrag <volume> -a [-v]
+         Defrag <volume> [{-r | -w}] [-f] [-v]
+         Defrag       -c [{-r | -w}] [-f] [-v]
+
+Parameters:
+
+Value         Description
+
+<volume>      Specifies the drive letter or mount point path of the volume to
+              be defragmented or analyzed.
+
+-c            Defragments all volumes on this computer.
+
+-a            Performs fragmentation analysis only.
+
+-r            Performs partial defragmentation (default). Attempts to
+              consolidate only fragments smaller than 64 megabytes (MB).
+
+-w            Performs full defragmentation. Attempts to consolidate all file
+              fragments, regardless of their size.
+
+-f            Forces defragmentation of the volume when free space is low.
+
+-v            Specifies verbose mode. The defragmentation and analysis output
+              is more detailed.
+
+-?            Displays this help information.
+
+Examples:
+
+Defrag d:
+Defrag d:\vol\mountpoint -w -f
+Defrag d: -a -v
+Defrag -c -v

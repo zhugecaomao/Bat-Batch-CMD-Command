@@ -1,0 +1,4 @@
+描述:
+        获取与特定服务相关的显示名称
+用法:
+        sc <server> GetDisplayName <service key name> <bufsize>

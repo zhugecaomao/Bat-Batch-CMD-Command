@@ -1,0 +1,4 @@
+
+ RmClient.exe pipename
+
+

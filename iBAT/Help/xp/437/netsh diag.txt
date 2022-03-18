@@ -1,0 +1,15 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+connect        -     Connect to news, mail, and proxy servers.                               
+dump           - Displays a configuration script.
+gui            -     Displays the web page user interface.    
+help           - Displays a list of commands.
+ping           -     Pings wins, ip, news, mail, proxy dns and adapters.                                     
+show           -     Shows mail, news, proxy, computer, operating system, network adapter, modem and network client information.                                     
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

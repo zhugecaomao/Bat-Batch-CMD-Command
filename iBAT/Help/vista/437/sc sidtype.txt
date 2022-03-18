@@ -1,0 +1,29 @@
+DESCRIPTION:
+        Changes the service security identifier (SID) type 
+        setting of a service. 
+
+        If this setting is "unrestricted", the Service Control 
+        Manager (SCM) will add this service's SID to the service 
+        process token when the service process starts the next 
+        time due to the first service in the process being started.  
+        This setting is valid only for Win32 user mode services. 
+
+        If this setting is "restricted", the Service Control 
+        Manager (SCM) will add this service's SID to the service 
+        process token when the service process starts the next 
+        time due to the first service in the process being started. 
+        In addition, this service's SID will also be added to
+        the restricting SID list in the process token. The process
+        token will be a restricted token.  See MSDN for details on
+        restricted token. This setting is valid only for Win32 
+        user mode services. In addition, for a share process service,
+        all services cohosted in the process must have this SID type
+        set for this to take effect.
+        
+        If this setting is "none", the SCM will not add the service's 
+        SID to the service process token.   
+USAGE:
+        sc <server> sidtype [service name] [type]
+
+OPTIONS:
+        type = <none|unrestricted|restricted>

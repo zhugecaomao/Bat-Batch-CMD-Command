@@ -1,0 +1,5 @@
+/? is an invalid parameter.
+---- Commands Supported ----
+
+tx     Commands related to transactions
+tm     Commands related to transaction managers

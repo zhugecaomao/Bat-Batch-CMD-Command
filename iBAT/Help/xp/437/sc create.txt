@@ -1,0 +1,19 @@
+Creates a service entry in the registry and Service Database.
+SYNTAX: 
+sc create [service name] [binPath= ] <option1> <option2>...
+CREATE OPTIONS:
+NOTE: The option name includes the equal sign.
+ type= <own|share|interact|kernel|filesys|rec>
+       (default = own)
+ start= <boot|system|auto|demand|disabled>
+       (default = demand)
+ error= <normal|severe|critical|ignore>
+       (default = normal)
+ binPath= <BinaryPathName>
+ group= <LoadOrderGroup>
+ tag= <yes|no>
+ depend= <Dependencies(separated by / (forward slash))>
+ obj= <AccountName|ObjectName>
+       (default = LocalSystem)
+ DisplayName= <display name>
+ password= <password> 

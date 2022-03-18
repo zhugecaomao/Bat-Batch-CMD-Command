@@ -1,0 +1,125 @@
+
+POWERCFG [/LIST | /QUERY [name] | /CREATE name | /DELETE name |
+       /SETACTIVE name | /CHANGE name settings |
+       /HIBERNATE {ON|OFF} | /EXPORT name [/FILE filename] |
+       /IMPORT name [/FILE filename] | /GLOBALPOWERFLAG {ON|OFF} /OPTION flag |
+       /BATTERYALARM {LOW|CRITICAL} [settings] |
+       /DEVICEQUERY queryflags | /DEVICEENABLEWAKE devicename |
+       /DEVICEDISABLEWAKE devicename | /?]
+
+描述:
+    这个命令行工具允许管理员控制系统上的电源设置。
+
+参数列表:
+    /LIST, /L       列出现有电源方案的名称。
+    /QUERY, /Q      显示指定的电源方案的配置。如果没有指定名称，将显示
+                    当前使用中的电源方案的配置。
+    /CREATE, /C     用指定的名称创建电源方案。新方案是用当前使用中方
+                    案的属性创建的。
+    /DELETE, /D     删除具有指定名称的电源方案。
+    /SETACTIVE, /S  将具有指定名称的电源方案设为使用中。
+    /CHANGE, /X     更改指定电源方案的设置。其他开关指定以下改动:
+                        /monitor-timeout-ac <分钟>
+                        /monitor-timeout-dc <分钟>
+                        /disk-timeout-ac <分钟>
+                        /disk-timeout-dc <分钟>
+                        /standby-timeout-ac <分钟>
+                        /standby-timeout-dc <分钟>
+                        /hibernate-timeout-ac <分钟>
+                        /hibernate-timeout-dc <分钟>
+                        /processor-throttle-ac <throttle>
+                        /processor-throttle-dc <throttle>
+                    系统使用 AC 电源时，使用 AC 设置。系统使用电池电源
+                    时，使用 DC 设置。将超时设为零会禁用相应的超时功能。
+                    支持的控制器设置为 NONE、CONSTANT、DEGRADE 和 
+                    ADAPTIVE。
+    /EXPORT, /E     将具有指定名称的电源方案导出到一个文件。如果没有指定
+                    文件名，默认值则为 SCHEME.POW。另一个参数受支持:
+                        /FILE <filename>
+    /IMPORT, /I     从具有指定名称的文件导入电源方案。如果没有指定文件名，
+                    默认值则为 SCHEME.POW。如果具有那个名称的方案已存在，
+                    新的会将其替换。另一个受支持的参数是:
+                        /FILE <filename>
+    /HIBERNATE, /H {ON|OFF}  启用/禁用休眠功能。
+                    部分系统不支持休眠超时。
+    /NUMERICAL, /N  允许用数字标识符指定使用的电源方案。使用这个开关时，
+                    在命令行上电源方案名的地方，指定其数字标识符。
+                    这个开关可以跟 /QUERY、/DELETE、/SETACTIVE、/CHANGE、
+                    /EXPORT 和 /IMPORT 命令一起使用。
+    /GLOBALPOWERFLAG, /G {ON|OFF}  启用/关闭一个全局电源标志。
+                    有效标志 (在 "/OPTION " 后使用)是:
+                         BATTERYICON:    在系统任务栏启用/关闭电池指示器
+                                         图标。
+                         MULTIBATTERY:   在系统电源表启用/关闭多电池显示。
+                         RESUMEPASSWORD: 恢复系统时提示输入密码。
+                         WAKEONRING:     启用/关闭响铃唤醒支持。
+                         VIDEODIM:       在电池电量启用/关闭使视频
+                                         显示变暗的支持。
+    /AVAILABLESLEEPSTATES, /A  报告系统上可用的休眠状态。尝试报告休眠
+                    状态不可用的原因。
+    /BATTERYALARM, /B {LOW|CRITICAL}  配置电池不足警报。
+                    可以指定下列开关:
+                        /activate <on|off>
+                            启用或禁用警告。
+                        /level <percentage (0 - 100)>
+                            电压达到此百分比时会响警告。
+                       /text <on|off>
+                            启用或关闭通知。
+                        /sound <on|off>
+                            启用或关闭可听到的通知。
+                        /action <none|shutdown|hibernate|standby>
+                            指定响警铃时采取的操作。并不是所有的操作总是
+                            可用。
+                        /forceaction <on|off>
+                            即使程序停止反应也强行待机或关机。
+                        /program <on|off>
+                            指定要运行的程序。schtasks.exe /change
+                            可以用于配置程序。
+    /DEVICEQUERY <queryflags> 将返回满足 <queryflags> 中
+                    指定条件的设备的列表。<queryflags> 的值
+                    可能是:
+                    wake_from_S1_supported - 返回支持将系统
+                             从轻睡眠状态唤醒的全部设备。
+                    wake_from_S2_supported - 返回支持将系统
+                             从较深睡眠状态唤醒的全部设备。
+                    wake_from_S3_supported - 返回支持将系统
+                             从最深睡眠状态唤醒的全部设备。
+                    wake_from_any - 返回支持将系统
+                             从任何睡眠状态唤醒的全部设备。
+                    S1_supported - 列表支持轻睡眠状态的设备。
+                    S2_supported - 列表支持较深睡眠状态的设备。
+                    S3_supported - 列表支持最深眠状态的设备。
+                    S4_supported - 列表支持系统休眠的设备。
+                    wake_programmable - 列表用户可自定义
+                             从睡眠状态唤醒系统的设备。
+                    wake_armed - 列表当前配置为
+                             从任何睡眠状态唤醒系统的设备。
+                    all_devices - 返回系统中当前所有设备。
+                    all_devices_verbose - 返回设备的详细列表。
+    /DEVICEENABLEWAKE <devicename> 启用设备将系统从睡眠状态
+                    唤醒。<devicename> 是使用 '/DEVICEQUERY wake_programmable'
+                    参数检索的设备。
+    /DEVICEDISABLEWAKE <devicename> 禁用设备将系统从睡眠状态
+                    唤醒。<devicename> 是使用 '/DEVICEQUERY wake_programmable'
+                    参数检索的设备。
+    /HELP, /?       显示命令行参数的信息。
+
+示例:
+    POWERCFG /LIST
+    POWERCFG /QUERY scheme
+    POWERCFG /QUERY
+    POWERCFG /CREATE scheme
+    POWERCFG /DELETE scheme
+    POWERCFG /SETACTIVE scheme
+    POWERCFG /CHANGE scheme /monitor-timeout-dc 15
+    POWERCFG /CHANGE scheme /monitor-timeout-dc 0
+    POWERCFG /HIBERNATE on
+    POWERCFG /EXPORT scheme /file file
+    POWERCFG /QUERY number /NUMERICAL
+    POWERCFG /GLOBALPOWERFLAG on /OPTION BATTERYICON
+    POWERCFG /AVAILABLESLEEPSTATES
+    POWERCFG /BATTERYALARM low
+    POWERCFG /BATTERYALARM critical /ACTIVATE on /LEVEL 6 /ACTION hibernate
+    POWERCFG /DEVICEQUERY wake_armed
+    POWERCFG /DEVICEENABLEWAKE "Microsoft USB IntelliMouse Explorer"
+

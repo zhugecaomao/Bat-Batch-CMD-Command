@@ -1,0 +1,9 @@
+Configures a keyboard for a specific language.
+
+KEYB [xx[,[yyy][,[drive:][path]filename]]] [/E] [/ID:nnn]
+
+  xx                      Specifies a two-letter keyboard code.
+  yyy       ÿ             Specifies the code page for the character set.
+  [drive:][path]filename  Specifies the keyboard definition file.
+  /E                      Specifies that an enhanced keyboard is installed.
+  /ID:nnn                 Specifies the keyboard in use.

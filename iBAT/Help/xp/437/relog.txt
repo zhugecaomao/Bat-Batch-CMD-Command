@@ -1,0 +1,39 @@
+
+Microsoft r Relog.exe (5.1.2600.0)
+c Microsoft Corporation. All rights reserved.
+
+Relog creates new performance logs from data in existing performance logs by
+changing the sampling rate and/or converting the file format. Supports all
+performance log formats, including Windows NT 4.0 compressed logs.
+
+Usage:
+relog <filename [filename ...]> [options]
+
+Parameters:
+  <filename [filename ...]>     Performance file to relog.
+
+Options:
+  -?                            Displays context sensitive help.
+  -a                            Append output to existing binary file.
+  -c <path [path ...]>          Counters to filter from input log.
+  -cf <filename>                File listing performance counters to filter
+                                form the input log. Default is all counters
+                                in the original log file.
+  -f <CSV|TSV|BIN|SQL>          Output file format.
+  -t <value>                    Only write every nth record into the output
+                                file. Default is to write every record.
+  -o                            Output file path or SQL database.
+  -b <M/d/yyyy h:mm:ss[AM|PM]>  Begin time for the first record to write into
+                                the output file.
+  -e <M/d/yyyy h:mm:ss[AM|PM]>  End time for the last record to write into
+                                the output file.
+  -config <filename>            Settings file containing command options.
+  -q                            List performance counters in the input file.
+  -y                            Answer yes to all questions without
+                                prompting.
+
+Examples:
+  relog logfile.csv -c "\Processor(_Total)\% Processor Time" -o logfile.blg
+  relog logfile.blg -cf counters.txt -f blg
+  relog logfile.blg -f csv -o logfile.csv -t 2
+  relog logfile.blg -q -o counters.txt

@@ -1,0 +1,7 @@
+DESCRIPTION:
+        Deletes a service entry from the registry.
+        If the service is running, or another process has an
+        open handle to the service, the service is simply marked
+        for deletion.
+USAGE:
+        sc <server> delete [service name]

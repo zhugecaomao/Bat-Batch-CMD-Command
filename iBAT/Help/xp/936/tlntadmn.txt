@@ -1,0 +1,24 @@
+
+用法: tlntadmn [computer name] [common_options] start | stop | pause | continue | -s | -k | -m | config config_options  
+                           所有会话用 'all'。
+     -s sessionid          列出会话的信息。
+     -k sessionid          终止会话。
+     -m sessionid          发送消息到会话。
+
+     config                配置 telnet 服务器参数。
+
+common_options 为:
+     -u user               指定要使用其凭据的用户
+     -p password           用户密码
+
+config_options 为:
+    dom = domain           设定用户的默认域
+    ctrlakeymap = yes|no   设定 ALT 键的映射
+    timeout = hh:mm:ss     设定空闲会话超时值
+    timeoutactive = yes|no 启用空闲会话。
+    maxfail = attempts     设定断开前失败的登录企图数。
+    maxconn = connections  设定最大连接数。
+    port = number          设定 telnet 端口。
+    sec = [+/-]NTLM [+/-]passwd
+                           设定身份验证机构
+    mode = console|stream  指定操作模式。

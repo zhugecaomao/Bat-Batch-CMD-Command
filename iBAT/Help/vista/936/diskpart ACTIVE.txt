@@ -1,0 +1,27 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    在基本主启动记录(MBR)磁盘上，将带焦点的分区标记为活动分区。
+
+语法:  ACTIVE
+
+    此命令会通知基本输入输出系统(BIOS)该分区为
+    有效的系统分区。
+
+    必须选择一个分区才能成功执行此操作。
+
+    警告:
+
+    DiskPart 仅验证该分区是否能够包含操作系统启动文件。
+    DiskPart 不会检查分区中的内容。
+    如果错误地将某个分区标记为活动分区，而该分区不包含
+    操作系统启动文件，则计算机可能无法启动。
+
+示例:
+
+    ACTIVE
+
+DISKPART> 

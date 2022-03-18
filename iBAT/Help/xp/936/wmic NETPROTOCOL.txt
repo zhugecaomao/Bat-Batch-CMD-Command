@@ -1,0 +1,14 @@
+
+NETPROTOCOL - 协议 (和其网络特点) 管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NETPROTOCOL ASSOC [<format specifier>]
+NETPROTOCOL CREATE <assign list>
+NETPROTOCOL DELETE
+NETPROTOCOL GET [<property list>] [<get switches>]
+NETPROTOCOL LIST [<list format>] [<list switches>]
+

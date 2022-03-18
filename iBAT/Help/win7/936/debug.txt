@@ -1,0 +1,9 @@
+Runs Debug, a program testing and editing tool.
+
+DEBUG [[drive:][path]filename [testfile-parameters]]
+
+  [drive:][path]filename  Specifies the file you want to test.
+  testfile-parameters     Specifies command-line information required by
+                          the file you want to test.
+
+After Debug starts, type ? to display a list of debugging commands.

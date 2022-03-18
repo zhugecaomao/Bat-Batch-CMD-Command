@@ -1,0 +1,52 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Extends the volume or partition with focus and its file system into free
+    (unallocated) space on a disk.
+
+Syntax:  EXTEND [SIZE=<N>] [DISK=<N>] [NOERR]
+        EXTEND FILESYSTEM [NOERR]
+
+    SIZE=<N>    Specifies the amount of space in megabytes (MB) to add to the
+                current volume or partition. If no size is given, all of the
+                contiguous free space that is available on the disk is used.
+
+    DISK=<N>    Specifies the disk on which the volume or partition is
+                extended. If no disk is specified, the volume or partition is
+                extended on the current disk.
+
+    FILESYSTEM  Extends the file system of the volume with focus. For use only
+                on disks where the file system was not extended with the
+                volume.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    On basic disks, the free space must be on the same disk as the volume or
+    partition with focus. It must also immediately follow the volume or
+    partition with focus (start at the next sector offset).
+
+    On dynamic disks with simple or spanned volumes, a volume can be extended
+    to any free space on any dynamic disk. Using this command, you can convert
+    a simple dynamic volume into a spanned dynamic volume.
+
+    If the partition was previously formatted with the NTFS file system, the
+    file system is automatically extended to fill the larger partition. No data
+    loss occurs. If the partition was previously formatted with a different
+    file system than NTFS, the command fails with no change to the partition.
+    If the partition was not previously formatted with a file system, the
+    partition will still be extended.
+
+    A volume or partition must be selected for this operation to succeed.
+
+Example:
+
+    EXTEND SIZE=500 DISK=3
+    EXTEND FILESYSTEM
+
+DISKPART> 

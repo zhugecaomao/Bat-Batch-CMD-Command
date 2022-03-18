@@ -1,0 +1,7 @@
+Logs display information to a file in the current directory.
+
+Usage: dispdiag [-testacpi] [-d]
+        -testacpi              runs hotkey diagnostics test
+        -d                     generates a dmp file as well with additional data.
+Output:
+        Name of the saved file.

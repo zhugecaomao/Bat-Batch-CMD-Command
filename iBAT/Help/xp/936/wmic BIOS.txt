@@ -1,0 +1,14 @@
+
+BIOS - 基本输入/输出服务 (BIOS) 管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+BIOS ASSOC [<format specifier>]
+BIOS CREATE <assign list>
+BIOS DELETE
+BIOS GET [<property list>] [<get switches>]
+BIOS LIST [<list format>] [<list switches>]
+

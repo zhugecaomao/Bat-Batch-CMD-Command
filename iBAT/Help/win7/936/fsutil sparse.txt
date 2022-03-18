@@ -1,0 +1,6 @@
+---- 支持的 SPARSE 命令 ----
+
+setflag         设置稀疏
+queryflag       查询稀疏
+queryrange      查询范围
+setrange        设置稀疏范围

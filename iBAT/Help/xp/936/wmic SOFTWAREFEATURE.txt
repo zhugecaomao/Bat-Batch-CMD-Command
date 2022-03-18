@@ -1,0 +1,15 @@
+
+SOFTWAREFEATURE - SoftwareElement 的软件产品组件的管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SOFTWAREFEATURE ASSOC [<format specifier>]
+SOFTWAREFEATURE CALL <method name> [<actual param list>]
+SOFTWAREFEATURE CREATE <assign list>
+SOFTWAREFEATURE DELETE
+SOFTWAREFEATURE GET [<property list>] [<get switches>]
+SOFTWAREFEATURE LIST [<list format>] [<list switches>]
+

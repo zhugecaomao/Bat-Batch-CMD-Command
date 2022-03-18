@@ -1,0 +1,16 @@
+
+下列指令有效:
+
+此上下文中的命令:
+?              - 显示命令列表。
+audit          - 显示已经安装和删除的 Winsock LSP 列表。
+dump           - 显示一个配置脚本。
+help           - 显示命令列表。
+remove         - 从系统中删除 Winsock LSP。
+reset          - 重置 Winsock 目录为清除状态。
+set            - 设置 Winsock 选项。
+show           - 显示信息。
+
+若需要命令的更多帮助信息，请键入命令，接着是空格，
+后面跟 ?。
+

@@ -1,0 +1,8 @@
+---- FILE Commands Supported ----
+
+findbysid               Find a file by security identifier
+queryallocranges        Query the allocated ranges for a file
+setshortname            Set the short name for a file
+setvaliddata            Set the valid data length for a file
+setzerodata             Set the zero data for a file
+createnew               Creates a new file of a specified size

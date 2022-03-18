@@ -1,0 +1,23 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    将外部磁盘组导入到本地计算机的联机磁盘组。
+
+语法:  IMPORT [NOERR]
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart 会继续处理命令，如同没有出现
+                错误一样。
+                如果不使用 NOERR 参数，错误会导致 DiskPart 退出并返回错误代码。
+
+    此命令将位于同一组中的每个磁盘作为带焦点的磁盘导入。
+
+    必须选择动态磁盘才能继续执行该操作。
+
+示例:
+
+    IMPORT
+
+DISKPART> 

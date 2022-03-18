@@ -1,0 +1,5 @@
+Usage: atmadm [options]
+       where options are one or more of:
+         -c         List all connections
+         -a         List all registered addresses
+         -s         Display Statistics

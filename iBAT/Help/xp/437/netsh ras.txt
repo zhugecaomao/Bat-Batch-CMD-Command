@@ -1,0 +1,22 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+aaaa           - Changes to the `netsh ras aaaa' context.
+add            - Adds items to a table.
+appletalk      - Changes to the `netsh ras appletalk' context.
+delete         - Removes items from a table.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+ip             - Changes to the `netsh ras ip' context.
+ipx            - Changes to the `netsh ras ipx' context.
+set            - Sets configuration information.
+show           - Displays information.
+
+The following sub-contexts are available:
+ aaaa appletalk ip ipx
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

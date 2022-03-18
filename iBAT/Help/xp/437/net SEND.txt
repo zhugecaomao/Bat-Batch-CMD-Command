@@ -1,0 +1,7 @@
+The syntax of this command is:
+
+
+NET SEND 
+{name | * | /DOMAIN[:name] | /USERS} message
+
+

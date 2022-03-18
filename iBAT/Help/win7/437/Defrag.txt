@@ -1,0 +1,43 @@
+Microsoft Disk Defragmenter
+Copyright (c) 2007 Microsoft Corp.
+
+Description:
+
+        Locates and consolidates fragmented files on local volumes to
+        improve system performance.
+
+Syntax:
+
+        defrag <volumes> | /C | /E <volumes>    [/H] [/M | [/U] [/V]]
+        defrag <volumes> | /C | /E <volumes> /A [/H] [/M | [/U] [/V]]
+        defrag <volumes> | /C | /E <volumes> /X [/H] [/M | [/U] [/V]]
+        defrag <volume>                      /T [/H]       [/U] [/V]
+
+Parameters:
+
+        Value   Description
+
+        /A      Perform analysis on the specified volumes.
+
+        /C      Perform the operation on all volumes.
+
+        /E      Perform the operation on all volumes except those specified.
+
+        /H      Run the operation at normal priority (default is low).
+
+        /M      Run the operation on each volume in parallel in the background.
+
+        /T      Track an operation already in progress on the specified volume.
+
+        /U      Print the progress of the operation on the screen.
+
+        /V      Print verbose output containing the fragmentation statistics.
+
+        /X      Perform free space consolidation on the specified volumes.
+
+Examples:
+
+        defrag C: /U /V
+        defrag C: D: /M
+        defrag C:\mountpoint /A /U
+        defrag /C /H /V

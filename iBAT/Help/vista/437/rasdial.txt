@@ -1,0 +1,12 @@
+USAGE:
+        rasdial entryname [username [password|*]] [/DOMAIN:domain]
+                [/PHONE:phonenumber] [/CALLBACK:callbacknumber]
+                [/PHONEBOOK:phonebookfile] [/PREFIXSUFFIX]
+
+        rasdial [entryname] /DISCONNECT
+
+        rasdial
+
+        For Online Privacy Information please refer to
+        'http://go.microsoft.com/fwlink/?LinkId=34493'
+

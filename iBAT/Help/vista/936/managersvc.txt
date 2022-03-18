@@ -1,0 +1,4 @@
+Backburner Manager version 2008.1
+Usage:
+  managersvc -i to Install Service
+  managersvc -r to Remove Service

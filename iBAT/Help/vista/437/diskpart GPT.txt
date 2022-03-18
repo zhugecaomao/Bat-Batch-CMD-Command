@@ -1,0 +1,56 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    On basic GUID partition table (GPT) disks, assigns the GPT attribute(s) to
+    the partition with focus.
+
+Syntax:  GPT ATTRIBUTES=<N>
+
+    ATTRIBUTES=<N>
+
+                The hexadecimal value indicating the attributes to apply to the
+                partition with focus. The GPT attribute field is a 64-bit field
+                that contains two subfields. The higher field is interpreted
+                only in the context of a particular partition type GUID, while
+                the lower field is common to all partition types.
+
+                All partitions have the following attribute:
+
+                0x0000000000000001 marks the partition as required. This
+                indicates to all disk management utilities that the partition
+                should not be deleted. The EFI System partition contains only
+                those binaries necessary to start the operating system. This
+                makes it easy for OEM- or operating system-specific binaries to
+                be placed in other partitions.
+
+                For basic data partitions, the following attribute is defined:
+
+                0x8000000000000000 prevents the partition from having a drive
+                letter automatically assigned. By default, each partition is
+                assigned a new drive letter. Setting this attribute ensures
+                that when a disk is moved to a new computer, a new drive letter
+                will not be automatically generated. Instead, the user can
+                manually assign drive letters.
+
+                Other attributes can be added at any time.
+
+    GPT partition attributes give additional information about the use of the
+    partition. Some attributes are specific to the partition type GUID.
+
+    A basic GPT partition must be selected for this operation to succeed.
+
+    Caution:
+
+        Changing the GPT attributes might cause your basic data volumes to be
+        unmountable or fail to be assigned drive letters. Unless you are an
+        original equipment manufacturer (OEM) or an IT professional experienced
+        with GPT disks, do not change GPT attributes.
+
+Example:
+
+    GPT ATTRIBUTES=0x8000000000000000
+
+DISKPART> 

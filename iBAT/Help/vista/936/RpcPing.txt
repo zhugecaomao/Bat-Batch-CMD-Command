@@ -1,0 +1,189 @@
+用法: 
+rpcping [-t <protseq>] [-s <server_addr>] [-e <endpoint>            
+        |-f <interface UUID>[,MajorVer]] [-O <Interface Object UUID]
+        [-i <#_iterations>] [-u <security_package_id>] [-a <authn_level>]                             
+        [-N <server_princ_name>] [-I <auth_identity>] [-C <capabilities>]
+        [-T <identity_tracking>] [-M <impersonation_type>]
+        [-S <server_sid>] [-P <proxy_auth_identity>] [-F <RPCHTTP_flags>]
+        [-H <RPC/HTTP_authn_schemes>] [-o <binding_options>]
+        [-B <server_certificate_subject>] [-b] [-E] [-q] [-c]
+        [-A <http_proxy_auth_identity>] [-U <HTTP_proxy_authn_schemes>]
+        [-r <report_results_interval>] [-v <verbose_level>] [-d]
+
+
+使用 RPC 来 ping 服务器。选项为:
+
+-t <protseq> - 要使用的协议序列。可以是标准 RPC 协议序列
+    之一 - ncacn_ip_tcp、ncacn_np、ncacn_http 等等。如果未
+    指定，默认值为 ncacn_ip_tcp。
+
+-s <server_addr> - 服务器地址。如果未指定，则将 ping 本地
+    计算机。例如，server、server.com、157.59.244.141
+
+-e <endpoint> - 要 ping 的终结点。如果未指定，则将 ping
+    目标计算机上的终结点映射器。此选项与接口(-f)选项
+    相互排斥。
+
+-o <binding_options> - RPC ping 的绑定选项。有关详细信息
+    请参阅 MSDN (HTTP 上的 RpcStringBindingCompose 和 RPC)。
+
+-f <interface UUID>[,MajorVer] - 要 ping 的接口。
+    此选项与终结点选项相互排斥。该接口被指定为
+    一个 UUID。如果未指定 MajorVer，则将搜寻接口
+    的版本 1。指定了接口时，rpcping 将查询目标
+    计算机上的终结点映射器以检索指定接口的
+    终结点。将使用命令行中指定的选项查询终结点
+    映射器。
+
+-O <Object UUID> - 对象 Uuid，如果接口已注册了一个此类对象。
+
+-i <#_iterations> - 要进行的调用的次数。默认值为 1。
+    指定了多个迭代时，此选项对于测量连接延迟
+    很有用。
+
+-u <security_package_id> - 安全程序包(安全提供程序)，RPC
+    将使用它来实现该调用。该安全程序包被标识为一个编号
+    或一个名称。如果使用了某个编号，则会在
+    RpcBindingSetAuthInfoEx API 中使用相同的编号。下面的表
+    给出了这些名称和编号。名称不区分大小写:
+        Negotiate - 9，或 nego、snego 或 negotiate 三者之一
+        NTLM - 10 或 NTLM
+        SChannel - 14 或 SChannel
+        Kerberos - 16 或 Kerberos
+    如果指定了此选项，则必须指定"无"之外的身份验证
+    级别。此选项无默认值。如果未指定此选项，RPC 将
+    不会为该 ping 使用安全性。
+
+-a <authn_level> - 要使用的身份验证级别。可能的值有
+    connect、call、pkt、integrity 和 privacy。如果指
+    定了此选项，则必须同时指定安全程序包 ID (-u)。此
+    选项无默认值。如果未指定此选项，RPC 将不会为
+    该 ping 使用安全性。
+
+
+-N <server_princ_name> - 指定一个服务器主体名称。与
+    RpcBindingSetAuthInfoEx 的 ServerPrincName 参数具有相同
+    的语义。有关 RpcBidningSetAuthInfoEx 的详细信息，请参阅
+    MSDN。仅当选中身份验证级别和安全程序包时，才可以使用此字段。
+
+-I <auth_identity> - 允许您指定其他标识以连接到
+    该服务器。该标识使用“用户,域,密码”格式，其中
+    这三个字段具有明显的含义。如果该用户名、域或
+    密码具有可以由 shell 解释的特殊字符，请确保
+    将该标识括在双引号中。您可以指定 * 来代替该
+    密码，RPC 将提示您输入该密码，而不会在屏幕上
+    回显它。如果未指定此字段，则将使用已登录用户
+    的标识。仅当选中身份验证级别和安全程序包时，
+    才可以使用此字段。
+
+-C <capabilities> - 标志的一个十六进制位掩码。它与 MSDN 中
+    描述的 RPC_SECURITY_QOS 结构中的“容量”字段具有相同的
+    含义。仅当选中身份验证级别和安全程序包时，才可以使用
+    此字段。
+
+-T <identity_tracking> - 可以为静态或动态。如果未指定，
+    默认值为动态。仅当选中身份验证级别和安全程序包时，
+    才可以使用此字段。
+
+-M <impersonation_type> - 可以为匿名、标识、模拟或
+    委派。默认值为模拟。仅当选中身份验证级别和安全
+    程序包时，才可以使用此字段。  
+
+
+-S <server_sid> - 服务器的预期 SID。有关详细信息，
+    请参阅 MSDN 中的 RPC_SECURITY_QOS 结构中的 Sid 字段。
+    使用此选项要求 Windows .NET Server 2003 或更高版本。
+    仅当选中身份验证级别和安全数据包时，才可以使用此
+    字段。
+
+-P <proxy_auth_identity> - 指定用以对 RPC/HTTP 代理进行
+    身份验证的标识。对于 -I 选项，具有相同的格式。
+    另外，为了使用此选项，必须指定安全程序包(-u)、
+    身份验证级别(-a)和身份验证方案(-H)。
+
+-F <RPCHTTP_flags> - 为 RPC/HTTP 前端身份验证
+    传递的标志。可以将这些标志指定为编号或名称
+    当前可以识别的标志有:
+        使用 SSL - 1 或 ssl 或 use_ssl
+        使用 first auth scheme - 2 或 first 或 use_first
+    有关详细信息，请参阅 RPC_HTTP_TRANSPORT_CREDENTIALS
+    中的“标志”字段。另外，为了使用此选项，必须指定安全
+    程序包(-u)和身份验证级别(-a)。
+
+-H <RPC/HTTP_authn_schemes> - 用于 RPC/HTTP 前端身份验证
+    的身份验证方案。此选项是一个由逗号分隔的数字值或名称
+    列表。例如，Basic,NTLM。可以识别的值有(名称不区分
+    大小写):
+        基本 - 1 或 Basic
+        NTLM - 2 或 NTLM
+        证书 - 65536 或 Cert
+    另外，为了使用此选项，必须指定安全程序包(-u)和身份
+    验证级别(-a)。
+
+-B <server_certificate_subject> - 服务器证书主题。有关
+    详细信息，请参阅 MSDN 中的 RPC_HTTP_TRANSPORT_CREDENTIALS
+    结构中的 ServerCertificateSubject 字段。必须使用
+    SSL 以使此选项工作。另外，为了使用此选项，必须
+    指定安全程序包(-u)和身份验证级别(-a)。
+
+-b - 从服务器发送的证书中检索
+    服务器证书主题并将它显示到屏幕上或记录到日志文件中。仅当
+    指定“仅代理回显”选项(-E)和“使用 SSL”选项时才有效。
+    另外，为了使用此选项，必须指定安全程序包(-u)和身份
+    验证级别(-a)。
+
+-R - 指定 HTTP 代理。如果它为“无”，我们将不使用 HTTP
+    代理而直接尝试 RPC 代理。值“默认”意味着将使用您的
+    客户端计算机中的 IE 设置。任何其他值都将被视
+    为显式 HTTP 代理。如果未指定此标志，则认为是
+    默认值，即选中 IE 设置。仅当启用 -E(仅回显)
+    标志时此标志才有效。
+
+
+-E - 将该 ping 限制为仅用于 RPC/HTTP 代理服务器。无法通过该 ping 访问
+    该服务器。尝试建立时很有用，不论 RPC/HTTP
+    代理服务器是否可访问。另外，为了使用此选项，必须指定
+    安全数据包(-u)和身份验证级别(-a)。若要指定 HTTP 代理服务器，
+    请使用 -R 标志。如果在 -o 标志中指定 HTTP 代理服务器，
+    则将忽略此选项。
+
+-q - 安静模式。除密码之外，不会发出任何提示。假定
+    对所有查询均为 "Y" 响应。请慎重使用此选项。
+
+-c - 使用智能卡证书。RPCPing 将提示用户选择
+    智能卡。
+
+-A <http_proxy_auth_identity> - 指定使用对 HTTP 代理服务器进行
+    身份验证的标识。具有与用于 -I 选项相同的格式。
+    另外，为了使用此选项，必须指定身份验证方案(-U)、
+    安全数据包(-u)以及身份验证级别(-a)。
+
+-U <HTTP_proxy_authn_schemes> - 用于 HTTP 代理服务器身份验证
+    的身份验证方案。此选项是一个由逗号分隔的一系列数字值或
+    名称。例如，Basic,NTLM。已识别的值如下(名称不
+    区分大小写):
+        Basic - 1 或 Basic
+        NTLM - 2 或 NTLM
+    为了使用此选项，必须指定安全数据包(-u)
+    和身份验证级别(-a)。
+
+-r <report_results_interval> - 如果已指定多个迭代，则在上一次调用后
+    该选项将使得 rpcping 定期显示当前的执行统计信息。报告间隔以秒为单位
+    提供。默认值为 15。
+
+-v <verbose_level> - 向 rpcping 提供输出内容的详细程度。
+    默认值为 1. 2 并且 3 提供 rpcping 的更多输出内容。
+
+-d - 启动 RPC 网络诊断 UI
+
+示例: 查明通过 RPC/HTTP 连接的 Exchange 服务器
+是否可访问:
+    rpcping -t ncacn_http -s exchange_server -o RpcProxy=front_end_proxy
+        -P "username,domain,*" -H Basic -u NTLM -a connect -F 3
+提示输入密码时，请输入该密码。exchange_server 是 Exchange
+服务器的名称；front_end_proxy 是代理服务器的名称；用户名
+和域是会在 Outlook 提示中输入的用户名和域。其他
+参数将请求 rpcping 来 ping Exchange 服务器，其方式
+与 Outlook 将连接到该服务器以获取典型配置文件的方式完全
+相同。
+

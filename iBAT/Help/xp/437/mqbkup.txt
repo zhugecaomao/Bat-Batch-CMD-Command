@@ -1,0 +1,10 @@
+Microsoft (R) Message Queue Backup\Restore Utility Version 3.00
+版权所有 (C) Microsoft 1997-2001. 保留所有权利。
+
+用法:   mqbkup [-b | -r] [-y] backup_path
+
+参数:
+-b      备份到 backup_path
+-r      从 backup_path 还原
+-y      不提示(对所有问题都回答“是”)
+-?      打印此帮助

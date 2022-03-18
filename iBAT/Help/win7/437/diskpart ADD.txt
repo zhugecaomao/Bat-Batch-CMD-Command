@@ -1,0 +1,42 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Mirrors the simple volume with focus to the specified disk.
+
+Syntax:  ADD DISK=<N> [ALIGN=<N>] [WAIT] [NOERR]
+
+    DISK=<N>    Specifies a disk, other than the one containing the existing
+                simple volume, to contain the mirror. You can mirror only
+                simple volumes. The specified disk must have unallocated space
+                at least as large as the size of the simple volume you want to
+                mirror.
+
+    ALIGN=<N>   Typically used with hardware RAID Logical Unit Number (LUN)
+                arrays to improve performance. Aligns all volume extents to
+                the closest alignment boundary. The extent offsets will be
+                a multiple of <N>. 
+
+    WAIT        Waits for the volume to finish synchronizing with the added
+                disk before returning. Without the WAIT parameter, DiskPart
+                returns after the mirrored volume is created and does not wait
+                for the synchronization to complete.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    A volume must be selected for this operation to succeed.    
+    
+    Fault-tolerant volumes such as RAID-5 and mirrored volumes are not
+    supported in any edition of Windows Vista.
+    
+
+Example:
+
+    ADD DISK=2
+
+DISKPART> 

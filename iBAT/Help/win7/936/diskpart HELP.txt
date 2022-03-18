@@ -1,0 +1,21 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    显示可用命令列表或指定命令的详细帮助信息。
+
+
+语法:  HELP [<COMMAND>]
+
+    <COMMAND>   要显示其详细帮助的命令。
+
+    如果未指定命令，HELP 将显示所有可能的命令。
+
+示例:
+
+    HELP
+    HELP CREATE PARTITION PRIMARY
+
+DISKPART> 

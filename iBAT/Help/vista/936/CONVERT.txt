@@ -1,0 +1,14 @@
+将 FAT 卷转换成 NTFS。
+
+CONVERT volume /FS:NTFS [/V] [/CvtArea:filename] [/NoSecurity] [/X]
+
+
+  volume      指定驱动器号(后面跟一个冒号)、装入点或卷名。
+  /FS:NTFS    指定要将此卷转换成 NTFS。
+  /V          指定将用详细模式运行转换。
+  /CvtArea:filename
+              将根目录中的一个连续文件指定为
+              NTFS 系统文件的占位符。
+  /NoSecurity 指定所有用户均可以访问转换文件和目录的安全设置。
+  /X          如果必要，先强行卸除卷。
+              该卷的所有打开的句柄将无效。

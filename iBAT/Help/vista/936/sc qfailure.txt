@@ -1,0 +1,4 @@
+描述:
+        检索在失败服务上执行的操作。
+用法:
+        sc <server> qfailure [service name] <bufferSize>

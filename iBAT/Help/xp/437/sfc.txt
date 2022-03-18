@@ -1,0 +1,16 @@
+
+Microsoft(R) Windows XP Windows File Checker Version 5.1
+(C) 1999-2000 Microsoft Corp. All rights reserved
+
+Scans all protected system files and replaces incorrect versions with correct Mi
+crosoft versions.
+
+SFC [/SCANNOW] [/SCANONCE] [/SCANBOOT] [/REVERT] [/PURGECACHE] [/CACHESIZE=x]
+
+
+/SCANNOW        Scans all protected system files immediately.
+/SCANONCE       Scans all protected system files once at the next boot.
+/SCANBOOT       Scans all protected system files at every boot.
+/REVERT         Return scan to default setting.
+/PURGECACHE     Purges the file cache.
+/CACHESIZE=x    Sets the file cache size.

@@ -1,0 +1,8 @@
+The syntax of this command is:
+
+
+NET USER 
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+

@@ -1,0 +1,9 @@
+中断终端会话的连接
+
+TSDISCON [sessionid | sessionname] [/SERVER:servername] [/V]
+
+  sessionid           会话 ID。
+  sessionname         会话名称。
+  /SERVER:servername  指定终端服务器(默认值是当前服务器)。
+  /V                  显示有关执行的操作的信息。
+

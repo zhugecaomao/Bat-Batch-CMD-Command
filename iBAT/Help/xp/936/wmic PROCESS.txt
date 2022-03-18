@@ -1,0 +1,15 @@
+
+PROCESS - 进程管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+PROCESS ASSOC [<format specifier>]
+PROCESS CALL <method name> [<actual param list>]
+PROCESS CREATE <assign list>
+PROCESS DELETE
+PROCESS GET [<property list>] [<get switches>]
+PROCESS LIST [<list format>] [<list switches>]
+

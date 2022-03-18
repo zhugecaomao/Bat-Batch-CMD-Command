@@ -1,0 +1,23 @@
+
+下列指令有效:
+
+此上下文中的命令:
+?              - 显示命令列表。
+consec         - 更改到 `netsh advfirewall consec' 上下文。
+dump           - 显示一个配置脚本。
+export         - 将当前策略导出到文件。
+firewall       - 更改到 `netsh advfirewall firewall' 上下文。
+help           - 显示命令列表。
+import         - 将策略文件导入当前策略存储。
+mainmode       - 更改到 `netsh advfirewall mainmode' 上下文。
+monitor        - 更改到 `netsh advfirewall monitor' 上下文。
+reset          - 将策略重置为默认全新策略。
+set            - 设置每个配置文件或全局设置。
+show           - 显示配置文件或全局属性。
+
+下列的子上下文可用:
+ consec firewall mainmode monitor
+
+若需要命令的更多帮助信息，请键入命令，接着是空格，
+后面跟 ?。
+

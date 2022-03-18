@@ -1,0 +1,84 @@
+Displays or alters the encryption of directories [files] on NTFS partitions.
+
+  CIPHER [/E | /D | /C] 
+         [/S:directory] [/B] [/H] [pathname [...]]
+  
+  CIPHER /K
+  
+  CIPHER /R:filename [/SMARTCARD]
+  
+  CIPHER /U [/N]
+  
+  CIPHER /W:directory
+  
+  CIPHER /X[:efsfile] [filename]
+  
+  CIPHER /Y
+ 
+  CIPHER /ADDUSER [/CERTHASH:hash | /CERTFILE:filename] 
+         [/S:directory] [/B] [/H] [pathname [...]]
+ 
+  CIPHER /REMOVEUSER /CERTHASH:hash
+         [/S:directory] [/B] [/H] [pathname [...]]
+
+  CIPHER /REKEY [pathname [...]]
+
+    /B        Abort if an error is encountered.  By default, CIPHER continues 
+              executing even if errors are encountered.  
+    /C        Displays information on the encrypted file. 
+    /D        Decrypts the specified files or directories. 
+    /E        Encrypts the specified files or directories. Directories will be 
+              marked so that files added afterward will be encrypted. The 
+              encrypted file could become decrypted when it is modified if the
+              parent directory is not encrypted. It is recommended that you 
+              encrypt the file and the parent directory.
+    /H        Displays files with the hidden or system attributes.  These
+              files are omitted by default.
+    /K        Creates a new certificate and key for use with EFS. If
+              this option is chosen, all the other options will be ignored.
+    /N        This option only works with /U. This will prevent keys being
+              updated. This is used to find all the encrypted files on the 
+              local drives.
+    /R        Generates an EFS recovery agent key and certificate, then writes
+              them to a .PFX file (containing certificate and private key) and 
+              a .CER file (containing only the certificate). An administrator
+              may add the contents of the .CER to the EFS recovery policy to 
+              create the recovery agent for users, and import the .PFX to 
+              recover individual files.  If SMARTCARD is specified, then writes
+              the recovery key and certificate to a smart card.  A .CER file is 
+              generated (containing only the certificate).  No .PFX file is 
+              generated.              
+    /S        Performs the specified operation on directories in the given
+              directory and all subdirectories.
+    /U        Tries to touch all the encrypted files on local drives. This will
+              update user's file encryption key or recovery agent's key to the
+              current ones if they are changed. This option does not work with
+              other options except /N.
+    /W        Removes data from available unused disk space on the entire 
+              volume. If this option is chosen, all other options are ignored.
+              The directory specified can be anywhere in a local volume. If it 
+              is a mount point or points to a directory in another volume, the
+              data on that volume will be removed.
+    /X        Backup EFS certificate and keys into file filename. If efsfile is
+              provided, the current user's certificate(s) used to encrypt the
+              file will be backed up. Otherwise, the user's current EFS 
+              certificate and keys will be backed up.
+    /Y        Displays your current EFS certificate thumbnail on the local PC.
+    /ADDUSER  Adds a user to the specified encrypted file(s).  If CERTHASH is
+              provided, cipher will search for a certificate with this SHA1 
+              hash.  If CERTFILE is provided, cipher will extract the 
+              certificate from the file. 
+    /REKEY    Updates the specified encrypted file(s) to use the configured
+              EFS current key.
+    /REMOVEUSER     Removes a user from the specified file(s).  CERTHASH
+              must be the SHA1 hash of the certificate to remove. 
+    
+    directory A directory path.
+    filename  A filename without extensions.
+    pathname  Specifies a pattern, file or directory.
+    efsfile   An encrypted file path.
+
+    Used without parameters, CIPHER displays the encryption state of
+    the current directory and any files it contains. You may use multiple
+    directory names and wildcards.  You must put spaces between multiple
+    parameters.

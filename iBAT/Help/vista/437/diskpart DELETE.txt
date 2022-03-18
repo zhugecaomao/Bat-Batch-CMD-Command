@@ -1,0 +1,13 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.0.6002
+
+DISK        - Delete a missing disk from the disk list.
+PARTITION   - Delete the selected partition.
+VOLUME      - Delete the selected volume.
+
+DISKPART> 

@@ -1,0 +1,6 @@
+
+FORCEDOS [/D directory] filename [parameters]
+/D directory    Specifies the current directory for
+                the specified program to use.
+filename        Specifies the program to start.
+parameters      Specifies parameters to pass to the program.

@@ -1,0 +1,15 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+install        - Installs the component corresponding to the current context.
+set            - Sets configuration information.
+show           - Displays information.
+uninstall      - Removes the component corresponding to the current context.
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

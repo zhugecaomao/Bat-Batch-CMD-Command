@@ -1,0 +1,139 @@
+
+POWERCFG [/LIST | /QUERY [name] | /CREATE name | /DELETE name |
+       /SETACTIVE name | /CHANGE name settings |
+       /HIBERNATE {ON|OFF} | /EXPORT name [/FILE filename] |
+       /IMPORT name [/FILE filename] | /GLOBALPOWERFLAG {ON|OFF} /OPTION flag |
+       /BATTERYALARM {LOW|CRITICAL} [settings] |
+       /DEVICEQUERY queryflags | /DEVICEENABLEWAKE devicename |
+       /DEVICEDISABLEWAKE devicename | /?]
+
+Description:
+    This command line tool enables an administrator to control
+    the power settings on a system.
+
+Parameter List:
+    /LIST, /L       Lists the names of existing power schemes.
+    /QUERY, /Q      Displays the configuration of the specified power scheme.
+                    If no name is specified, the configuration of the currently
+                    active power scheme is displayed.
+    /CREATE, /C     Creates a power scheme with the specified name.  The new
+                    scheme is created with the properties of the currently
+                    active scheme.
+    /DELETE, /D     Deletes the power scheme with the specified name.
+    /SETACTIVE, /S  Makes the power scheme with the specified name active.
+    /CHANGE, /X     Changes settings of the specified power scheme. Additional
+                    switches specify the changes as follows:
+                        /monitor-timeout-ac <minutes>
+                        /monitor-timeout-dc <minutes>
+                        /disk-timeout-ac <minutes>
+                        /disk-timeout-dc <minutes>
+                        /standby-timeout-ac <minutes>
+                        /standby-timeout-dc <minutes>
+                        /hibernate-timeout-ac <minutes>
+                        /hibernate-timeout-dc <minutes>
+                        /processor-throttle-ac <throttle>
+                        /processor-throttle-dc <throttle>
+                    AC settings are used when the system is on AC power.
+                    DC settings are used when the system is on battery power.
+                    Setting a timeout to zero will disable the corresponding
+                    timeout feature.  Supported throttle settings are NONE
+                    CONSTANT, DEGRADE, and ADAPTIVE.
+    /EXPORT, /E     Exports the power scheme with the specified name to a
+                    file.  If no filename is specified, the default is
+                    SCHEME.POW.  This additional parameter is supported:
+                        /FILE <filename>
+    /IMPORT, /I     Imports the power scheme from a file under the specified
+                    name.  If no filename is specified, the default is
+                    SCHEME.POW.  If a scheme with that name already exists, it
+                    is replaced with the new one.  This additional parameter
+                    is supported:
+                        /FILE <filename>
+    /HIBERNATE, /H {ON|OFF}  Enables/Disables the hibernate feature.  Hibernate
+                    timeout is not supported on all systems.
+    /NUMERICAL, /N  Allows the power scheme to be operated upon to be specified
+                    using a numerical identifier.  When using this switch, in
+                    place of the name of the power scheme on the command line,
+                    specify its numerical identifier.  This switch may be used
+                    in combination with the /QUERY, /DELETE, /SETACTIVE,
+                    /CHANGE, /EXPORT, and /IMPORT commands.
+    /GLOBALPOWERFLAG, /G {ON|OFF}  Turns one of the global power flags on/off.
+                    Valid flags (to be used after "/OPTION ") are:
+                         BATTERYICON:    Turns the battery meter icon in the
+                                         system tray on/off.
+                         MULTIBATTERY:   Turns on/off multiple battery display
+                                         in system Power Meter.
+                         RESUMEPASSWORD: Prompt for password on resuming the
+                                         system.
+                         WAKEONRING:     Turn on/off wake on ring support.
+                         VIDEODIM:       Turn on/off support for dimming video
+                                         display on battery power.
+    /AVAILABLESLEEPSTATES, /A  Reports the sleep states available on the
+                    system.  Attempts to report reasons why sleep states are
+                    unavailable.
+    /BATTERYALARM, /B {LOW|CRITICAL}  Configures the battery alarm.  The
+                    following switches can be specified:
+                        /activate <on|off>
+                            Enables or disables the alarm.
+                        /level <percentage (0 - 100)>
+                            The alarm will be activated when the power level
+                            reaches this percentage.
+                        /text <on|off>
+                            Turns the text notification on or off.
+                        /sound <on|off>
+                            Turns the audible notification on or off.
+                        /action <none|shutdown|hibernate|standby>
+                            Specifies the action to take when this alarm goes
+                            off.  Not all actions are always available.
+                        /forceaction <on|off>
+                            Force stand by or shutdown even if a program stops
+                            responding.
+                        /program <on|off>
+                            Specifies a program to run.  schtasks.exe /change
+                           may be used to configure the program.
+    /DEVICEQUERY <queryflags> will return a list of devices that meet the
+                    criteria specified in <queryflags>.  Possible values
+                    for <queryflags> are:
+                    wake_from_S1_supported - return all devices that support
+                             waking the system from a light sleep state.
+                    wake_from_S2_supported - return all devices that support
+                             waking the system from a deeper sleep state.
+                    wake_from_S3_supported - return all devices that support
+                             waking from the deepest sleep state.
+                    wake_from_any - return all devices that support waking
+                             from any sleep state.
+                    S1_supported - list devices supporting light sleep states.
+                    S2_supported - list devices supporting deeper sleep.
+                    S3_supported - list devices supporting deepest sleep.
+                    S4_supported - list devices supporting system hibernation.
+                    wake_programmable - list devices that are user-configurable
+                             to wake the system from a sleep state.
+                    wake_armed - list devices that are currently configured to
+                             wake the system from any sleep state.
+                    all_devices - return all devices present in the system.
+                    all_devices_verbose - return verbose list of devices.
+    /DEVICEENABLEWAKE <devicename> enable the device to wake the system from a
+                    sleep state. <devicename> is a device retrieved using
+                    the '/DEVICEQUERY wake_programmable' parameter.
+    /DEVICEDISABLEWAKE <devicename> disable the device from waking the system
+                    from a sleep state. <devicename> is a device retrieved
+                    using the '/DEVICEQUERY wake_armed' parameter.
+    /HELP, /?       Displays information on command-line parameters.
+
+Examples:
+    POWERCFG /LIST
+    POWERCFG /QUERY scheme
+    POWERCFG /QUERY
+    POWERCFG /CREATE scheme
+    POWERCFG /DELETE scheme
+    POWERCFG /SETACTIVE scheme
+    POWERCFG /CHANGE scheme /monitor-timeout-dc 15
+    POWERCFG /CHANGE scheme /monitor-timeout-dc 0
+    POWERCFG /HIBERNATE on
+    POWERCFG /EXPORT scheme /file file
+    POWERCFG /QUERY number /NUMERICAL
+    POWERCFG /GLOBALPOWERFLAG on /OPTION BATTERYICON
+    POWERCFG /AVAILABLESLEEPSTATES
+    POWERCFG /BATTERYALARM low
+    POWERCFG /BATTERYALARM critical /ACTIVATE on /LEVEL 6 /ACTION hibernate
+    POWERCFG /DEVICEQUERY wake_armed
+    POWERCFG /DEVICEENABLEWAKE "Microsoft USB IntelliMouse Explorer"

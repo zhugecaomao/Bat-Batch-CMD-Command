@@ -1,0 +1,40 @@
+
+SCHTASKS /Change [/S system [/U username [/P password]]] {[/RU runasuser]
+    [/RP runaspassword] [/TR taskrun]} /TN taskname
+
+描述:
+    更改要运行的程序，或计划任务
+    使用的用户帐户和密码。
+
+参数列表:
+    /S       system           要连接到的远程系统。
+
+    /U       username         指定要执行命令的
+                              用户上下文。
+
+    /P       password         指定给定用户上下文
+                              密码。
+
+    /RU      username         更改要运行此计划任务的
+                              用户名 (用户上下文)。
+                              对于系统帐户，有效值是
+                              ""，"NT AUTHORITY\SYSTEM" 或 "SYSTEM"。
+
+    /RP      password         指定已有的用户上下文的
+                              密码或新用户帐户的
+                              密码。密码不会影响
+                              系统帐户。
+
+    /TR      taskrun          指定这个计划任务运行的新
+                              程序。键入程序的路径
+                              和文件名。
+
+    /TN      taskname         Specifies which scheduled task to change.
+
+    /?                        显示帮助/用法信息。
+
+示例:
+    SCHTASKS /Change /RP password /TN "备份和还原"
+    SCHTASKS /Change /TR restore.exe /TN "启动还原"
+    SCHTASKS /Change /S system /U user /P password /RU newuser 
+             /TN "启动还原"

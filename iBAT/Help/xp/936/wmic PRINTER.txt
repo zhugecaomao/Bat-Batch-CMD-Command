@@ -1,0 +1,16 @@
+
+PRINTER - 打印机设备管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+PRINTER ASSOC [<format specifier>]
+PRINTER CALL <method name> [<actual param list>]
+PRINTER CREATE <assign list>
+PRINTER DELETE
+PRINTER GET [<property list>] [<get switches>]
+PRINTER LIST [<list format>] [<list switches>]
+PRINTER SET [<assign list>]
+

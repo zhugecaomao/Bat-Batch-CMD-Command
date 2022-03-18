@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Retrieves the description string of a service.
+USAGE:
+        sc <server> qdescription [service name] <bufferSize>

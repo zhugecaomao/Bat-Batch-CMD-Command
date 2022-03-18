@@ -1,0 +1,15 @@
+创建、删除或列出卷装载点。
+
+MOUNTVOL [drive:]path VolumeName
+MOUNTVOL [drive:]path /D
+MOUNTVOL [drive:]path /L
+
+    path        指定装入点将驻留的现有 NTFS 目录。
+    VolumeName  指定装入点的目标的卷名称。
+    /D          从指定的目录中删除卷装入点。
+    /L          列出指定目录的已装入的卷名称。
+
+当前装载点的 VolumeName 可能值为:
+
+    \\?\Volume{12e3d724-eff5-11e0-bafb-806d6172696f}\
+        C:\

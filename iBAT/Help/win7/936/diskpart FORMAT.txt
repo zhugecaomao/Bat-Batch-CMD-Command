@@ -1,0 +1,64 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    格式化指定卷以便在 Windows 中使用。
+
+语法:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
+                [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT] 
+                [NOERR]
+
+    FS=<FS>     指定文件系统的类型。如果未指定文件系统，
+                则使用 FILESYSTEMS 命令显示的默认文件系统。
+
+    REVISION=<X.XX>
+
+                指定文件系统修订版(如果适用)。
+
+    RECOMMENDED 如果指定，则使用建议的文件系统和修订版
+                (如果存在)，而不使用默认系统。可以通过
+                FILESYSTEMS 命令显示建议的文件系统
+                (如果存在)。
+
+    LABEL=<"label">
+
+                指定卷标。
+
+    UNIT=<N>    替代默认分配单元大小。对于一般用途，强烈
+                建议使用默认设置。可以通过 FILESYSTEMS
+                命令显示特定文件系统的默认分配单元大小。
+
+                对于大于 4096 的分配单元大小，不支持 NTFS
+                压缩。
+
+    QUICK       执行快速格式化。
+
+    COMPRESS    仅限于 NTFS: 默认情况下压缩在新卷上创建的
+                文件。
+
+    OVERRIDE    如果必要，可强制先卸载文件系统。该卷
+                所有打开的句柄将不再有效。
+
+    DUPLICATE   仅限于 UDF: 该标志应用于 UDF 格式，版本 2.5 或更高。
+                该标志指示格式化操作将文件系统元数据复制到磁盘上的另一扇区集。
+                复制的元数据由操作系统使用，例如，用于修复或恢复应用程序。如果
+                发现主元数据扇区已损坏，则将从复制的扇区中读取文件系统元数据。
+
+    NOWAIT      强制该命令在格式化正在进行的过程中立即返回。
+                如果未指定 NOWAIT，DiskPart 将以百分比形式显示格式进度。
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart 会继续
+                处理命令，如同没有出现错误一样。如果不使用
+                NOERR 参数，错误会导致 DiskPart
+                退出并返回错误代码。
+
+    必须选择一个卷才能继续执行此操作。
+
+示例:
+
+    FORMAT FS=NTFS LABEL="New Volume" QUICK COMPRESS
+    FORMAT RECOMMENDED OVERRIDE
+
+DISKPART> 

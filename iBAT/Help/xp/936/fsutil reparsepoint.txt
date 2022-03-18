@@ -1,0 +1,4 @@
+---- 支持的 REPARSEPOINT 命令 ----
+
+query           查询重分析点
+delete          删除重分析点

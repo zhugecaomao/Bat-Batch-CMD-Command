@@ -1,0 +1,14 @@
+
+STARTUP - 用户登录到计算机系统时自动运行命令的管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+STARTUP ASSOC [<format specifier>]
+STARTUP CREATE <assign list>
+STARTUP DELETE
+STARTUP GET [<property list>] [<get switches>]
+STARTUP LIST [<list format>] [<list switches>]
+

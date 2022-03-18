@@ -1,0 +1,15 @@
+用法: AuditPol command [<sub-command><options>]
+
+
+命令 (每次执行仅允许一个命令)
+  /?               帮助(与上下文相关)
+  /get             显示当前审核策略。
+  /set             设置审核策略。
+  /list            显示可选择的策略元素。
+  /backup          将审核策略保存到文件。
+  /restore         将审核策略从文件还原。
+  /clear           清除审核策略。
+  /remove          删除用户帐户的每用户审核策略。
+
+
+有关每个命令的详细信息，请使用 AuditPol <command> /?

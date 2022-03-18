@@ -1,0 +1,14 @@
+
+BASEBOARD - 基板 (也叫母板或系统板) 管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+BASEBOARD ASSOC [<format specifier>]
+BASEBOARD CREATE <assign list>
+BASEBOARD DELETE
+BASEBOARD GET [<property list>] [<get switches>]
+BASEBOARD LIST [<list format>] [<list switches>]
+

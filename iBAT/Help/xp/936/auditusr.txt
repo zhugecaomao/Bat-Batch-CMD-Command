@@ -1,0 +1,30 @@
+Auditusr - 设置每用户审核策略。
+/? 显示命令行帮助。
+如果未给定参数，那么将显示当前设置。
+指定下列参数之一:
+/is <security principal>:<list of comma-delimited categories>
+   添加或更改包括-成功项
+/if <security principal>:<list of comma-delimited categories>
+   添加或更改包括-失败项
+/es <security principal>:<list of comma-delimited categories>
+   添加或更改排除-成功项
+/ef <security principal>:<list of comma-delimited categories>
+   添加或更改排除-失败项
+/r <security principal>
+   从该安全主体删除所有每用户审核项
+/ra
+   删除所有每用户审核项
+/e <filename>
+   将当前每用户审核设置导出到文件
+/i <filename>
+   从文件导入当前每用户审核设置
+有效的类别:
+系统事件
+登录/注销
+对象访问
+特权使用
+详细追踪
+策略改动
+帐户管理
+目录服务访问
+帐户登录

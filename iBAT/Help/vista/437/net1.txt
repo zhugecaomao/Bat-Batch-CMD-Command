@@ -1,0 +1,6 @@
+The syntax of this command is:
+
+NET
+    [ ACCOUNTS | COMPUTER | CONFIG | CONTINUE | FILE | GROUP | HELP |
+      HELPMSG | LOCALGROUP | PAUSE | PRINT | SESSION | SHARE | START |
+      STATISTICS | STOP | TIME | USE | USER | VIEW ]

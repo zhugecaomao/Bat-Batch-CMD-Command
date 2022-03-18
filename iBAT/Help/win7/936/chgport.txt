@@ -1,0 +1,8 @@
+为 DOS 应用程序兼容性列出或改变 COM 端口映射。
+
+CHANGE PORT [portx=porty | /D portx | /QUERY]
+
+  portx=porty  将端口 x 映射到端口 y。
+  /D portx    删除端口 x 的映射。
+  /QUERY      显示当前映射端口。
+

@@ -1,0 +1,7 @@
+---- TRANSACTION Commands Supported ----
+
+commit          Commit a specified transaction
+list            Display currently running transactions
+fileinfo        Display transaction information for a specific file
+query           Display information on a specified transaction
+rollback        Rollback a specified transaction

@@ -1,0 +1,13 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.1.7600
+
+PARTITION   - Create a partition.
+VOLUME      - Create a volume.
+VDISK       - Creates a virtual disk file.
+
+DISKPART> 

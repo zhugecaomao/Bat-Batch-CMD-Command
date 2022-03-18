@@ -1,0 +1,26 @@
+
+下列指令有效:
+
+此上下文中的命令:
+6to4           - 更改到 `netsh interface 6to4' 上下文。
+?              - 显示命令列表。
+add            - 向表中添加一个配置项目。
+delete         - 从表中删除一个配置项目。
+dump           - 显示一个配置脚本。
+help           - 显示命令列表。
+ipv4           - 更改到 `netsh interface ipv4' 上下文。
+ipv6           - 更改到 `netsh interface ipv6' 上下文。
+isatap         - 更改到 `netsh interface isatap' 上下文。
+portproxy      - 更改到 `netsh interface portproxy' 上下文。
+reset          - 复位信息。
+set            - 设置配置信息。
+show           - 显示信息。
+tcp            - 更改到 `netsh interface tcp' 上下文。
+teredo         - 更改到 `netsh interface teredo' 上下文。
+
+下列的子上下文可用:
+ 6to4 ipv4 ipv6 isatap portproxy tcp teredo
+
+若需要命令的更多帮助信息，请键入命令，接着是空格，
+后面跟 ?。
+

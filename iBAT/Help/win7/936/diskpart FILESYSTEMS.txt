@@ -1,0 +1,17 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    显示有关选定卷的当前文件系统以及用于格式化该卷的受支持文件系统的信息。
+
+语法:  FILESYSTEMS
+
+    必须选择一个卷才能成功执行此操作。
+
+示例:
+
+    FILESYSTEMS
+
+DISKPART> 

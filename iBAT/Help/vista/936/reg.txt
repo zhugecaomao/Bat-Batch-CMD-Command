@@ -1,0 +1,30 @@
+
+REG Operation [Parameter List]
+
+  Operation  [ QUERY   | ADD    | DELETE  | COPY    |
+               SAVE    | LOAD   | UNLOAD  | RESTORE |
+               COMPARE | EXPORT | IMPORT  | FLAGS ]
+
+返回代码: (除了 REG COMPARE)
+
+  0 - 成功
+  1 - 失败
+
+要得到有关某个操作的帮助，请键入:
+
+  REG Operation /?
+
+例如:
+
+  REG QUERY /?
+  REG ADD /?
+  REG DELETE /?
+  REG COPY /?
+  REG SAVE /?
+  REG RESTORE /?
+  REG LOAD /?
+  REG UNLOAD /?
+  REG COMPARE /?
+  REG EXPORT /?
+  REG IMPORT /?
+  REG FLAGS /?

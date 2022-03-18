@@ -1,0 +1,4 @@
+---- HARDLINK Commands Supported ----
+
+create          Create a hardlink
+list            Enumerate hardlinks on a file

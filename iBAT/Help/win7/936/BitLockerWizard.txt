@@ -1,0 +1,9 @@
+Bitlocker Wizard Launcher
+        Usage: BitlockerWizard X: <P|R|S|T>
+            P is mapped to  FVEUI_AFTER_TPM_PPI_NO_REBOOT
+            R is mapped to  FVEUI_AFTER_TPM_PPI_REBOOT
+            S is mapped to  FVEUI_MODE_CREATE_NO_REBOOT
+            T is mapped to  FVEUI_MODE_CREATE_AFTER_REBOOT
+            U is mapped to  FVEUI_MODE_DUPLICATEKEY
+            V is mapped to  FVEUI_MODE_RESUME
+

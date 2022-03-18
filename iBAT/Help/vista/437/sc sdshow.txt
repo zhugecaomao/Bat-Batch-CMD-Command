@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Displays a service's security descriptor in SDDL format
+USAGE:
+        sc <server> sdshow <service name> <showrights>

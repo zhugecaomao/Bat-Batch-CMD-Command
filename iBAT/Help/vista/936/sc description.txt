@@ -1,0 +1,4 @@
+描述:
+        设置服务的描述字符串。
+用法:
+        sc <server> description [service name] [description]

@@ -1,0 +1,6 @@
+---- VOLUME Commands Supported ----
+
+dismount        Dismount a volume
+diskfree        Query the free space of a volume
+querycluster    Query which file is using a particular cluster
+

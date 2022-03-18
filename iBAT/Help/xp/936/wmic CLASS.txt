@@ -1,0 +1,6 @@
+
+按 ESC 键回到完整的 WMI 架构。
+用法:
+
+CLASS <class path expr> [<standardverb> [<verb switches>]]
+

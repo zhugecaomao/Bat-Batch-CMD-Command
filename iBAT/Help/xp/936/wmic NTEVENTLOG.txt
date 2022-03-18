@@ -1,0 +1,16 @@
+
+NTEVENTLOG - NT 时间日志文件管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NTEVENTLOG ASSOC [<format specifier>]
+NTEVENTLOG CALL <method name> [<actual param list>]
+NTEVENTLOG CREATE <assign list>
+NTEVENTLOG DELETE
+NTEVENTLOG GET [<property list>] [<get switches>]
+NTEVENTLOG LIST [<list format>] [<list switches>]
+NTEVENTLOG SET [<assign list>]
+

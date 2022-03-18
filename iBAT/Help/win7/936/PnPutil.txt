@@ -1,0 +1,12 @@
+Microsoft PnP 工具
+用法:
+------
+pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF 名称> 
+示例:
+pnputil.exe -a a:\usbcam\USBCAM.INF      -> 添加 USBCAM.INF 指定的程序包
+pnputil.exe -a c:\drivers\*.inf          -> 添加 c:\drivers\ 中的所有程序包\
+pnputil.exe -i -a a:\usbcam\USBCAM.INF   -> 添加和安装驱动程序包
+pnputil.exe -e                           -> 枚举所有第三方程序包
+pnputil.exe -d oem0.inf                  -> 删除程序包 oem0.inf
+pnputil.exe -f -d oem0.inf               -> 强制删除程序包 oem0.inf
+pnputil.exe -?                           -> 此用法屏幕

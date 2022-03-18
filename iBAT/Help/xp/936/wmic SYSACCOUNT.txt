@@ -1,0 +1,14 @@
+
+SYSACCOUNT - 系统帐户管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SYSACCOUNT ASSOC [<format specifier>]
+SYSACCOUNT CREATE <assign list>
+SYSACCOUNT DELETE
+SYSACCOUNT GET [<property list>] [<get switches>]
+SYSACCOUNT LIST [<list format>] [<list switches>]
+

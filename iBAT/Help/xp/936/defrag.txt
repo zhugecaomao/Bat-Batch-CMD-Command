@@ -1,0 +1,7 @@
+用法:
+defrag <volume> [-a] [-f] [-v] [-?]
+  volume  驱动器号或装载点(d: 或 d:\vol\mountpoint)
+  -a      只分析
+  -f      即使可用空间不足，也强制碎片整理
+  -v      详述结果
+  -?      显示这段帮助文字

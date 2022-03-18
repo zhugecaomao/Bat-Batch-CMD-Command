@@ -1,0 +1,14 @@
+
+CSPRODUCT - SMBIOS 的计算机系统产品信息。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+CSPRODUCT ASSOC [<format specifier>]
+CSPRODUCT CREATE <assign list>
+CSPRODUCT DELETE
+CSPRODUCT GET [<property list>] [<get switches>]
+CSPRODUCT LIST [<list format>] [<list switches>]
+

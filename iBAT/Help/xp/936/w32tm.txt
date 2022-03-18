@@ -1,0 +1,80 @@
+w32tm [/? | /register | /unregister ]
+  ? - 此帮助屏幕。
+  register - 注册为作为服务运行并且添加默认
+    配置到注册表。
+  unregister - 解除服务注册并删除所有配置
+    来自注册表的信息。
+
+w32tm /monitor [/domain:<domain name>]
+               [/computers:<name>[,<name>[,<name>...]]]
+               [/threads:<num>]
+  domain - 指定要监视的域。如果没有指定
+    域名，或者没有指定域或者计算机
+    选项，将使用默认域。此选项
+    可以多次使用。
+  computers - 监视给定的计算机列表。计算机
+    名称由逗号分隔，没有空格。如果名称
+    有前缀 '*'，它将被视为一个 PDC。此选项
+    可以多次使用。
+  threads - 同时分析的计算机数量。默认
+    值为 3。允许的范围是 1-50。
+
+w32tm /ntte <NT time epoch>
+  转换一个 NT 系统时间，以 (10^-7)s 间隔从 0h 1-Jan 1601，
+  到一个可读的格式。
+
+w32tm /ntpte <NTP time epoch>
+  转换一个 NTP 时间，以 (2^-32)s 间隔从 0h 1-Jan 1900，到
+  一个可读的格式。
+
+w32tm /resync [/computer:<computer>] [/nowait] [/rediscover] [/soft]
+  告诉计算机它应该尽快同步它的时钟，
+  丢弃所有积累的错误统计。
+  computer:<computer> - 需要重新同步的计算机。如果没有
+    指定，将重新同步本地计算机。
+  nowait - 不等待重新同步发生;
+    立即返回。否则，在返回前等待重新同步
+    执行完毕。
+  rediscover - 重新检测网络配置并重新发现
+    网络资源，然后重新同步。
+  soft - 利用现有错误统计重新同步。没有什么用处， 
+    为兼容性而提供。
+
+w32tm /stripchart /computer:<target> [/period:<refresh>]
+    [/dataonly] [/samples:<count>] 
+  显示此计算机和另一计算机之间的偏移量
+  的条带图。
+  computer:<target> - 要测量偏移量的计算机。
+  period:<refresh> - 在示例之间的时间间隔，以秒为单位。
+    默认为 2 秒
+  dataonly - 只显示数据，没有图表。
+  samples:<count> - 收集 <count> 示例，然后停止。如果没有
+    指定，将一直收集示例，直到按下 Ctrl-C。
+
+w32tm /config [/computer:<target>] [/update]
+    [/manualpeerlist:<peers>] [/syncfromflags:<source>]
+    [/LocalClockDispersion:<seconds>]
+  computer:<target> - 调整 <target> 的配置。如果没有
+    指定，默认为本地计算机。
+  update - 通知时间服务配置被
+    更改，使更改生效。
+  manualpeerlist:<peers> - 设置手动对等列表为 <peers>，
+    which is a space-delimited list of DNS and/or IP addresses.
+    指定多对等端时，该开关必须用引号
+    括起来。
+  syncfromflags:<source> - 设置 NTP 客户要同步自
+    的源。<source> 应该是一个这些关键字的以
+    逗号分隔的列表(不区分大小写):
+      MANUAL - 从手动对等端列表包括对等端
+      DOMHIER - 从域层次的一个 DC 同步
+
+w32tm /tz
+  显示当前时区设置。
+
+w32tm /dumpreg [/subkey:<key>] [/computer:<target>]
+  显示与给定注册键相关的值。
+  默认键为 HKLM\System\CurrentControlSet\Services\W32Time
+    (时间服务的根键)。
+  subkey:<key> - 显示与默认键的子键 <key> 相关的值。
+  computer:<target> - 查询计算机 <target> 的注册表设置
+

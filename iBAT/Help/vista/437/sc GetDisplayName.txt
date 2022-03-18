@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Gets the display name associated with a particular service
+USAGE:
+        sc <server> GetDisplayName <service key name> <bufsize>

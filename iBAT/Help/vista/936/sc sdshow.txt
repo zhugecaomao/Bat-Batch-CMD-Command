@@ -1,0 +1,4 @@
+描述:
+        以 SDDL 格式显示服务的安全描述符
+用法:
+         sc <server> sdshow <service name> <showrights>

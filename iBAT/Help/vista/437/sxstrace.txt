@@ -1,0 +1,14 @@
+WinSxs Tracing Utility.
+Usage: SxsTrace [Options]
+Options:
+   Trace -logfile:FileName [-nostop]
+       Enabling tracing for sxs.
+       Tracing log is saved to FileName.
+       If -nostop is specified, will not prompt to stop tracing.
+   Parse -logfile:FileName -outfile:ParsedFile  [-filter:AppName]
+       Translate the raw trace file into a human readable format and save the result to ParsedFile.
+       Use -filter option to filter the output.
+   Stoptrace
+       Stop the trace if it is not stopped before.
+Example:  SxsTrace Trace -logfile:SxsTrace.etl
+          SxsTrace Parse -logfile:SxsTrace.etl -outfile:SxsTrace.txt

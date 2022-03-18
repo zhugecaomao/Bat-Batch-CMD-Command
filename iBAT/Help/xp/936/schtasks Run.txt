@@ -1,0 +1,24 @@
+
+SCHTASKS /Run [/S system [/U username [/P password]]] /TN taskname
+
+描述:
+     立即运行计划任务。
+
+参数列表:
+    /S           system          指定要连接到的远程
+                                 系统。
+
+    /U           username        指定要执行命令的
+                                 上下文。
+
+    /P           password        指定给定用户上下文的
+                                 定密码。
+
+    /TN          taskname        要运行的计划任务的标识。
+
+    /?                           显示帮助/用法。
+
+示例:
+    SCHTASKS /Run /? 
+    SCHTASKS /Run /TN "Start Backup"
+    SCHTASKS /Run /S system /U user /P password /TN "Backup and Restore"

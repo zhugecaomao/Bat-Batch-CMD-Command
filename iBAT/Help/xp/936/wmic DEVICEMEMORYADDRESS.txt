@@ -1,0 +1,14 @@
+
+DEVICEMEMORYADDRESS - 设备内存地址管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+DEVICEMEMORYADDRESS ASSOC [<format specifier>]
+DEVICEMEMORYADDRESS CREATE <assign list>
+DEVICEMEMORYADDRESS DELETE
+DEVICEMEMORYADDRESS GET [<property list>] [<get switches>]
+DEVICEMEMORYADDRESS LIST [<list format>] [<list switches>]
+

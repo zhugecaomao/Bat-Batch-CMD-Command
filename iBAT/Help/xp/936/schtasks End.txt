@@ -1,0 +1,25 @@
+
+SCHTASKS /End [/S system [/U username [/P password]]] /TN taskname
+
+描述:
+    停止正在运行的计划任务。
+
+参数列表:
+    /S           system           指定要连接到的远程
+                                  系统。
+
+    /U           username         指定要执行命令的
+                                  用户上下文。
+
+    /P           password         指定给定用户上下文的
+                                  密码。
+
+    /TN          taskname         指定要终止的计划
+                                  结束。
+
+    /?                            显示帮助/用法。
+
+示例:
+    SCHTASKS /End /? 
+    SCHTASKS /End /TN "Start Backup"
+    SCHTASKS /End /S system /U user /P password /TN "Backup and Restore"

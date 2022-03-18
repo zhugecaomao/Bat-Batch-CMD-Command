@@ -1,0 +1,4 @@
+Usage:lpremove.exe [/c]
+Running without parameters will create a scheduled task (if running first time) and exit.
+All subsequent runs without /c switch will result in starting lpksetup.exe which will perform a cleanup task for language packs.
+/c - lpremove will delete its scheduled task and exit.

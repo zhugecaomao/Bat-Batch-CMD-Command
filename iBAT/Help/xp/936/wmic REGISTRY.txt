@@ -1,0 +1,15 @@
+
+REGISTRY - 计算机系统注册表管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+REGISTRY ASSOC [<format specifier>]
+REGISTRY CREATE <assign list>
+REGISTRY DELETE
+REGISTRY GET [<property list>] [<get switches>]
+REGISTRY LIST [<list format>] [<list switches>]
+REGISTRY SET [<assign list>]
+

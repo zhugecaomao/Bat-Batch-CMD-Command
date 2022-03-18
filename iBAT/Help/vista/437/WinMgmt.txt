@@ -1,0 +1,61 @@
+
+Windows Management Instrumentation
+
+用法:  winmgmt  [/backup <filename>] [/restore <filename> <flag>]
+                [/resyncperf] [/standalonehost [<level>]] [/sharedhost]
+                [/verifyrepository [<path>]] [/salvagerepository]
+                [/resetrepository]
+
+/backup <filename>
+        使 WMI 将存储库备份到指定的文件名。
+        filename 参数应包含文件位置的完整路径。
+        此过程需要存储库上的写锁定，因此备份过程
+        完成之前，将挂起对存储库的
+        写操作。
+
+/restore <filename> <flag>
+        手动从指定的备份文件还原 WMI 存储库。filename
+        参数应包含备份文件位置的完整路径。为了执行
+        还原操作，如果操作失败，WMI 将保存现有存储
+        库，以便进行写回。然后从在 filename 参数中
+        指定的备份文件还原存储库。如果无法实现对存
+        储库的独占访问，现有客户端将从 WMI 断开连接。
+        flag 参数必须是 1 (强制 -- 断开用户连接并还原)或
+        0 (默认 -- 没有连接的用户时还原)，并且指定还原
+        模式。
+
+/resyncperf
+        使用 WMI 注册系统性能库。
+
+/standalonehost [<level>]
+        将 Winmgmt 服务移动到具有固定 DCOM 终结点的独立 Svchost
+        进程。默认的终结点是 "ncacn_ip_tcp.0.24158"。
+        但是，可以通过运行 Dcomcnfg.exe 更改终结点。level
+        参数是 Svchost 进程的身份验证等级。如果未指定
+        等级，则默认为 4 (RPC_C_AUTHN_LEVEL_PKT)。
+
+/sharedhost
+        将 Winmgmt 服务移动到共享的 Svchost 进程。
+
+/verifyrepository [<path>]
+        在 WMI 存储库上执行一致性检查。添加
+        不带有 <path> 参数的 /verifyrepository
+        开关时，将验证当前由 WMI 使用的活动存储库。
+        指定 path 参数时，可以验证存储库的任何已
+        保存副本。在这种情况下，path 参数应包含已
+        保存的存储库副本的完整路径。已保存的存储库
+        应是整个存储库文件夹的副本。
+
+/salvagerepository
+        在 WMI 存储库上执行一致性检查，如果
+        检测到不一致，则重建存储库。如果可以
+        读取不一致的存储库的内容，则将其合并
+        到重建的存储库。回收操作始终与 WMI 服
+        务当前正在使用的存储库一起工作。包含
+        #pragma autorecover 预处理器声明的 MOF
+        文件被还原到存储库。
+
+/resetrepository
+        首次安装操作系统时，会将存储库重置
+        到原始状态。包含 #pragma autorecover
+        预处理器声明的 MOF 文件被还原到存储库。

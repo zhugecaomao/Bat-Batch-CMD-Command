@@ -1,0 +1,48 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Breaks the mirrored volume with focus into two simple volumes.
+
+Syntax:  BREAK DISK=<N> [NOKEEP] [NOERR]
+
+    DISK=<N>    Specifies a disk that contains one copy of the mirror 
+                volume. When the command has completed, this disk is 
+                given focus, and the new volume created on this disk 
+                using the mirror volume extents does not retain any 
+                drive letters, volume GUID pathnames or mounted folder 
+                paths that had been associated with the mirror volume. 
+                If the mirror volume on the specified disk is used as a
+                system or boot partition, the command fails.
+
+    NOKEEP      Specifies that only one copy of the mirror volume is 
+                retained; the mirror volume extents on disk <N> are converted
+                to free  space. Neither the remaining copy of the mirror 
+                volume, nor the free space on disk <N> receives the focus.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    Applies to dynamic disks only. Breaks the mirrored volume with focus into
+    two simple volumes. One simple volume retains the drive letter, volume 
+    GUID pathnames or mounted folder paths that had been associated with 
+    the mirror volume. The other simple volume receives the focus so you 
+    can assign it a new drive letter (it will automatically be assigned a 
+    volume GUID pathname).
+
+    By default, the contents of both copies of the mirror are retained. Each
+    copy becomes a simple volume. By using the NOKEEP parameter, you retain
+    only one copy of the mirror volume as a simple volume, and the other copy
+    is converted to free space. Neither volume receives the focus.
+
+    A mirror volume must be selected for this operation to succeed.
+
+Example:
+
+    BREAK DISK=2
+
+DISKPART> 

@@ -1,0 +1,4 @@
+Backburner Server version 2008.1
+Usage:
+  serversvc -i to Install Service
+  serversvc -r to Remove Service

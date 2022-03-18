@@ -1,0 +1,25 @@
+
+Microsoft _ Logman.exe (6.0.6002.18005)
+
+Usage:
+  logman [create|query|start|stop|delete|update|import|export] [options]
+
+Verbs:
+  create                        Create a new data collector.
+  query                         Query data collector properties. If no name
+                                is given all data collectors are listed.
+  start                         Start an existing data collector and set the
+                                begin time to manual.
+  stop                          Stop an existing data collector and set the
+                                end time to manual.
+  delete                        Delete an existing data collector.
+  update                        Update an existing data collector's properties.
+  import                        Import a data collector set from an XML file.
+  export                        Export a data collector set to an XML file.
+
+Options:
+  -?                            Displays context sensitive help.
+  -s <computer>                 Perform the command on specified remote system.
+  -config <value>               Settings file containing command options.
+  -ets                          Send commands to Event Trace Sessions
+                                directly without saving or scheduling.

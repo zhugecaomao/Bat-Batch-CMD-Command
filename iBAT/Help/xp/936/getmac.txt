@@ -1,0 +1,35 @@
+
+GETMAC [/S system [/U username [/P [password]]]] [/FO format] [/NH] [/V]
+
+描述:
+    此命令行工具使管理员能够显示系
+    统上一个或多个网卡的 MAC 地址。
+
+参数列表: 
+    /S     system            指定要连接到的远程系统。
+
+    /U     [domain\]user     指定用户上下文，命令在此上下
+                             用户上下文。
+
+    /P     [password]        指定给定用户上下文
+                             密码。如果省略则提示输入。
+
+    /FO    format            指定输出显示的
+                             格式。
+                             有效值: "TABLE"，"LIST"，"CSV"。
+
+    /V                       指定详细信息应该
+                             在输出中显示。
+
+    /NH                      指定 ""Column Header"" 在输出中
+                             不应该被显示。
+                             只对 TABLE 和 CSV 格式有效。
+
+    /?                       显示帮助/用法。
+
+示例: 
+    GETMAC /FO csv 
+    GETMAC /S system /NH /V
+    GETMAC /S system /U user
+    GETMAC /S system /U domain\user /P password /FO list /V
+    GETMAC /S system /U domain\user /P password /FO table /NH

@@ -1,0 +1,40 @@
+
+Submitting job:
+
+  Job name                  : cmdJob
+  Job name adjust           : No
+  Job description           : Calling: /?
+  Manager                   : 
+  Netmask                   : 
+  Port                      : 
+  Priority                  : 50
+  Submit suspended          : No
+  Working path              : 
+  Servers                   : 
+  Outputs                   : 
+  Dependencies              : 
+  Attach executable         : No
+  Number of tasks           : 1
+  Fill in %tp start         : 1
+  Fill in %tp jump          : 1
+  Task name column          : -1
+  Job parameter file        : 
+  Job per server            : No
+  Task timeout              : 600 minutes
+  Non concurrent tasks      : No
+
+  Email alerts:
+    From                    : 
+    To                      : 
+    Server                  : 
+    On completion           : No
+    On failure              : No
+    Every Nth task          : 0
+
+  Executable to batch       : /?
+  Parameters                : 
+
+DBG: Looking for plugins in C:\Autodesk\3DSMAX_2009\\Network\*.task.
+DBG: Looking for plugins in C:\Program Files\Autodesk\Backburner\*.task.
+DBG: Looking for Adapters in C:\Program Files\Autodesk\Backburner\Adapters\*.
+Error: Could not find a manager.

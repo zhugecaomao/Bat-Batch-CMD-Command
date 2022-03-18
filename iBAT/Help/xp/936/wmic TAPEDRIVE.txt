@@ -1,0 +1,14 @@
+
+TAPEDRIVE - 磁带驱动器管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+TAPEDRIVE ASSOC [<format specifier>]
+TAPEDRIVE CREATE <assign list>
+TAPEDRIVE DELETE
+TAPEDRIVE GET [<property list>] [<get switches>]
+TAPEDRIVE LIST [<list format>] [<list switches>]
+

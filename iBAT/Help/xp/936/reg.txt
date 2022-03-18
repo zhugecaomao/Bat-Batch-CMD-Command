@@ -1,0 +1,33 @@
+
+Windows 控制台注册表工具 - 版本 3.0
+版权所有 (C) Microsoft Corp. 1981-2001.  保留所有权利。
+
+
+REG Operation [参数列表]
+
+  Operation  [ QUERY   | ADD    | DELETE  | COPY    |
+               SAVE    | LOAD   | UNLOAD  | RESTORE |
+               COMPARE | EXPORT | IMPORT ]
+
+返回代码: (除了 REG COMPARE)
+
+  0 - 成功
+  1 - 失败
+
+要得到有关某个操作的帮助，请键入:
+
+  REG Operation /?
+
+例如:
+
+  REG QUERY /?
+  REG ADD /?
+  REG DELETE /?
+  REG COPY /?
+  REG SAVE /?
+  REG RESTORE /?
+  REG LOAD /?
+  REG UNLOAD /?
+  REG COMPARE /?
+  REG EXPORT /?
+  REG IMPORT /?

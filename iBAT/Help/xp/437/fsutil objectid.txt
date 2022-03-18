@@ -1,0 +1,6 @@
+---- OBJECTID Commands Supported ----
+
+query           Query the object identifier
+set             Change the object identifier
+delete          Delete the object identifier
+create          Create the object identifier

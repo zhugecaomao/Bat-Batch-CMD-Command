@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Queries the configuration information for a service.
+USAGE:
+        sc <server> qc [service name] <bufferSize>

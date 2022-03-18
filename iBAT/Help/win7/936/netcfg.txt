@@ -1,0 +1,61 @@
+netcfg [-v] [-e] [-winpe] [-l <full-path-to-component-INF>] -c <p|s|c> -i <comp-
+id>
+
+  -winpe 为 Windows 预安装环境安装 TCP/IP、NetBIOS 和 Microsoft 客户端
+    -l  提供 INF 的位置
+    -c  提供要安装组件的类别(p 代表协议、s 代表服务、c 代表客户端)
+    -i  提供组件 ID
+
+    参数必须按照以下顺序传递。
+
+    示例:
+    netcfg -l c:\oemdir\foo.inf -c p -i foo
+     ...使用 c:\\oemdir\\foo.inf 安装协议 "foo"
+
+    netcfg -c s -i MS_Server
+     ...安装服务 "MS_Server"
+
+或
+
+netcfg [-v] -winpe
+    示例:
+    netcfg -v -winpe
+    ...为 Windows 预安装环境安装 TCP/IP、NetBIOS 和 Microsoft Client
+
+或
+
+netcfg [-v] -q <comp-id>
+    示例:
+    netcfg -q MS_IPX
+    ...显示是否安装了组件 "MS_IPX"
+
+或
+
+netcfg [-v] [-e] -u <comp-id>
+    示例:
+    netcfg -u MS_IPX
+
+    ...卸载组件 "MS_IPX"
+
+或
+
+netcfg [-v] -s <a|n>
+    其中，
+    -s\t提供要显示的组件的种类
+      \ta 代表适配器，n 代表网络组件
+    示例:
+    netcfg -s n
+    ...显示所有已安装的 net 组件
+
+或
+
+netcfg [-v] -b <comp-id>
+    示例:
+    netcfg -b ms_tcpip
+    ...显示包含 "MS_TCPIP" 的绑定路径
+
+
+一般说明:\n"
+  -v    以详细模式运行
+  -e    在安装和卸载时使用服务环境变量
+  -?    显示此帮助信息

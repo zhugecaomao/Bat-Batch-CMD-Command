@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Retrieves the actions performed on service failure.
+USAGE:
+        sc <server> qfailure [service name] <bufferSize>

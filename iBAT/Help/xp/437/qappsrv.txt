@@ -1,0 +1,9 @@
+Displays the available application terminal servers on the network.
+
+QUERY TERMSERVER [servername] [/DOMAIN:domain] [/ADDRESS] [/CONTINUE]
+
+  servername      Identifies a Terminal server.
+  /DOMAIN:domain  Displays information for the specified domain (defaults
+                  to the current domain).
+  /ADDRESS        Displays network and node addresses.
+  /CONTINUE       Does not pause after each screen of information.

@@ -1,0 +1,14 @@
+
+SCHTASKS /ShowSid /TN taskname
+
+描述:
+    向任务的专用用户显示 SID。
+
+参数列表:
+    /TN  taskname    指定计划的任务名称。名称中不允许有短划线。
+
+    /?               显示此帮助消息。
+
+示例:
+    SCHTASKS /ShowSid /? 
+    SCHTASKS /ShowSid /TN "\Microsoft\Windows\RAC\RACTask"

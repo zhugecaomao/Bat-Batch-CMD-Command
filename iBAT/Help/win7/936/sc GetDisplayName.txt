@@ -1,0 +1,4 @@
+[SC] GetServiceDisplayName 失败 1060:
+
+指定的服务未安装。
+

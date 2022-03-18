@@ -1,0 +1,6 @@
+Loads a program above the first 64K of memory, and runs the program.
+
+LOADFIX [drive:][path]filename
+
+Use LOADFIX to load a program if you have received the message
+"Packed file corrupt" when trying to load it in low memory.

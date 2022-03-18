@@ -1,0 +1,7 @@
+Usage:
+defrag <volume> [-a] [-f] [-v] [-?]
+  volume  drive letter or mount point (d: or d:\vol\mountpoint)
+  -a      Analyze only
+  -f      Force defragmentation even if free space is low
+  -v      Verbose output
+  -?      Display this help text

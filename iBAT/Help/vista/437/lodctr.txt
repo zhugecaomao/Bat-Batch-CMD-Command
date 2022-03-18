@@ -1,0 +1,41 @@
+
+
+LODCTR
+    Updates registry values related to performance counters.
+
+Usage:
+    LODCTR <INI-FileName>
+        INI-FileName is the name of the initialization file that contains
+            the counter name definitions and explain text for an extensible
+            counter DLL.
+
+    LODCTR /S:<Backup-FileName>
+        save the current perf registry strings and info to <Backup-FileName>
+
+    LODCTR /R:<Backup-FileName>
+        restore the perf registry strings and info using <Backup-FileName>
+
+    LODCTR /R
+        rebuild the perf registry strings and info from scratch based on the current
+            registry settings and backup INI files.
+
+    LODCTR /T:<Service-Name>
+        set the performance counter service as trusted.
+
+    LODCTR /E:<Service-Name>
+        enable the performance counter service.
+
+    LODCTR /D:<Service-Name>
+        disable the performance counter service.
+
+    LODCTR /Q
+
+    LODCTR /Q:<Service-Name>
+        query the performance counter service information, either query all or specified one.
+
+    LODCTR /M:<Counter-Manifest>
+        install Windows Vista performance counter provider definition XML file
+            to system repository.
+
+Note: any arguments with spaces in the names must be enclosed within
+Double Quotation marks.

@@ -1,0 +1,33 @@
+
+Microsoft r TraceRpt.Exe (5.1.2600.5512)
+c Microsoft Corporation. All rights reserved.
+
+Tracerpt processes binary Event Trace Session log files or real-time streams
+from instrumented Event Trace providers and creates a report or a text (CSV)
+file describing the events generated.
+
+Usage:
+tracerpt { <filename [filename ...]> | -rt <session_name [session_name ...]>
+                                } [options]
+
+Parameters:
+  <filename [filename ...]>     Event Trace log file to process.
+
+Options:
+  -?                            Displays context sensitive help.
+  -o [filename]                 Text (CSV) output file. Default is
+                                dumpfile.csv.
+  -summary [filename]           Summary report text file (CSV) file. Default
+                                is summary.txt.
+  -report [filename]            Text output report file. Default is
+                                workload.txt.
+  -rt <session_name [session_name ...]>   Real-time Event Trace Session data
+                                source.
+  -config <filename>            Settings file containing command options.
+  -y                            Answer yes to all questions without
+                                prompting.
+
+Examples:
+  tracerpt logfile1.etl logfile2.etl -o -report
+  tracerpt logfile.etl -o logdmp.csv -summary logdmp.txt -report logrpt.txt
+  tracerpt -rt EVENT_SESSION_1 EVENT_SESSION_2 -o logfile.csv

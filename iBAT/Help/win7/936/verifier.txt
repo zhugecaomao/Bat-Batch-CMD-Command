@@ -1,0 +1,58 @@
+驱动程序验证程序管理器 - 版本 6.1.7600.16385
+
+Copyright (c) Microsoft Corporation. All rights reserved.
+ 
+verifier /standard /driver NAME [NAME ...]
+verifier /standard /all
+verifier [/flags FLAGS ] [/faults [PROBABILITY [TAGS [APPLICATIONS [MINUTES]]]] /driver NAME [NAME ...]
+verifier [/flags FLAGS ] [/faults [PROBABILITY [TAGS [APPLICATIONS [MINUTES]]]] /all
+verifier /querysettings
+verifier /volatile /flags FLAGS
+verifier /volatile /adddriver NAME [NAME ...]
+verifier /volatile /removedriver NAME [NAME ...]
+verifier /volatile /faults [PROBABILITY [TAGS [APPLICATIONS]]
+verifier /reset
+verifier /query
+verifier /log LOG_FILE_NAME [/interval SECONDS]
+ 
+FLAGS 必须是十进制或十六进制位 (bits) 的组合:
+ 
+    位 0  - 特殊池检查
+    位 1  - 强制 irql 检查
+    位 2  - 资源模拟低
+    位 3  - 池跟踪
+    位 4  - I/O 验证
+    位 5  - 死锁检测
+    位 6  - 未使用
+    位 7  - DMA 验证
+    位 8  - 安全性检查
+    位 9  - 强制挂起 I/O 请求
+    位 10 - IRP 日志记录
+    位 11 - 杂项检查
+ 
+例如，/flags 27 等同于 /flags 0x1B
+ 
+/volatile 选项可以用来动态更改验证程序的设置
+并且不用重新启动系统。系统重新启动后，任何新
+当系统被重新启动时。
+ 
+可选错误注入参数:
+ 
+PROBABILITY  - 指定错误注入可能性的 1 到 10,000 之间的
+               数字。例如，指定 100 表示错误注入
+               可能性为 1% (100/10,000)。如果未
+               指定此参数，则将使用默认可能性 6%。
+ 
+TAGS         - 指定将使用错误注入的、用空格字符分隔的
+               用空格分隔。如果未
+               指定此参数，则可以使用错误注入任何池分配。
+ 
+APPLICATIONS - 指定将使用错误注入的、用空格字符分隔的
+               应用程序的图像文件名。
+               如果未指定此参数，则在任何应用程序中都
+               可以发生模拟资源不足的情形。
+ 
+MINUTES      - 指定重新启动之后的时间段长度的正数，
+               以分钟计，在该时间段内不会发生任何错误注入。
+               如果未指定此参数，则默认的
+               将使用 8 分钟的长度。

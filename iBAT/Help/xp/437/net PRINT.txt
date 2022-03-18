@@ -1,0 +1,8 @@
+The syntax of this command is:
+
+
+NET PRINT 
+\\computername\sharename
+          [\\computername] job# [/HOLD | /RELEASE | /DELETE]
+
+

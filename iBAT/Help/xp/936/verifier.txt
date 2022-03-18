@@ -1,0 +1,32 @@
+Driver Verifier Manager - version 5.1.2600.0
+
+Copyright (c) Microsoft Corporation. All rights reserved.
+ 
+verifier /standard /driver NAME [NAME ...]
+verifier /standard /all
+verifier [ /flags FLAGS ] /driver NAME [NAME ...]
+verifier [ /flags FLAGS ] /all
+verifier /querysettings
+verifier /volatile /flags FLAGS
+verifier /volatile /adddriver NAME [NAME ...]
+verifier /volatile /removedriver NAME [NAME ...]
+verifier /reset
+verifier /query
+verifier /log LOG_FILE_NAME [/interval SECONDS]
+ 
+FLAGS must be a number in decimal or hex, combination of bits:
+ 
+    bit 0 - special pool checking
+    bit 1 - force irql checking
+    bit 2 - low resources simulation
+    bit 3 - pool tracking
+    bit 4 - I/O verification
+    bit 5 - deadlock detection
+    bit 6 - enhanced I/O verification
+    bit 7 - DMA verification
+ 
+E.g. /flags 27 is equivalent with /flags 0x1B
+ 
+The /volatile option can be used to change the verifier settings
+dynamically without restarting the system. Any new settings will be lost
+when the system is rebooted.

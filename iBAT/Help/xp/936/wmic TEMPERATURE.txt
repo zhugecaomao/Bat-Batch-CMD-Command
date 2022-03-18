@@ -1,0 +1,14 @@
+
+TEMPERATURE - 温度感应器的数据管理 (电子温度表)。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+TEMPERATURE ASSOC [<format specifier>]
+TEMPERATURE CREATE <assign list>
+TEMPERATURE DELETE
+TEMPERATURE GET [<property list>] [<get switches>]
+TEMPERATURE LIST [<list format>] [<list switches>]
+

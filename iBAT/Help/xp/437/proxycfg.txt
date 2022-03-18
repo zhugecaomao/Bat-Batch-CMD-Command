@@ -1,0 +1,16 @@
+Microsoft (R) WinHTTP Default Proxy Configuration Tool
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+usage:
+
+    proxycfg -?  : to view help information
+
+    proxycfg     : to view current WinHTTP proxy settings
+
+    proxycfg [-d] [-p <server-name> [<bypass-list>]]
+
+        -d : set direct access
+        -p : set proxy server(s), and optional bypass list
+
+    proxycfg -u  : import proxy settings from current user's
+                   Microsoft Internet Explorer manual settings (in HKCU)

@@ -1,0 +1,42 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    使焦点中的卷的大小减少指定的量。
+    从该卷末尾的未使用空间创建可用磁盘空间。
+
+语法:  SHRINK [DESIRED=<N>] [MINIMUM=<N>] [NOWAIT] [NOERR]
+        SHRINK QUERYMAX [NOERR]
+
+    DESIRED=<N> 指定要该卷减少的空间大小，单位为兆字节(MB)。
+                如果未指定所需量，则该卷减少的量为该卷上最大可用空间量。
+
+    MINIMUM=<N> 指定要该卷减少的最小空间量，单位为 MB。
+
+    QUERYMAX    返回该卷可以减少的最大字节数(该卷上的可用空间)。
+                如果应用程序当前正在访问该卷，则该值可能会发生变化。
+
+    NOWAIT      强制该命令在收缩过程仍在进行时立即返回。
+
+    NOERR       仅用于脚本。出现错误时，DiskPart 会继续处理命令，
+                如同未出现错误一样。如果未使用 NOERR 参数，
+                错误会导致 DiskPart 退出并返回错误代码。
+
+     如果未指定 MINIMUM 量，则该卷将减少 DESIRED 量(如果已指定)
+     或该卷上可用空间的最大量。如果已指定 MINIMUM 量，
+     但没有足够的可用空间可用，则该命令将会失败。
+
+     此命令在基本卷以及简单卷或跨区动态卷上有效。
+     只有该卷使用 NTFS 文件系统格式化或该卷上没有文件系统时，
+     才可以减少卷的大小。
+
+    必须选择一个卷才能成功执行此操作。
+
+示例:
+
+    SHRINK DESIRED=500 MINIMUM=250
+    SHRINK QUERYMAX
+
+DISKPART> 

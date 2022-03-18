@@ -1,0 +1,100 @@
+
+Verbs:
+  -dump             -- Dump configuration information or files
+  -asn              -- Parse ASN.1 file
+
+  -decodehex        -- Decode hexadecimal-encoded file
+  -decode           -- Decode Base64-encoded file
+  -encode           -- Encode file to Base64
+
+  -deny             -- Deny pending request
+  -resubmit         -- Resubmit pending request
+  -setattributes    -- Set attributes for pending request
+  -setextension     -- Set extension for pending request
+  -revoke           -- Revoke Certificate
+  -isvalid          -- Display current certificate disposition
+
+  -getconfig        -- Get default configuration string
+  -ping             -- Ping Active Directory Certificate Services Request interf
+ace
+  -pingadmin        -- Ping Active Directory Certificate Services Admin interfac
+e
+  -CAInfo           -- Display CA Information
+  -ca.cert          -- Retrieve the CA's certificate
+  -ca.chain         -- Retrieve the CA's certificate chain
+  -GetCRL           -- Get CRL
+  -CRL              -- Publish new CRLs [or delta CRLs only]
+  -shutdown         -- Shutdown Active Directory Certificate Services
+
+  -installCert      -- Install Certification Authority certificate
+  -renewCert        -- Renew Certification Authority certificate
+
+  -schema           -- Dump Certificate Schema
+  -view             -- Dump Certificate View
+  -db               -- Dump Raw Database
+  -deleterow        -- Delete server database row
+
+  -backup           -- Backup Active Directory Certificate Services
+  -backupDB         -- Backup Active Directory Certificate Services database
+  -backupKey        -- Backup Active Directory Certificate Services certificate
+and private key
+  -restore          -- Restore Active Directory Certificate Services
+  -restoreDB        -- Restore Active Directory Certificate Services database
+  -restoreKey       -- Restore Active Directory Certificate Services certificate
+ and private key
+  -dynamicfilelist  -- Display dynamic file List
+  -databaselocations -- Display database locations
+  -hashfile         -- Generate and display cryptographic hash over a file
+
+  -store            -- Dump certificate store
+  -addstore         -- Add certificate to store
+  -delstore         -- Delete certificate from store
+  -verifystore      -- Verify certificate in store
+  -repairstore      -- Repair key association or update certificate properties o
+r key security descriptor
+  -viewstore        -- Dump certificate store
+  -viewdelstore     -- Delete certificate from store
+
+  -dsPublish        -- Publish certificate or CRL to Active Directory
+
+  -Template         -- Display templates
+  -TemplateCAs      -- Display CAs for template
+  -CATemplates      -- Display templates for CA
+  -InstallDefaultTemplates -- Install default certificate templates
+  -URLCache         -- Display or delete URL cache entries
+  -pulse            -- Pulse autoenrollment events
+  -MachineInfo      -- Display Active Directory machine object information
+  -DCInfo           -- Display domain controller information
+  -EntInfo          -- Display enterprise information
+  -TCAInfo          -- Display CA information
+  -SCInfo           -- Display smart card information
+
+  -SCRoots          -- Manage smart card root certificates
+
+  -verifykeys       -- Verify public/private key set
+  -verify           -- Verify certificate, CRL or chain
+  -sign             -- Re-sign CRL or certificate
+
+  -vroot            -- Create/delete web virtual roots and file shares
+  -vocsproot        -- Create/delete web virtual roots for OCSP web proxy
+  -oid              -- Display ObjectId or set display name
+  -error            -- Display error code message text
+  -getreg           -- Display registry value
+  -setreg           -- Set registry value
+  -delreg           -- Delete registry value
+
+  -ImportKMS        -- Import user keys and certificates into server database fo
+r key archival
+  -ImportCert       -- Import a certificate file into the database
+  -GetKey           -- Retrieve archived private key recovery blob
+  -RecoverKey       -- Recover archived private key
+  -MergePFX         -- Merge PFX files
+  -ConvertEPF       -- Convert PFX files to EPF file
+  -?                -- Display this usage message
+
+
+CertUtil -?              -- Display a verb list (command list)
+CertUtil -dump -?        -- Display help text for the "dump" verb
+CertUtil -v -?           -- Display all help text for all verbs
+
+CertUtil: -? command completed successfully.

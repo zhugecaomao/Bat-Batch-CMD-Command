@@ -1,0 +1,38 @@
+
+DRIVERQUERY [/S system [/U username [/P [password]]]]
+              [/FO format] [/NH] [/SI] [/V] 
+Description:
+    Enables an administrator to enumerate and display the list of 
+    installed device drivers as well as their properties.
+
+Parameter List:
+      /S     system           Specifies the remote system to connect to.
+
+      /U     [domain\]user    Specifies the user context 
+                              under which the command should execute.
+
+      /P     [password]       Specify the Password for the given 
+                              user context. Prompts for input if omitted.
+
+      /FO    format           Specifies the type of output to display.
+                              Valid values to be passed with the
+                              switch are "TABLE", "LIST", "CSV".
+
+      /NH                     Specifies that the "Column Header" 
+                              should not be displayed in the
+                              screen output. Valid for "TABLE" 
+                              and "CSV" format only.
+
+      /V                      Displays detailed information. Not valid 
+                              for signed drivers.
+
+      /SI                     Provides information about signed drivers.
+
+      /?                      Displays this Help/Usage.
+
+Examples:
+    DRIVERQUERY
+    DRIVERQUERY /FO CSV /SI
+    DRIVERQUERY /NH
+    DRIVERQUERY /S ipaddress /U user  /V 
+    DRIVERQUERY /S system /U domain\user /P password /FO LIST

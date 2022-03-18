@@ -1,0 +1,7 @@
+---- USN Commands Supported ----
+
+createjournal   Create a USN journal
+deletejournal   Delete a USN journal
+enumdata        Enumerate USN data
+queryjournal    Query the USN data for a volume
+readdata        Read the USN data for a file

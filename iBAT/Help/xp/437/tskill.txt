@@ -1,0 +1,12 @@
+Ends a process.
+
+TSKILL processid | processname [/SERVER:servername] [/ID:sessionid | /A] [/V]
+
+  processid           Process ID for the process to be terminated.
+  processname         Process name to be terminated.
+  /SERVER:servername  Server containing processID (default is current).
+                         /ID or /A must be specified when using processname
+                         and /SERVER
+  /ID:sessionid       End process running under the specified session.
+  /A                  End process running under ALL sessions.
+  /V                  Display information about actions being performed.

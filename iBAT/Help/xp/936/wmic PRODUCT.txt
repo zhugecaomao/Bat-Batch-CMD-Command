@@ -1,0 +1,15 @@
+
+PRODUCT - 安装包任务管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+PRODUCT ASSOC [<format specifier>]
+PRODUCT CALL <method name> [<actual param list>]
+PRODUCT CREATE <assign list>
+PRODUCT DELETE
+PRODUCT GET [<property list>] [<get switches>]
+PRODUCT LIST [<list format>] [<list switches>]
+

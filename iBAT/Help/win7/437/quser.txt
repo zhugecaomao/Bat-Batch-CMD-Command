@@ -1,0 +1,9 @@
+Display information about users logged on to the system.
+
+QUERY USER [username | sessionname | sessionid] [/SERVER:servername]
+
+  username            Identifies the username.
+  sessionname         Identifies the session named sessionname.
+  sessionid           Identifies the session with ID sessionid.
+  /SERVER:servername  The server to be queried (default is current).
+

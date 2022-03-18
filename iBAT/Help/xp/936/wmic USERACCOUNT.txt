@@ -1,0 +1,16 @@
+
+USERACCOUNT - 用户帐户管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+USERACCOUNT ASSOC [<format specifier>]
+USERACCOUNT CALL <method name> [<actual param list>]
+USERACCOUNT CREATE <assign list>
+USERACCOUNT DELETE
+USERACCOUNT GET [<property list>] [<get switches>]
+USERACCOUNT LIST [<list format>] [<list switches>]
+USERACCOUNT SET [<assign list>]
+

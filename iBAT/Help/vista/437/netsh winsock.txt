@@ -1,0 +1,15 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+audit          - Displays a list of Winsock LSPs that have been installed and removed.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+remove         - Removes a Winsock LSP from the system.
+reset          - Resets the Winsock Catalog to a clean state.
+show           - Displays information.
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

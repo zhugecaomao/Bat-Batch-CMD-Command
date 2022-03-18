@@ -1,0 +1,21 @@
+
+
+LODCTR
+    为可扩展的计数器更新性能监视器的计数器名称及说明文字
+
+用法:
+    LODCTR [\\computername] filename
+        computername 为远程计算机名。
+            如果未指定 computername，则使用本地机器。
+        filename 是初始化文件的名称，该文件包含一个可扩展的
+            计数器 DLL 的计数器名称定义和
+            说明文字。
+
+    LODCTR /S:<FileName>
+        将当前 perf 注册表字符串和信息存入 <FileName>
+
+    LODCTR /R:<FileName>
+        用 <FileName> 还原 perf 注册表字符串和信息
+
+注意: 任何名称中带空格的参数都必须外加
+双引号。

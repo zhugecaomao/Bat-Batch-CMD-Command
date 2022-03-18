@@ -1,0 +1,12 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.1.7600
+
+DISK        - Online a disk that is currently marked as offline.
+VOLUME      - Online a volume that is currently marked as offline.
+
+DISKPART> 

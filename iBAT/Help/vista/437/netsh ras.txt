@@ -1,0 +1,22 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+aaaa           - Changes to the `netsh ras aaaa' context.
+add            - Adds items to a table.
+delete         - Removes items from a table.
+diagnostics    - Changes to the `netsh ras diagnostics' context.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+ip             - Changes to the `netsh ras ip' context.
+ipv6           - Changes to the `netsh ras ipv6' context.
+set            - Sets configuration information.
+show           - Displays information.
+
+The following sub-contexts are available:
+ aaaa diagnostics ip ipv6
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

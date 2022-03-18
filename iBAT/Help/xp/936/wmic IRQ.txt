@@ -1,0 +1,14 @@
+
+IRQ - 间隔请求线 (IRQ) 管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+IRQ ASSOC [<format specifier>]
+IRQ CREATE <assign list>
+IRQ DELETE
+IRQ GET [<property list>] [<get switches>]
+IRQ LIST [<list format>] [<list switches>]
+

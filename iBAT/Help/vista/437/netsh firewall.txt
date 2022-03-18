@@ -1,0 +1,16 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+add            - Adds firewall configuration.
+delete         - Deletes firewall configuration.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+reset          - Resets firewall configuration to default.
+set            - Sets firewall configuration.
+show           - Shows firewall configuration.
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

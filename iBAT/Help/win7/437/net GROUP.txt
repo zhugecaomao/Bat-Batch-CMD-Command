@@ -1,0 +1,7 @@
+The syntax of this command is:
+
+NET GROUP
+[groupname [/COMMENT:"text"]] [/DOMAIN]
+             groupname {/ADD [/COMMENT:"text"] | /DELETE}  [/DOMAIN]
+             groupname username [...] {/ADD | /DELETE} [/DOMAIN]
+

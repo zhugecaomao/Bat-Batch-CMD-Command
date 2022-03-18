@@ -1,0 +1,6 @@
+
+Microsoft (R) TypePerf.exe (5.1.2600.0)
+(C) Microsoft Corporation. All rights reserved.
+
+
+Typeperf将性能数据写入命令窗口或日志文件。要停止Typeperf，请按CTRL+C.forcey*不用提示对所有问题都回答 yes。径中没有指定服务器的情况下要监视的服务器。^C

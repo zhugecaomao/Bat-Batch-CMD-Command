@@ -1,0 +1,38 @@
+
+Usage: netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] [-p Password | *]
+             [Command | -f ScriptFile]
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+add            - Adds a configuration entry to a list of entries.
+advfirewall    - Changes to the `netsh advfirewall' context.
+bridge         - Changes to the `netsh bridge' context.
+delete         - Deletes a configuration entry from a list of entries.
+dhcpclient     - Changes to the `netsh dhcpclient' context.
+dump           - Displays a configuration script.
+exec           - Runs a script file.
+firewall       - Changes to the `netsh firewall' context.
+help           - Displays a list of commands.
+http           - Changes to the `netsh http' context.
+interface      - Changes to the `netsh interface' context.
+ipsec          - Changes to the `netsh ipsec' context.
+lan            - Changes to the `netsh lan' context.
+nap            - Changes to the `netsh nap' context.
+netio          - Changes to the `netsh netio' context.
+p2p            - Changes to the `netsh p2p' context.
+ras            - Changes to the `netsh ras' context.
+rpc            - Changes to the `netsh rpc' context.
+set            - Updates configuration settings.
+show           - Displays information.
+wcn            - Changes to the `netsh wcn' context.
+winhttp        - Changes to the `netsh winhttp' context.
+winsock        - Changes to the `netsh winsock' context.
+wlan           - Changes to the `netsh wlan' context.
+
+The following sub-contexts are available:
+ advfirewall bridge dhcpclient firewall http interface ipsec lan nap netio p2p ras rpc wcn winhttp winsock wlan
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.

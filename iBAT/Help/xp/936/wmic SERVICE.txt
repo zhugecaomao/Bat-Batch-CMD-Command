@@ -1,0 +1,15 @@
+
+SERVICE - 服务程序管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SERVICE ASSOC [<format specifier>]
+SERVICE CALL <method name> [<actual param list>]
+SERVICE CREATE <assign list>
+SERVICE DELETE
+SERVICE GET [<property list>] [<get switches>]
+SERVICE LIST [<list format>] [<list switches>]
+

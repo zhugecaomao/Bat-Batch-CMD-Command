@@ -1,0 +1,12 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.0.6002
+
+DISK        - Displays or sets the GUID partition table (GPT) identifier or 
+              master boot record (MBR) signature of a disk.
+
+DISKPART> 

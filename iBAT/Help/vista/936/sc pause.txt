@@ -1,0 +1,4 @@
+描述:
+        发送 PAUSE 控制请求到服务。
+用法:
+        sc <server> pause [service name]

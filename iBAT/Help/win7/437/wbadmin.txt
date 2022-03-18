@@ -1,0 +1,13 @@
+wbadmin 1.0 - Backup command-line tool
+(C) Copyright 2004 Microsoft Corp.
+
+---- Commands Supported ----
+
+START BACKUP              -- Runs a one-time backup.
+STOP JOB                  -- Stops the currently running backup or recovery 
+                              operation.
+GET VERSIONS              -- List details of backups recoverable from a 
+                              specified location.
+GET ITEMS                 -- Lists items contained in a backup.
+GET STATUS                -- Reports the status of the currently running 
+                              operation.

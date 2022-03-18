@@ -1,0 +1,37 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Displays or sets the SAN policy for the operating system.
+
+Syntax:  SAN [POLICY={OnlineAll | OfflineAll | OfflineShared}] [NOERR]
+
+    SAN             If the command is given with no parameters, the current
+                    SAN policy is displayed.
+
+    POLICY=<value>  Sets the SAN policy for the currently booted operating
+                    system.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    This command allows the user to display or change the SAN policy for the
+    currently booted OS. The default policy for Windows Advanced Server and
+    Windows Data Center is OfflineShared. In this case the boot disk will
+    be brought online, as will all disks that are not located on a shared bus
+    such as SCSI, iSCSI, SAS, etc. The offlined disks will be read-only by
+    default. On all other versions of Windows, the default will be to bring
+    all disks online. In this case, the disks will be online and read/write.
+    The third policy value is OfflineAll. For this case, all disks except the
+    boot disk will be offline and read-only by default.
+
+Examples:
+
+    SAN
+    SAN POLICY=OfflineAll
+
+DISKPART> 

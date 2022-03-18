@@ -1,0 +1,184 @@
+Microsoft iSCSI 发起程序版本 6.0 內部版本 6000
+
+iscsicli
+
+iscsicli AddTarget <TargetName> <TargetAlias> <TargetPortalAddress>
+                           <TargetPortalSocket> <Target flags>
+                           <Persist> <Login Flags> <Header Digest> <Data Digest> 
+                           <Max Connections> <DefaultTime2Wait>
+                           <DefaultTime2Retain> <Username> <Password> <AuthType>
+                           <Mapping Count> <Target Lun> <OS Bus> <Os Target> 
+                           <OS Lun> ...
+
+iscsicli RemoveTarget <TargetName> 
+
+iscsicli AddTargetPortal <TargetPortalAddress> <TargetPortalSocket> 
+                         [HBA Name] [Port Number]
+                         <Security Flags>
+                         <Login Flags> <Header Digest> <Data Digest> 
+                         <Max Connections> <DefaultTime2Wait>
+                        <DefaultTime2Retain> <Username> <Password> <AuthType>
+
+iscsicli RemoveTargetPortal <TargetPortalAddress> <TargetPortalSocket> [HBA Name] [Port Number]
+
+iscsicli RefreshTargetPortal <TargetPortalAddress> <TargetPortalSocket> [HBA Name] [Port Number]
+
+iscsicli ListTargets [ForceUpdate]
+
+iscsicli ListTargetPortals
+
+iscsicli TargetInfo <TargetName> [Discovery Mechanism]
+
+iscsicli LoginTarget <TargetName> <ReportToPNP>
+                     <TargetPortalAddress> <TargetPortalSocket>
+                     <InitiatorInstance> <Port number> <Security Flags>
+                    <Login Flags> <Header Digest> <Data Digest> 
+                    <Max Connections> <DefaultTime2Wait>
+                    <DefaultTime2Retain> <Username> <Password> <AuthType> <Key>
+                    <Mapping Count> <Target Lun> <OS Bus> <Os Target> 
+                    <OS Lun> ...
+
+iscsicli LogoutTarget <SessionId>
+
+iscsicli PersistentLoginTarget <TargetName> <ReportToPNP>
+                     <TargetPortalAddress> <TargetPortalSocket>
+                    <InitiatorInstance> <Port number> <Security Flags>
+                    <Login Flags> <Header Digest> <Data Digest> 
+                    <Max Connections> <DefaultTime2Wait>
+                    <DefaultTime2Retain> <Username> <Password> <AuthType> <Key>
+                    <Mapping Count> <Target Lun> <OS Bus> <Os Target> 
+                    <OS Lun> ...
+
+iscsicli ListPersistentTargets
+
+iscsicli RemovePersistentTarget <Initiator Name> <TargetName> 
+                               <Port Number> 
+                               <Target Portal Address> 
+                                <Target Portal Socket> 
+
+iscsicli AddConnection <SessionId> <Initiator Instance>
+                      <Port Number> <Target Portal Address>
+                      <Target Portal Socket> <Security Flags>
+                      <Login Flags> <Header Digest> <Data Digest> 
+                      <Max Connections> <DefaultTime2Wait>
+                      <DefaultTime2Retain> <Username> <Password> <AuthType> <Key>
+
+iscsicli RemoveConnection <SessionId> <ConnectionId> 
+iscsicli ScsiInquiry <SessionId> <LUN> <EvpdCmddt> <PageCode>
+
+iscsicli ReadCapacity <SessionId> <LUN>
+
+iscsicli ReportLUNs <SessionId>
+
+iscsicli ReportTargetMappings
+
+iscsicli ListInitiators
+
+iscsicli AddiSNSServer <iSNS Server Address>
+
+iscsicli RemoveiSNSServer <iSNS Server Address>
+
+iscsicli RefreshiSNSServer <iSNS Server Address>
+
+iscsicli ListiSNSServers
+
+iscsicli NodeName <node name>
+
+iscsicli SessionList <Show Session Info>
+
+iscsicli CHAPSecret <chap secret>
+
+iscsicli TunnelAddr <Initiator Name> <InitiatorPort> <Destination Address> <Tunnel Address> <Persist>
+
+iscsicli GroupKey <Key> <Persist>
+
+iscsicli BindPersistentVolumes
+
+iscsicli BindPersistentDevices
+
+iscsicli ReportPersistentDevices
+
+iscsicli AddPersistentDevice <Volume or Device Path>
+
+iscsicli RemovePersistentDevice <Volume or Device Path>
+
+iscsicli ClearPersistentDevices
+
+iscsicli Ping <Initiator Name> <Address> [Request Count] [Request Size] [Request Timeout]
+
+iscsicli GetPSKey <Initiator Name> <initiator Port> <Id Type> <Id>
+
+iscsicli PSKey <Initiator Name> <initiator Port> <Security Flags> <Id Type> <Id> <Key> <persist>
+快速命令
+
+iscsicli QLoginTarget <TargetName>  [CHAP Username] [CHAP Password]
+
+iscsicli QAddTarget <TargetName> <TargetPortalAddress>
+
+iscsicli QAddTargetPortal <TargetPortalAddress>
+                          [CHAP Username] [CHAP Password]
+
+iscsicli QAddConnection <SessionId> <Initiator Instance>
+                        <Target Portal Address>
+                        [CHAP Username] [CHAP Password]
+
+目标映射:
+    <Target Lun> 是目标用于公开 LUN 的 LUN 值。
+                 其形式必须为 0x0123456789abcdef
+    <OS Bus> 是 OS 应该用于公开 LUN 的总线编号
+    <OS Target> 是 OS 应该用于公开 LUN 的目标编号
+    <OS LUN> 是 OS 应该用于公开 LUN 的 LUN 编号
+
+负载 ID 类型:
+    ID_IPV4_ADDR 为      1 - ID 格式为 1.2.3.4
+    ID_FQDN 为           2 - ID 格式为 ComputerName
+    ID_IPV6_ADDR 为      5 - ID 形式为 IPv6 地址
+安全标志:
+    TunnelMode 为          0x00000040
+    TransportMode 为       0x00000020
+    PFS Enabled 为         0x00000010
+    Aggressive Mode 为     0x00000008
+    Main mode 为           0x00000004
+    IPSEC/IKE Enabled 为   0x00000002
+    Valid Flags 为         0x00000001
+
+登录标志:
+    ISCSI_LOGIN_FLAG_REQUIRE_IPSEC                0x00000001
+        该操作需要 IPSec
+
+    ISCSI_LOGIN_FLAG_MULTIPATH_ENABLED            0x00000002
+        为此发起程序上的目标启用多路
+
+AuthType:
+    ISCSI_NO_AUTH_TYPE = 0，
+        不使用任何 iSCSI 带内身份验证
+
+    ISCSI_CHAP_AUTH_TYPE = 1，
+        单向 CHAP (使用目标对发起程序进行身份验证)
+
+    ISCSI_MUTUAL_CHAP_AUTH_TYPE = 2
+        相互 CHAP (使用目标和发起程序相互进行身份验证)
+
+目标标志:
+    ISCSI_TARGET_FLAG_HIDE_STATIC_TARGET            0x00000002
+        如果设置了此标志，则只有在动态发现目标时，
+        才会报告该目标。
+
+    ISCSI_TARGET_FLAG_MERGE_TARGET_INFORMATION      0x00000004
+        如果设置了此标志，则会将传递的目标信息与该目标的
+        已静态配置的任何目标信息合并
+
+可以将 CHAP 机密、CHAP 密码和 IPSec 预共享密钥指定为文本字符串
+或十六进制值的序列。对于在命令行上指定的值，只有头两个字母为 0x 时，
+才会将该值当作十六进制值，而其他形式的值则会始终被当作字符串。
+
+例如 0x12345678 指定了一个 4 字节的机密
+
+除了以 0x 开头的数值之外，其他所有数值都会被假定为十进制值。
+以 0x 开头的数值会被假定为十六进制值
+
+也可以在命令行模式中运行 iscsicli。在命令行模式中，可以直接从控制台
+输入 iscsicli 命令。若要进入命令行模式，
+只需不带任何参数运行 iscsicli
+
+操作成功完成。 

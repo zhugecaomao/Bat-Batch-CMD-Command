@@ -1,0 +1,8 @@
+此命令的语法是:
+
+
+NET GROUP 
+[groupname [/COMMENT:"text"]] [/DOMAIN]
+          groupname {/ADD [/COMMENT:"text"] | /DELETE}  [/DOMAIN]
+          groupname username [...] {/ADD | /DELETE} [/DOMAIN]
+

@@ -1,0 +1,5 @@
+DESCRIPTION:
+        Gets the key name associated with a particular service,
+        using the display name as input
+USAGE:
+        sc <server> GetKeyName <service display name> <bufsize>

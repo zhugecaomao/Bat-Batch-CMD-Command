@@ -1,0 +1,9 @@
+监视另一个终端服务会话。
+
+SHADOW {sessionname | sessionid} [/SERVER:servername] [/V]
+
+  sessionname         用名称 sessionname 识别会话。
+  sessionid           用 ID sessionid 识别会话。
+  /SERVER:servername  含有该会话的服务器(默认值是当前值)。
+  /V                  显示有关执行的操作的信息。
+

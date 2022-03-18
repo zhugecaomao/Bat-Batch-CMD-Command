@@ -1,0 +1,28 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+   刷新所选包中所有磁盘的状态，尝试恢复无效包中的磁盘，
+   并重新同步具有过时丛或奇偶校验数据的镜像卷和 RAID-5 卷。
+
+
+语法:  RECOVER [NOERR]
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart
+                会继续处理命令，如同没有出现错误一样。
+                如果不使用 NOERR 参数，错误会导致 DiskPart 退出
+                并返回错误代码。
+
+    此命令对包执行操作。
+    必须选择属于该包的一个磁盘才能继续执行此操作。
+
+    此命令仅适用于动态磁盘。如果在基本磁盘上调用，则该命令会成功，
+    但不执行任何操作。
+
+示例:
+
+    RECOVER
+
+DISKPART> 

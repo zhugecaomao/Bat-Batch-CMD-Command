@@ -1,0 +1,17 @@
+All rdp file(s) have been succesfully signed.
+NAME
+
+rdpsign [options] [items to sign]
+
+OPTIONS
+
+  /sha1 HASH
+       Specified the SHA1 hash of the signing certificate.
+  /q
+       Quiet mode:  No output when success, minimal output when failed.
+  /v
+       Verbose mode:  Display all warnings, messages, and status.
+  /l
+       Test signing and output results without actually replacing any of the inputs.  Ignores when input files are on stdin.
+
+

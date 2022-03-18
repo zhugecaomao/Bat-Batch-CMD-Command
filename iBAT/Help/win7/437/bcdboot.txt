@@ -1,0 +1,29 @@
+
+Bcdboot - Bcd boot file creation and repair tool.
+
+The bcdboot.exe command-line tool is used to copy critical boot files to the
+system partition and to create a new system BCD store.
+
+bcdboot <source> [/l <locale>] [/s <volume-letter>] [/v]
+                 [/m [{OS Loader ID}]]
+
+  source            Specifies the location of the windows system root.
+
+  /l                Specifies an optional locale parameter to use when
+                    initializing the BCD store. The default is US English.
+
+  /s                Specifies an optional volume letter parameter to designate
+                    the target system partition where boot environment files are
+                    copied.  The default is the system partition identified by
+                    the firmware.
+
+  /v                Enables verbose mode.
+
+  /m                If an OS loader GUID is provided, this option merges the 
+                    given loader object with the system template to produce a 
+                    bootable entry. Otherwise, only global objects are merged.
+
+
+Examples: bcdboot c:\windows /l en-us
+          bcdboot c:\windows /s h:
+          bcdboot c:\windows /m {d58d10c6-df53-11dc-878f-00064f4f4e08}

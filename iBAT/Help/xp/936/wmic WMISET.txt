@@ -1,0 +1,15 @@
+
+WMISET - WMI 服务操作参数管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+WMISET ASSOC [<format specifier>]
+WMISET CREATE <assign list>
+WMISET DELETE
+WMISET GET [<property list>] [<get switches>]
+WMISET LIST [<list format>] [<list switches>]
+WMISET SET [<assign list>]
+

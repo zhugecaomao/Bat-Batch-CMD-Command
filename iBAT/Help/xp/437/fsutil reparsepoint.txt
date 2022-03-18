@@ -1,0 +1,4 @@
+---- REPARSEPOINT Commands Supported ----
+
+query           Query a reparse point
+delete          Delete a reparse point

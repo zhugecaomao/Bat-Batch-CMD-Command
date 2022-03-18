@@ -1,0 +1,9 @@
+将会话子系统硬件和软件复位成所知的初始数值。
+
+RESET SESSION {sessionname | sessionid} [/SERVER:servername] [/V]
+
+  sessionname         用名称 sessionname 识别会话。
+  sessionid           用 ID sessionid 识别会话。
+  /SERVER:servername  含有该会话的服务器(默认值是当前值)。
+  /V                  显示其他信息。
+

@@ -1,0 +1,39 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    为带焦点的卷分配一个驱动器号或装入文件夹的路径名称。
+
+语法:  ASSIGN [LETTER=<D> | MOUNT=<PATH>] [NOERR]
+
+    LETTER=<D>  分配给卷的驱动器号。
+
+    MOUNT=<PATH>
+
+                分配给卷的装入文件夹的路径名称。
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart 会继续
+                处理命令，如同没有出现错误一样。如果
+                不使用 NOERR 参数，错误会导致 DiskPart
+                退出并返回错误代码。
+
+    如果没有指定驱动器号或装入的文件夹，则会分配下一个可用的
+    驱动器号。如果驱动器号或装入的文件夹已经在使用，
+    则会生成一个错误。
+
+    通过使用 ASSIGN 命令，您可以更改与可移动驱动器关联的
+    驱动器号。
+
+    您无法为启动卷或含有页面文件的卷分配驱动器号。
+    此外，您无法为原始设备制造商(OEM)分区(除非启动到 Windows PE)或除基本数据
+    分区以外的任何 GUID 分区表(GPT)分区、ESP 分区或恢复分区分配驱动器号。
+
+    必须选择一个卷才能成功执行此操作。
+
+示例:
+
+    ASSIGN LETTER=D
+
+DISKPART> 

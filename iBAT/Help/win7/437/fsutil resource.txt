@@ -1,0 +1,10 @@
+---- RESOURCE Commands Supported ----
+
+create          Create a Secondary Transactional Resource Manager
+info            Display information relating to a Transactional Resource Manager
+setautoreset    Set whether a default Transactional Resource Manager will clean its transactional metadata on next mount
+setconsistent   Set a Transactional Resource Manager to prefer consistency over availability
+setavailable    Set a Transactional Resource Manager to prefer availability over consistency
+setlog          Change characteristics of a running Transactional Resource Manager
+start           Start a Transactional Resource Manager
+stop            Stop a Transactional Resource Manager

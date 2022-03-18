@@ -1,0 +1,11 @@
+将用户会话连接到远程桌面会话。
+
+TSCON {sessionid | sessionname} [/DEST:sessionname]
+        [/PASSWORD:pw | /PASSWORD:*] [/V]
+
+  sessionid          会话标识号。
+  sessionname        会话名。
+  /DEST:sessionname  将会话连接到目标 sessionname。
+  /PASSWORD:pw       拥有指定会话的用户的密码。
+  /V                 显示有关执行的操作的信息。
+

@@ -1,0 +1,4 @@
+[SC] StartService: OpenService 失败 123:
+
+文件名、目录名或卷标语法不正确。
+

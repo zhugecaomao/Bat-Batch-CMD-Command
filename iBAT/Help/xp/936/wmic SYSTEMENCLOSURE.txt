@@ -1,0 +1,14 @@
+
+SYSTEMENCLOSURE - 物理系统封闭管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SYSTEMENCLOSURE ASSOC [<format specifier>]
+SYSTEMENCLOSURE CREATE <assign list>
+SYSTEMENCLOSURE DELETE
+SYSTEMENCLOSURE GET [<property list>] [<get switches>]
+SYSTEMENCLOSURE LIST [<list format>] [<list switches>]
+

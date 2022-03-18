@@ -1,0 +1,15 @@
+
+PAGEFILESET - 页面文件设置管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+PAGEFILESET ASSOC [<format specifier>]
+PAGEFILESET CREATE <assign list>
+PAGEFILESET DELETE
+PAGEFILESET GET [<property list>] [<get switches>]
+PAGEFILESET LIST [<list format>] [<list switches>]
+PAGEFILESET SET [<assign list>]
+

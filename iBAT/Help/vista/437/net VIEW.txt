@@ -1,0 +1,6 @@
+The syntax of this command is:
+
+NET VIEW
+[\\computername [/CACHE] | [/ALL] | /DOMAIN[:domainname]]
+NET VIEW /NETWORK:NW [\\computername]
+

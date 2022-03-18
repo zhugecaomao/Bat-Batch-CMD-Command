@@ -1,0 +1,35 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    通过使用指定的动态磁盘替换出现故障的 RAID-5 成员
+    修复带焦点的 RAID-5 卷。
+
+语法:  REPAIR DISK=<N> [ALIGN=<N>] [NOERR]
+
+    DISK=<N>    指定将替换出现故障的 RAID-5 成员的动态
+                磁盘。指定磁盘的可用空间必须等于或大于
+                出现故障的 RAID-5 成员的总大小。
+
+    ALIGN=<N>   通常与硬件 RAID 逻辑单元号(LUN)阵列一起
+                使用以便提高性能。将所有的卷或分区
+                扩展到与最近的对齐边界对齐。N 为从磁盘开始部分
+                到最近的对齐边界的千字节(KB)数。
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart 会继续
+                处理命令，如同没有出现错误一样。如果不使用
+                NOERR 参数，错误会导致 DiskPart
+                退出并返回错误代码。
+
+    指定的动态磁盘可用空间必须大于或等于出现故障的
+    RAID-5 成员的总大小。
+
+    必须选择一个 RAID-5 卷才能成功执行此操作。
+
+示例:
+
+    REPAIR DISK=1
+
+DISKPART> 

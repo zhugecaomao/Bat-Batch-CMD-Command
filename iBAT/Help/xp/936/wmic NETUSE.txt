@@ -1,0 +1,14 @@
+
+NETUSE - 活动网络连接管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NETUSE ASSOC [<format specifier>]
+NETUSE CREATE <assign list>
+NETUSE DELETE
+NETUSE GET [<property list>] [<get switches>]
+NETUSE LIST [<list format>] [<list switches>]
+

@@ -1,0 +1,54 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Removes a drive letter or mount point from the volume with focus.
+
+Syntax:  REMOVE [LETTER=<D> | MOUNT=<PATH> | ALL] [DISMOUNT] [NOERR]
+
+    LETTER=<D>  The drive letter to be removed.
+
+    MOUNT=<PATH>
+
+                The mount point path to be removed.
+
+    ALL         Removes all current drive letters and mount points.
+
+    DISMOUNT    Dismounts the basic volume, when all drive letters and mount
+                points have been removed from the volume, and takes the basic
+                volume offline, making it unmountable. If other processes are
+                using the volume, DiskPart closes any open handles before
+                dismounting the volume. You can make the volume mountable by
+                assigning it a driver letter or by creating a mount point path
+                to the volume. Dismount will fail if used on a volume that has
+                any remaining drive letters or mount points. For scripting,
+                using remove all dismount is recommended.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    If no drive letter or mount point is specified, DiskPart removes the first
+    drive letter or mount point it encounters. If the all parameter is used,
+    all current drive letters and mount points are removed. If the dismount
+    parameter is used, DiskPart closes all open handles to the volume and then
+    dismounts it.
+
+    The remove command can be used to change the drive letter associated with a
+    removable drive. You cannot remove the drive letters on system, boot, or
+    paging volumes. In addition, you cannot remove the drive letter for an
+    original equipment manufacturer (OEM) partition, any GUID partition table
+    (GPT) partition with an unrecognized GUID, or any of the special, non-data,
+    GPT partitions such as the EFI System partition.
+
+    A volume must be selected for this operation to succeed.
+
+Example:
+
+    REMOVE LETTER=K
+    REMOVE ALL DISMOUNT
+
+DISKPART> 

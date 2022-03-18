@@ -1,0 +1,34 @@
+
+Microsoft DiskPart version 5.1.3565
+
+Copyright (C) 1999-2003 Microsoft Corporation.
+On computer: iBat
+
+DISKPART>
+Microsoft DiskPart version 5.1.3565
+
+ADD         - Add a mirror to a simple volume.
+ACTIVE      - Marks the current basic partition as an active boot partition.
+ASSIGN      - Assign a drive letter or mount point to the selected volume.
+BREAK       - Break a mirror set.
+CLEAN       - Clear the configuration information, or all information, off the
+              disk.
+CONVERT     - Converts between different disk formats.
+CREATE      - Create a volume or partition.
+DELETE      - Delete an object.
+DETAIL      - Provide details about an object.
+EXIT        - Exit DiskPart
+EXTEND      - Extend a volume.
+HELP        - Prints a list of commands.
+IMPORT      - Imports a disk group.
+LIST        - Prints out a list of objects.
+INACTIVE    - Marks the current basic partition as an inactive partition.
+ONLINE      - Online a disk that is currently marked as offline.
+REM         - Does nothing. Used to comment scripts.
+REMOVE      - Remove a drive letter or mount point assignment.
+REPAIR      - Repair a RAID-5 volume.
+RESCAN      - Rescan the computer looking for disks and volumes.
+RETAIN      - Place a retainer partition under a simple volume.
+SELECT      - Move the focus to an object.
+
+DISKPART>

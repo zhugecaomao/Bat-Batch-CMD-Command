@@ -1,0 +1,6 @@
+
+按 ESC 键回到完整的 WMI 对象路径。
+用法:
+
+PATH (<path expr> | (<class path expr> [WHERE <where clause>])) [<verb clause>]
+

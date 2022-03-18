@@ -1,0 +1,14 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.0.6002
+
+BASIC       - 将磁盘从动态转更换为基本。
+DYNAMIC     - 将磁盘从基本转更换为动态。
+GPT         - 将磁盘从 MBR 转更换为 GPT。
+MBR         - 将磁盘从 GPT 转更换为 MBR。
+
+DISKPART> 

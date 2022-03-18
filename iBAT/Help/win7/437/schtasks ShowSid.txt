@@ -1,0 +1,14 @@
+
+SCHTASKS /ShowSid /TN taskname
+
+Description:
+    Shows the SID for the task's dedicated user.
+
+Parameter List:
+    /TN  taskname    Specifies the scheduled task name. Dashes are not allowed in the name.
+
+    /?               Displays this help message.
+
+Examples:
+    SCHTASKS /ShowSid /? 
+    SCHTASKS /ShowSid /TN "\Microsoft\Windows\RAC\RACTask"

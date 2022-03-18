@@ -1,0 +1,50 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    从带焦点的卷中删除驱动器号或装入的文件夹路径名。
+
+语法:  REMOVE [LETTER=<D> | MOUNT=<Path> | ALL] [DISMOUNT] [NOERR]
+
+    LETTER=<D>  要删除的驱动器号。
+
+    MOUNT=<Path>
+
+                要删除的装入文件夹的路径。
+
+    ALL         删除当前的所有驱动器号和装入的文件夹路径。
+
+    DISMOUNT    以下情况下会使用此参数:
+                1) 已从卷中删除所有的驱动器号及装入的文件夹路径，
+                2) 指定了 ALL 参数。该参数指定即将卸载文件系统并使卷脱机。
+                如果其他进程正在使用该卷，DiskPart
+                将在卸载文件系统并使卷脱机之前关闭任何打开的句柄。
+                通过为卷分配驱动器号或创建到卷的装入文件夹路径，或者
+                使用 ONLINE 命令，可以使卷联机。
+                如果使用的卷上具有任何剩余的驱动器号或装入文件夹路径，
+                则 DISMOUNT 将会失败。
+                对于脚本，建议使用 REMOVE ALL DISMOUNT。
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart 会继续处理命令，如同
+                没有出现错误一样。如果不使用 NOERR 参数，错误会导致 DiskPart
+                退出并返回错误代码。
+
+    如果未指定驱动器号或装入文件夹路径，DiskPart 将删除遇到的第一个驱动
+    器号或装入文件夹路径。如果使用了 ALL 参数，则将删除当前的所有驱动器
+    号和装入文件夹路径。如果使用了 DISMOUNT 参数，DiskPart 将关闭所有已
+    打开的指向该卷的句柄，然后卸载该卷并使其脱机。
+
+    REMOVE 命令可用于更改与可移动驱动器相关联的驱动器号。无法删除启动卷
+    或页面卷上的驱动器号。
+
+    必须选择一个卷才能继续执行此操作。
+
+示例: 
+
+    REMOVE LETTER=K
+    REMOVE MOUNT=G:\MountH
+    REMOVE ALL DISMOUNT
+
+DISKPART> 

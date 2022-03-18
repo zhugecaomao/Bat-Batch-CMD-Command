@@ -1,0 +1,14 @@
+
+MEMLOGICAL - 系统内存管理 (配置布局和内存可用性)。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+MEMLOGICAL ASSOC [<format specifier>]
+MEMLOGICAL CREATE <assign list>
+MEMLOGICAL DELETE
+MEMLOGICAL GET [<property list>] [<get switches>]
+MEMLOGICAL LIST [<list format>] [<list switches>]
+

@@ -1,0 +1,21 @@
+
+
+LODCTR
+    Updates Performance Monitor counter names and explain text for an extensible counter
+
+Usage:
+    LODCTR [\\computername] filename
+        computername is the name of the remote computer.
+            Local machine is used if computername is not specified.
+        filename is the name of the initialization file that contains
+            the counter name definitions and explain text for an extensible
+            counter DLL.
+
+    LODCTR /S:<FileName>
+        save current perf registry strings and info to <FileName>
+
+    LODCTR /R:<FileName>
+        restore perf registry strings and info using <FileName>
+
+Note: any arguments with spaces in the names must be enclosed within
+Double Quotation marks.

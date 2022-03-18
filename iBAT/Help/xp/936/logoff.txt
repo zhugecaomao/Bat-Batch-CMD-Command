@@ -1,0 +1,10 @@
+终止会话。
+
+LOGOFF [sessionname | sessionid] [/SERVER:servername] [/V]
+
+  sessionname         会话名称。
+  sessionid           会话 ID。
+  /SERVER:servername  指定含有要注销的用户会话
+                      的终端服务器(默认值是当前服务器)。
+  /V                  显示有关执行的操作的信息。
+

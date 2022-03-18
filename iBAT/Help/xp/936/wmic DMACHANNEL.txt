@@ -1,0 +1,14 @@
+
+DMACHANNEL - 直接内存访问(DMA)频道管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+DMACHANNEL ASSOC [<format specifier>]
+DMACHANNEL CREATE <assign list>
+DMACHANNEL DELETE
+DMACHANNEL GET [<property list>] [<get switches>]
+DMACHANNEL LIST [<list format>] [<list switches>]
+

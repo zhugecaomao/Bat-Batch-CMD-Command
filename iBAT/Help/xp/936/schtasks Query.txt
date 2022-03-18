@@ -1,0 +1,35 @@
+
+SCHTASKS /Query [/S system [/U username [/P password]]] [/FO format]
+    [/NH] [/V] [/?]
+
+描述: 
+    允许管理员显示本地或远程系统上
+    的计划任务。
+
+参数列表:
+    /S           system      指定要连接的远程系统。
+
+    /U           username    指定要执行的命令的
+                             用户上下文。
+
+    /P           password    为给定的用户上下文
+                             指定密码。
+
+    /FO          format      指定要显示的输出格式。
+                             有效值: TABLE, LIST, CSV。
+
+    /NH                      指定在输出中不显示
+                             列标题。
+                             只对 TABLE 和 CSV 格式有效。
+
+    /V                       指定要显示的附加
+                             信息。
+
+    /?                       显示帮助/用法。
+
+示例:
+    SCHTASKS /Query 
+    SCHTASKS /Query /? 
+    SCHTASKS /Query /S system /U user /P password
+    SCHTASKS /Query /FO LIST /V /S system /U user /P password
+    SCHTASKS /Query /FO TABLE /NH /V

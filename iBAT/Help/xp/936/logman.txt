@@ -1,0 +1,69 @@
+
+Microsoft (R) Logman.exe (5.1.2600.5512)
+(C) Microsoft Corporation. All rights reserved.
+
+Logman 管理“性能日志和警报”服务，来创建和管理事件跟踪会话日志和性能日志。 
+
+用法:
+logman VERB <collection_name> 
+                                [选项]
+
+动词:
+  create <counter|trace>        创建新集合。 
+  start                         启用现有集合并将开始时间设为手动。 
+  stop                          停止现有集合并将停止时间设为手动。 
+  delete                        删除现有集合。 
+  query [collection_name|providers]  查询集合属性。如果没有指定 collect
+                                ion_name，所有集合都会被列出。关键字 
+                                'providers' 将列出所有注册的事件跟踪提供程序。
+  update                        更新现有集合属性。 
+
+参数:
+  <collection_name>             集合名。 
+
+选项:
+  -?                            显示跟上下文相关的帮助。 
+  -s <computer>                 在指定的远程系统上执行命令。 
+  -config <文件名>              含有命令选项的设置文件。 
+  -b <yyyy-M-d H:mm:ss[上午|下午]>   在指定时间开始收集。 
+  -e <yyyy-M-d H:mm:ss[上午|下午]>   在指定时间结束收集。 
+  -m <[start] [stop]>           该为手动启动或停止，不使用计划的开始或结束时间
+                                。 
+  -[-]r                         每天在指定的开始时间和结束时间重复收集操作。 
+  -o <path|dsn!log>             输出日志文件的路径或 SQL 数据库中 DSN 和日志集
+                                名称。 
+  -f <bin|bincirc|csv|tsv|sql>  指定集合的记录格式。 
+  -[-]a                         附到现有日志文件。 
+  -[-]v [nnnnnn|mmddhhmm]       将文件版本信息附到日志名结尾。 
+  -[-]rc <文件名>               每次关闭日志时运行指定的命令。 
+  -[-]max <值>                  日志文件最大值(MB)或 SQL 日志的记录数量。 
+  -[-]cnf [[[时:]分:]秒]        指定时间已过或超过最大大小值时，创建新文件。 
+  -c <path [path ...]>          要收集的性能计数器 
+  -cf <文件名>                  列出要收集的性能计数器的文件，一行一个。 
+  -si <[[时:]分:]秒>            性能计数器集合的示例间隔。 
+  -ln <logger_name>             事件跟踪会话的记录者名。 
+  -[-]rt                        以实时模式运行事件跟踪会话。 
+  -p <provider [flags [level]]> 要启用的单个提供程序。 
+  -pf <文件名>                  列出要启用的多个提供程序的文件。 
+  -[-]ul                        以用户模式运行事件跟踪会话。 
+  -bs <值>                      事件跟踪会话缓冲区大小，单位为 KB。 
+  -ft <[[时:]分:]秒>            事件跟踪会话刷新计时器。 
+  -nb <min max>                 事件跟踪会话缓冲区数量。 
+  -fd                           将现有事件跟踪会话的所有活动缓冲区刷新到磁盘。
+  -[-]u [user [password]]       Run As 的用户。输入 * 生成密码提示。如果在密码
+                                提示处键入，密码则不会得到显示。 
+  -rf <[[时:]分:]秒>            以一定的时间运行集合。 
+  -y                            不用提示对所有问题都回答 yes。 
+  -ets                          不保存或计划就将命令直接发送到事件跟踪会话。 
+  -mode <trace_mode [trace_mode ...]>   事件跟踪会话记录程序模式。 
+
+注意:
+  列出 [-] 的地方，一个多余的 - 会否定选项。
+  例如，--r 关掉 -r 选项。
+
+例如:
+  logman create counter perf_log -c "\Processor(_Total)\% Processor Time"
+  logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile 
+  logman start perf_log 
+  logman update perf_log -si 10 -f csv -v mmddhhmm
+  logman update trace_log -p "Windows Kernel Trace" (disk,net) 

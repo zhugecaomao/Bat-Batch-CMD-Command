@@ -1,0 +1,8 @@
+The syntax of this command is:
+
+
+NET TIME 
+[\\computername | /DOMAIN[:domainname] | /RTSDOMAIN[:domainname]] [/SET]
+         [\\computername] /QUERYSNTP
+         [\\computername] /SETSNTP[:ntp server list]
+

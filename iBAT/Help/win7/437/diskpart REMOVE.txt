@@ -1,0 +1,57 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Removes a drive letter or mounted folder pathname from the volume 
+    with focus.
+
+Syntax:  REMOVE [LETTER=<D> | MOUNT=<PATH> | ALL] [DISMOUNT] [NOERR]
+
+    LETTER=<D>  The drive letter to be removed.
+
+    MOUNT=<PATH>
+
+                The mounted folder path to be removed.
+
+    ALL         Removes all current drive letters and mounted folder paths.
+
+    DISMOUNT    This parameter may be used if 1) all drive letters and 
+                mounted folder paths have been removed from the volume, or 
+                2) the ALL parameter is specified.  This parameter 
+                specifies that the file system is to be dismounted and 
+                the volume taken offline. If other processes are using 
+                the volume, DiskPart closes any open handles before
+                dismounting the file system and taking the volume offline. 
+                You can bring the volume online by assigning it a driver 
+                letter, by creating a mounted folder path to the volume, or 
+                by using the ONLINE command. DISMOUNT will fail if used 
+                on a volume that has any remaining drive letters or mounted 
+                folder paths. For scripting, using REMOVE ALL DISMOUNT is 
+                recommended.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    If no drive letter or mounted folder path is specified, DiskPart removes
+    the first drive letter or mounted folder path it encounters. If the ALL 
+    parameter is used, all current drive letters and mounted folder paths 
+    are removed. If the DISMOUNT parameter is used, DiskPart closes all open 
+    handles to the volume and then dismounts the volume and takes it offline.
+
+    The REMOVE command can be used to change the drive letter associated with a
+    removable drive. You cannot remove the drive letters on boot or
+    paging volumes. 
+    
+    A volume must be selected for this operation to succeed.
+
+Example:
+
+    REMOVE LETTER=K
+    REMOVE MOUNT=G:\MountH
+    REMOVE ALL DISMOUNT
+
+DISKPART> 

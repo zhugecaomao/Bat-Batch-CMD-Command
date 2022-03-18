@@ -1,0 +1,14 @@
+/? is an invalid parameter.
+---- Commands Supported ----
+
+behavior        Control file system behavior
+dirty           Manage volume dirty bit
+file            File specific commands
+fsinfo          File system information
+hardlink        Hardlink management
+objectid        Object ID management
+quota           Quota management
+reparsepoint    Reparse point management
+sparse          Sparse file control
+usn             USN management
+volume          Volume management

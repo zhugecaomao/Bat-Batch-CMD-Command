@@ -1,0 +1,18 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+client         - Changes to the `netsh nap client' context.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+hra            - Changes to the `netsh nap hra' context.
+reset          - Resets configuration.
+show           - Shows configuration and state information.
+
+The following sub-contexts are available:
+ client hra
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

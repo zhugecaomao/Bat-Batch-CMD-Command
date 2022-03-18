@@ -1,0 +1,29 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+   Refreshes the state of all disks in the selected pack, attempts recovery
+   on disks in the invalid pack, and, resynchronizes mirrored volumes and
+   RAID-5 volumes that have stale plex or parity data.
+
+
+Syntax:  RECOVER [NOERR]
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    This command operates on a pack. A disk that is part of a pack must be 
+    selected for this operation to succeed.
+
+    This command is only applicable to dynamic disks. If called on a
+    basic disk, it will succeed but no action is taken.
+
+Example:
+
+    RECOVER
+
+DISKPART> 

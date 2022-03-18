@@ -1,0 +1,14 @@
+
+CDROM - CD-ROM 管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+CDROM ASSOC [<format specifier>]
+CDROM CREATE <assign list>
+CDROM DELETE
+CDROM GET [<property list>] [<get switches>]
+CDROM LIST [<list format>] [<list switches>]
+

@@ -1,0 +1,14 @@
+vssadmin 1.0 - 卷影复制服务管理命令行工具
+(C) 版权所有 2001 Microsoft Corp.
+
+用法:
+
+vssadmin list shadows [/set= {卷影副本集 guid}]
+        列出系统中的所有卷影副本，按卷影副本集 Id 分类。
+
+vssadmin list writers
+        列出系统中的所有写程序
+
+vssadmin list providers
+        列出当前所有已安装的卷影复制提供程序
+

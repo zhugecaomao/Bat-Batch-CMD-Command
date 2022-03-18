@@ -1,0 +1,11 @@
+
+Usage: ping6 [-t] [-a] [-n count] [-l size] [-w timeout] [-s srcaddr] [-r] dest
+
+Options:
+-t             Ping the specifed host until interrupted.
+-a             Resolve addresses to hostnames.
+-n count       Number of echo requests to send.
+-l size        Send buffer size.
+-w timeout     Timeout in milliseconds to wait for each reply.
+-s srcaddr     Source address to use.
+-r             Use routing header to test reverse route also.

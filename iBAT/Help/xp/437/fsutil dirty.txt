@@ -1,0 +1,4 @@
+---- DIRTY Commands Supported ----
+
+query           Query the dirty bit
+set             Set the dirty bit

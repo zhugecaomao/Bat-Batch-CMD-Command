@@ -1,0 +1,13 @@
+Display information about Terminal Sessions.
+
+QUERY SESSION [sessionname | username | sessionid]
+              [/SERVER:servername] [/MODE] [/FLOW] [/CONNECT] [/COUNTER]
+
+  sessionname         Identifies the session named sessionname.
+  username            Identifies the session with user username.
+  sessionid           Identifies the session with ID sessionid.
+  /SERVER:servername  The server to be queried (default is current).
+  /MODE               Display current line settings.
+  /FLOW               Display current flow control settings.
+  /CONNECT            Display current connect settings.
+  /COUNTER            Display current Terminal Services counters information.

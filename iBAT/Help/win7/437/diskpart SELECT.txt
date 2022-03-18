@@ -1,0 +1,14 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.1.7600
+
+DISK        - Shift the focus to a disk. For example, SELECT DISK.
+PARTITION   - Shift the focus to a partition. For example, SELECT PARTITION.
+VOLUME      - Shift the focus to a volume. For example, SELECT VOLUME.
+VDISK       - Shift the focus to a virtual disk. For example, SELECT VDISK.
+
+DISKPART> 

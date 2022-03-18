@@ -1,0 +1,8 @@
+---- 支持的 QUOTA 命令 ----
+
+disable         禁用配额跟踪和加强
+track           启用配额跟踪
+enforce         启用配额加强
+violations      显示配额冲突
+modify          为用户设置磁盘配额
+query           查询磁盘配额

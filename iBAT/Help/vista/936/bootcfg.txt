@@ -1,0 +1,49 @@
+
+BOOTCFG /parameter [arguments]
+
+描述:
+    此命令行工具可以用来在 BOOT.INI 文件中配置、查询、更改或删除
+    启动项目设置。
+
+参数列表:
+    /Copy       生成一个现有的启动项目的副本。
+
+    /Delete     从 BOOT.INI 文件删除现有启动项目。
+
+    /Query      显示当前启动项目和它们的设置。
+
+    /Raw        允许用户指定要添加的任何开关。
+
+    /Timeout    允许用户更改超时值。
+
+    /Default    允许用户更改默认启动项目。
+
+    /EMS        允许用户为无头支持配置 /redirect 开关。
+
+    /Debug      允许用户为远程调试指定端口和波特率。
+
+    /Addsw      允许用户添加预定义开关。
+
+    /Rmsw       允许用户删除预定义开关。
+
+    /Dbg1394    允许用户为调试配置 1394 端口。
+
+    /?          显示该帮助消息。
+
+例如:
+    BOOTCFG /Copy /?
+    BOOTCFG /Delete /?
+    BOOTCFG /Query /?
+    BOOTCFG /Raw /?
+    BOOTCFG /Timeout /?
+    BOOTCFG /EMS /?
+    BOOTCFG /Debug /?
+    BOOTCFG /Addsw /?
+    BOOTCFG /Rmsw /?
+    BOOTCFG /Dbg1394 /?
+    BOOTCFG /Default /?
+    BOOTCFG /?
+
+警告: BOOT.INI 用于 Windows XP 及更早版本操作系统上的
+         启动选项。使用 BCDEDIT 命令行工具修改
+         Windows Vista 引导选项。

@@ -1,0 +1,4 @@
+描述:
+        检索服务的描述字符串。
+用法:
+        sc <server> qdescription [service name] <bufferSize>

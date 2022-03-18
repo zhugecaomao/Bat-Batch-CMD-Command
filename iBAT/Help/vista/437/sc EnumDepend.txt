@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Enumerates the Services that are dependent on this one
+USAGE:
+        sc <server> EnumDepend <service name> <bufsize>

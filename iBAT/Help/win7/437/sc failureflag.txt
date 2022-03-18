@@ -1,0 +1,13 @@
+DESCRIPTION:
+        Changes the failure actions flag setting of a service. 
+        If this setting is 0 (default), the Service Control Manager 
+        (SCM) enables configured failure actions on the service
+        only if the service process terminates with the service in
+        a state other than SERVICE_STOPPED. If this setting is 1, 
+        the SCM enables configured failure actions on the service
+        if the service enters the SERVICE_STOPPED state with a Win32 
+        exit code other than 0 in addition to the service process 
+        termination as above. This setting is ignored if the service 
+        does not have any failure actions configured.
+USAGE:
+        sc <server> failureflag [service name] [flag]

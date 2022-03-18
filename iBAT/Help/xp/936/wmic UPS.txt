@@ -1,0 +1,14 @@
+
+UPS - 不可中断的电源供应 (UPS) 管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+UPS ASSOC [<format specifier>]
+UPS CREATE <assign list>
+UPS DELETE
+UPS GET [<property list>] [<get switches>]
+UPS LIST [<list format>] [<list switches>]
+

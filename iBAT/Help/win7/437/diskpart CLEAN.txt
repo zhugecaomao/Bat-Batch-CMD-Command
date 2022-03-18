@@ -1,0 +1,27 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+     Removes any and all partition or volume formatting from the disk with
+     focus.
+
+Syntax:  CLEAN [ALL]
+
+    ALL         Specifies that each and every byte\sector on the disk is set to
+                zero, which completely deletes all data contained on the disk.
+
+    On master boot record (MBR) disks, only the MBR partitioning information
+    and hidden sector information are overwritten. On GUID partition table
+    (GPT) disks, the GPT partitioning information, including the Protective
+    MBR, is overwritten. If the ALL parameter is not used, the first 1MB 
+    and the last 1MB of the disk are zeroed. This erases any disk formatting 
+    that had been previously applied to the disk. The disk's state after 
+    cleaning the disk is 'UNINITIALIZED'.
+
+Example:
+
+    CLEAN
+
+DISKPART> 

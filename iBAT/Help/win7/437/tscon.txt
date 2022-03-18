@@ -1,0 +1,11 @@
+Attaches a user session to a remote desktop session.
+
+TSCON {sessionid | sessionname} [/DEST:sessionname]
+        [/PASSWORD:pw | /PASSWORD:*] [/V]
+
+  sessionid          The ID of the session.
+  sessionname        The name of the session.
+  /DEST:sessionname  Connect the session to destination sessionname.
+  /PASSWORD:pw       Password of user owning identified session.
+  /V                 Displays information about the actions performed.
+

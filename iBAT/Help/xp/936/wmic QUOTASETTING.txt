@@ -1,0 +1,15 @@
+
+QUOTASETTING - 设置卷的磁盘配额信息。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+QUOTASETTING ASSOC [<format specifier>]
+QUOTASETTING CREATE <assign list>
+QUOTASETTING DELETE
+QUOTASETTING GET [<property list>] [<get switches>]
+QUOTASETTING LIST [<list format>] [<list switches>]
+QUOTASETTING SET [<assign list>]
+

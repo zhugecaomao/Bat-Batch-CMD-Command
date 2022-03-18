@@ -1,0 +1,22 @@
+
+Microsoft _ Logman.exe (6.0.6002.18005)
+
+用法:
+  logman [create|query|start|stop|delete|update|import|export] [选项]
+
+动词:
+  create                        创建新的数据收集器。
+  query                         查询数据收集程序属性。如果没有指定名称，将列出
+                                所有数据收集程序。
+  start                         启用现有数据收集程序并将开始时间设为手动。
+  stop                          停止现有数据收集程序并将停止时间设为手动。
+  delete                        删除现有数据收集程序。
+  update                        更新现有数据收集程序的属性。
+  import                        从 XML 文件导入数据收集器集。
+  export                        将数据收集器集导出到 XML 文件。
+
+选项:
+  -?                            显示跟上下文相关的帮助。
+  -s <computer>                 在指定的远程系统上执行命令。
+  -config <值>                  含有命令选项的设置文件。
+  -ets                          不保存或计划就将命令直接发送到事件跟踪会话。

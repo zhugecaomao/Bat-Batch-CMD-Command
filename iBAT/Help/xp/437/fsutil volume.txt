@@ -1,0 +1,4 @@
+---- VOLUME Commands Supported ----
+
+dismount        Dismount a volume
+diskfree        Query the free space of a volume

@@ -1,0 +1,4 @@
+描述:
+        设置服务的安全性描述符
+用法:
+        sc <server> sdset <service name> <SD in SDDL format>

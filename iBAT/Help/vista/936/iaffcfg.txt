@@ -1,0 +1,54 @@
+snetcfg [-v] [-l <full-path-to-component-INF>] -c <p|s|c> -i <comp-id>
+    where,
+    -l  provides the location of INF
+    -c  provides the class of the component to be installed
+        p == Protocol, s == Service, c == Client
+    -i  provides the component ID
+
+    The arguments must be passed in the order shown.
+
+    Examples:
+    snetcfg -l c:\oemdir\foo.inf -c p -i foo
+    ...installs protocol 'foo' using c:\oemdir\foo.inf
+
+    snetcfg -c s -i MS_Server
+    ...installs service 'MS_Server'
+
+OR
+
+snetcfg [-v] -q <comp-id>
+    Example:
+    snetcfg -q MS_IPX
+    ...displays if component 'MS_IPX' is installed
+
+OR
+
+snetcfg [-v] -u <comp-id>
+    Example:
+    snetcfg -u MS_IPX
+    ...uninstalls component 'MS_IPX'
+
+OR
+
+snetcfg [-v] -s <a|n>
+    where,
+    -s  provides the type of components to show
+        a == adapters, n == net components
+    Examples:
+    snetcfg -s n
+    ...shows all installed net components
+
+
+
+OR
+
+snetcfg [-v] -b <comp-id>
+    Examples:
+    snetcfg -b ms_tcpip
+    ...shows binding paths containing 'ms_tcpip'
+
+
+General Notes:
+  -v      turns on the verbose mode
+  -?      Displays this help
+

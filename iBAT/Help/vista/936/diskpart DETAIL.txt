@@ -1,0 +1,13 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.0.6002
+
+DISK        - 显示选中的磁盘的属性。
+PARTITION   - 显示选中的分区的属性。
+VOLUME      - 显示选中的卷的属性。
+
+DISKPART> 

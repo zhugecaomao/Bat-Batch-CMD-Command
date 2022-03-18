@@ -1,0 +1,8 @@
+---- 支持的 FILE 命令 ----
+
+findbysid               根据安全标识符查找文件
+queryallocranges        查询文件的分配的范围
+setshortname            为文件设置短名称
+setvaliddata            为文件设置有效数据长度
+setzerodata             为文件设置零数据
+createnew               创建一个指定大小的新文件

@@ -1,0 +1,75 @@
+BitLocker Drive Encryption: Repair Tool version 6.1.7600
+Copyright (C) Microsoft Corporation.
+
+Usage:
+
+repair-bde[.exe] InputVolume
+                  { OutputVolumeOrImage | {-NoOutputVolume|-nov} }
+                  { {-RecoveryPassword|-rp} NumericalPassword |
+                    {-RecoveryKey|-rk} PathToExternalKeyFile }
+                  [{-KeyPackage|-kp} PathToKeyPackage]
+                  [{-LogFile|-lf} PathToLogFile]
+                  [{-?|/?}]
+
+Description:
+  Attempts to repair or decrypt a damaged BitLocker-encrypted volume using the
+  supplied recovery information. 
+
+  WARNING! To avoid additional data loss, you should have a spare hard drive
+  available. Use this spare drive to store decrypted output or to back up the
+  contents of the damaged volume.  
+
+Parameters:
+  InputVolume
+                The BitLocker-encrypted volume to repair. Example: "C:".
+
+  OutputVolumeOrImage
+                Optional. The volume to store decrypted contents, or the file
+                location to create an image file of the contents.
+                Examples: "D:", "D:\imagefile.img".
+                
+                WARNING! All information on this output volume will be
+                overwritten.
+
+  -nov or -NoOutputVolume
+                Attempt to repair a BitLocker-encrypted volume by modifying the
+                boot sector to point to a valid copy of BitLocker metadata. 
+                
+                WARNING! To avoid additional data loss, use a sector backup
+                utility to back up the input volume before using this option.
+                If you do not have such a utility available, specify an output
+                volume or image instead.
+
+  -rk  or -RecoveryKey
+                Provide an external key to unlock the volume. 
+                Example: "F:\RecoveryKey.bek".
+
+  -rp  or -RecoveryPassword
+                Provide a numerical password to unlock the volume.
+                Example: "111111-222222-333333-...".
+
+  -kp  or -KeyPackage
+                Optional. Provide a key package to unlock the volume.
+                Example: "F:\ExportedKeyPackage"
+                
+            If this option is blank, the tool will look for the key package
+            automatically. This option is needed only if required by the tool.
+        
+  -lf  or -LogFile
+                Optional. Provide a path to a file that will store progress
+                information. Example: "F:\log.txt".
+
+  -f   or -Force
+                Optional. When used, forces a volume to be dismounted even if
+                it cannot be locked. This option is needed only if required by
+                the tool.
+
+  -?   or /?    
+                Shows this screen.
+
+Examples:
+  repair-bde C: -NoOutputVolume -rk F:\RecoveryKey.bek -Force
+  repair-bde C: D: -rp 111111-222222-[...] -lf F:\log.txt
+  repair-bde C: D: -kp F:\KeyPackage -rp 111111-222222-[...]
+  repair-bde C: D:\imagefile.img -kp F:\KeyPackage -rk F:\RecoveryKey.bek
+

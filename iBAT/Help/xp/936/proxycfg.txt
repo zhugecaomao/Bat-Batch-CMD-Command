@@ -1,0 +1,16 @@
+Microsoft (R) WinHTTP Default Proxy Configuration Tool
+版权所有 (C) Microsoft Corporation. 保留所有权利。
+
+用法:
+
+    proxycfg -?  : 查看帮助信息
+    
+    proxycfg     : 查看当前 WinHTTP 代理设置
+    
+    proxycfg [-d] [-p <server-name> [<bypass-list>]]
+    
+        -d : 设置直接访问       
+        -p : 设置代理服务器和可选的旁路列表
+        
+    proxycfg -u  : 从当前用户的 Microsoft Internet Explorer
+                   的手工设置导入代理设置(在 HKCU 中)

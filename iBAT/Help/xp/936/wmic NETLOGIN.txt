@@ -1,0 +1,14 @@
+
+NETLOGIN - (某一用户的)网络登录信息管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NETLOGIN ASSOC [<format specifier>]
+NETLOGIN CREATE <assign list>
+NETLOGIN DELETE
+NETLOGIN GET [<property list>] [<get switches>]
+NETLOGIN LIST [<list format>] [<list switches>]
+

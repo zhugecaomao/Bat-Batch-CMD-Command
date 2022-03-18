@@ -1,0 +1,21 @@
+
+下列指令有效:
+
+此上下文中的命令:
+?              - 显示命令列表。
+dump           - 显示一个配置脚本。
+exportkey      - 导出内容信息密钥。
+flush          - 刷新本地缓存的内容。
+help           - 显示命令列表。
+importkey      - 导入新的内容信息密钥。
+reset          - 重置 BranchCache 服务。
+set            - 设置配置参数。
+show           - 显示配置参数。
+smb            - 更改到 `netsh branchcache smb' 上下文。
+
+下列的子上下文可用:
+ smb
+
+若需要命令的更多帮助信息，请键入命令，接着是空格，
+后面跟 ?。
+

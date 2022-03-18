@@ -1,0 +1,15 @@
+
+FSDIR - 文件目录系统项目管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+FSDIR ASSOC [<format specifier>]
+FSDIR CALL <method name> [<actual param list>]
+FSDIR CREATE <assign list>
+FSDIR DELETE
+FSDIR GET [<property list>] [<get switches>]
+FSDIR LIST [<list format>] [<list switches>]
+

@@ -1,0 +1,13 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.0.6002
+
+DISK        - Shift the focus to a disk.
+PARTITION   - Shift the focus to a partition.
+VOLUME      - Shift the focus to a volume.
+
+DISKPART> 

@@ -1,0 +1,13 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.1.7600
+
+DISK        - 从磁盘列表删除遗失的磁盘。
+PARTITION   - 删除所选分区。
+VOLUME      - 删除所选卷。
+
+DISKPART> 

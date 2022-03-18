@@ -1,0 +1,13 @@
+
+** Invalid command
+Valid commands:                                                                                                         
+    load        Loads a Filter driver                                                                   
+    unload      Unloads a Filter driver                                                 
+    filters     Lists the Filters currently registered in the system    
+    instances   Lists the Instances for a Filter or Volume currently    
+                registered in the system                                                        
+    volumes     Lists all volumes/RDRs in the system                            
+    attach      Creates a Filter Instance to a Volume                           
+    detach      Removes a Filter Instance from a Volume                         
+                                                                                                                                                
+    Use fltmc help [ command ] for help on a specific command

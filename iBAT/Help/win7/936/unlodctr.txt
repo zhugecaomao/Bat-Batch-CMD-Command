@@ -1,0 +1,24 @@
+
+
+UNLODCTR
+    删除指定的可扩展计数器的计数器名称和说明文字。
+
+用法:
+
+    UNLODCTR <driver>
+        driver 是从系统注册表中将其
+            计数器名称定义和解释文本删除的设备驱动程序
+            的名称。
+
+    UNLODCTR /m:<manifest>
+        manifest 是包含性能
+            计数器定义的清单文件。这些计数器将从本地系统中删除。
+
+    UNLODCTR /g:{ProviderGuid}
+        ProviderGuid 标识卸载的性能计数器提供程序。
+
+    UNLODCTR /p:<ProviderName>
+        ProviderName 标识卸载的性能计数器提供程序。
+
+注意: 任何名称中带空格的参数都必须外加
+双引号。

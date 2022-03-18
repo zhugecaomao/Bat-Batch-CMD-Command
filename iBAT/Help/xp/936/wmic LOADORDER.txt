@@ -1,0 +1,14 @@
+
+LOADORDER - 定义执行依存的系统服务管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+LOADORDER ASSOC [<format specifier>]
+LOADORDER CREATE <assign list>
+LOADORDER DELETE
+LOADORDER GET [<property list>] [<get switches>]
+LOADORDER LIST [<list format>] [<list switches>]
+

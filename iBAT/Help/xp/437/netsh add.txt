@@ -1,0 +1,5 @@
+
+The following commands are available:
+
+Commands in this context:
+add helper     - Installs a helper DLL.

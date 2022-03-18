@@ -1,0 +1,15 @@
+DESCRIPTION:
+        Changes the actions upon failure
+USAGE:
+        sc <server> failure [service name] <option1> <option2>...
+
+OPTIONS:
+        reset=   <Length of period of no failures (in seconds)
+                  after which to reset the failure count to 0 (may be INFINITE)>
+                  (Must be used in conjunction with actions= )
+        reboot=  <Message broadcast before rebooting on failure>
+        command= <Command line to be run on failure>
+        actions= <Failure actions and their delay time (in milliseconds),
+                  separated by / (forward slash) -- e.g., run/5000/reboot/800
+                  Valid actions are <run|restart|reboot> >
+                  (Must be used in conjunction with the reset= option)

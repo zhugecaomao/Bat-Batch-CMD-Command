@@ -1,0 +1,15 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.1.7600
+
+DISK        - 显示磁盘列表。例如，LIST DISK。
+PARTITION   - 显示所选磁盘上的分区列表。
+              例如，LIST PARTITION。
+VOLUME      - 显示卷列表。例如，LIST VOLUME。
+VDISK       - 显示虚拟磁盘列表。
+
+DISKPART> 

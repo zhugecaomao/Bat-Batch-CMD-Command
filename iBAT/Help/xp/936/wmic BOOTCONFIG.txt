@@ -1,0 +1,14 @@
+
+BOOTCONFIG - 启动配置管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+BOOTCONFIG ASSOC [<format specifier>]
+BOOTCONFIG CREATE <assign list>
+BOOTCONFIG DELETE
+BOOTCONFIG GET [<property list>] [<get switches>]
+BOOTCONFIG LIST [<list format>] [<list switches>]
+

@@ -1,0 +1,7 @@
+The syntax of this command is:
+
+NET ACCOUNTS
+[/FORCELOGOFF:{minutes | NO}] [/MINPWLEN:length]
+              [/MAXPWAGE:{days | UNLIMITED}] [/MINPWAGE:days]
+              [/UNIQUEPW:number] [/DOMAIN]
+

@@ -1,0 +1,12 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.1.7600
+
+DISK        - 使当前标为脱机的磁盘联机。
+VOLUME      - 使当前标记为脱机的卷联机。
+
+DISKPART> 

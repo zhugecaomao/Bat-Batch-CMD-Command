@@ -1,0 +1,68 @@
+BitLocker 驱动器加密: 修复工具版本 6.1.7600
+版权所有 (C) Microsoft Corporation.
+
+用法:
+
+repair-bde[.exe] InputVolume
+                  { OutputVolumeOrImage | {-NoOutputVolume|-nov} }
+                  { {-RecoveryPassword|-rp} NumericalPassword |
+                    {-RecoveryKey|-rk} PathToExternalKeyFile }
+                  [{-KeyPackage|-kp} PathToKeyPackage]
+                  [{-LogFile|-lf} PathToLogFile]
+                  [{-?|/?}]
+                  
+描述: 
+  尝试使用提供的恢复信息修复或者解密损坏的 BitLocker 加密的卷。
+
+  警告! 若要避免其他数据丢失，应该有备用硬盘驱动器可用。使用此备用硬盘驱动器
+  存储解密的输出，或者备份损坏的卷的内容。
+  
+参数:
+  InputVolume
+                修复 BitLocker 加密的卷。例如: "C:"。
+
+  OutputVolumeOrImage
+                可选。存储解密内容的卷，或者创建该内容映像文件的文件位置。
+                例如: "D:"、"D:\imagefile.img"。
+
+                警告! 将覆盖此输出卷上的所有信息。
+
+  -nov or -NoOutputVolume
+                通过修改引导扇区指向有效的 BitLocker 元数据的副本，尝试修复 
+                BitLocker 加密的卷。
+
+                警告! 若要避免其他数据丢失，在使用此选项前，请使用扇区备份工
+                具来备份输入卷损坏的卷的内容。如果没有类似工具可用，请指定输
+                出卷或者映像代替。
+
+  -rk  or -RecoveryKey
+                提供外部密钥来解锁卷。
+                例如: "F:\RecoveryKey.bek".
+
+  -rp  or -RecoveryPassword
+                提供数字密码来解锁卷。
+                例如: "111111-222222-333333-...".
+
+  -kp  or -KeyPackage
+                可选。提供密钥程序包来解锁卷。
+                例如: "F:\ExportedKeyPackage"
+
+            如果此选项为空，则工具将自动查找密钥程序包。仅当工具要求时，才需
+            要完成此选项。
+        
+  -lf  or -LogFile
+                可选。提供到将存储安装进度的文件的路径。例如: "F:\log.txt".
+
+  -f   or -Force
+                可选。在使用后，即使无法对卷锁定，也强制卸除此卷。仅当工具要
+                求时，才需要完成此选项。
+
+  -?   or /?
+                显示此屏幕。
+
+例如:
+  repair-bde C: -NoOutputVolume -rk F:\RecoveryKey.bek -Force
+  repair-bde C: D: -rp 111111-222222-[...] -lf F:\log.txt
+  repair-bde C: D: -kp F:\KeyPackage -rp 111111-222222-[...]
+  repair-bde C: D:\imagefile.img -kp F:\KeyPackage -rk F:\RecoveryKey.bek
+

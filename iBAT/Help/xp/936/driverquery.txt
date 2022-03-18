@@ -1,0 +1,38 @@
+
+DRIVERQUERY [/S system [/U username [/P [password]]]]
+              [/FO format] [/NH] [/SI] [/V]
+描述:
+    允许管理员枚举和显示已安装设备驱动程序
+    列表以及驱动程序的属性。
+
+参数列表:
+      /S     system           指定要连接到的远程系统。
+
+      /U     [domain\]user    执行命令执行的用户
+                              上下文。
+
+      /P     [password]       指定所给用户上下文
+                              的密码。
+
+      /FO    format           指定要显示的结果类型。
+                              与命令行开关一起传递的有效值是
+                              "TABLE"、"LIST"、" CSV"。
+
+      /NH                     指定 "Column Header" 不应该在
+                              屏幕输出中出现。
+                              只对 "TABLE" 和 "CSV"
+                              格式有效。
+
+      /V                      显示详细信息。对已签名的
+                              驱动程序无效。
+
+      /SI                     提供有关已签名驱动程序的信息。
+
+      /?                      显示帮助/用法。
+
+例如:
+    DRIVERQUERY
+    DRIVERQUERY /FO CSV /SI
+    DRIVERQUERY /NH
+    DRIVERQUERY /S ipaddress /U user  /V
+    DRIVERQUERY /S system /U domain\user /P password /FO LIST

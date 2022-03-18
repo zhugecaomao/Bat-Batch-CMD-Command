@@ -1,0 +1,14 @@
+此命令的语法是:
+
+NET SHARE
+sharename
+          sharename=drive:path [/GRANT:user,[READ | CHANGE | FULL]]
+                               [/USERS:number | /UNLIMITED]
+                               [/REMARK:"text"]
+                               [/CACHE:Manual | Documents| Programs | BranchCache | None]
+          sharename [/USERS:number | /UNLIMITED]
+                    [/REMARK:"text"]
+                    [/CACHE:Manual | Documents | Programs | BranchCache | None]
+          {sharename | devicename | drive:path} /DELETE
+          sharename \\computername /DELETE
+

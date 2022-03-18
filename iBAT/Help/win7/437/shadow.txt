@@ -1,0 +1,9 @@
+Monitor another Remote Desktop Services session.
+
+SHADOW {sessionname | sessionid} [/SERVER:servername] [/V]
+
+  sessionname         Identifies the session with name sessionname.
+  sessionid           Identifies the session with ID sessionid.
+  /SERVER:servername  The server containing the session (default is current).
+  /V                  Display information about actions being performed.
+

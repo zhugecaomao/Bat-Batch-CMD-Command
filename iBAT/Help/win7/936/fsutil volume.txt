@@ -1,0 +1,6 @@
+---- 支持的 VOLUME 命令 ----
+
+dismount        卸载卷
+diskfree        查询卷的可用空间
+querycluster    查询使用特定群集的文件
+

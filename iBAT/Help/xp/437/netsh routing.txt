@@ -1,0 +1,17 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+ip             - Changes to the `netsh routing ip' context.
+ipx            - Changes to the `netsh routing ipx' context.
+reset          - Resets IP routing to a clean state.
+
+The following sub-contexts are available:
+ ip ipx
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

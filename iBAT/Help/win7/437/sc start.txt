@@ -1,0 +1,4 @@
+[SC] StartService: OpenService FAILED 123:
+
+The filename, directory name, or volume label syntax is incorrect.
+

@@ -1,0 +1,7 @@
+---- FSINFO Commands Supported ----
+
+drives          List all drives
+drivetype       Query drive type for a drive
+volumeinfo      Query volume information
+ntfsinfo        Query NTFS specific volume information
+statistics      Query file system statistics

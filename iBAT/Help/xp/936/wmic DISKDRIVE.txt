@@ -1,0 +1,14 @@
+
+DISKDRIVE - 物理磁盘驱动器管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+DISKDRIVE ASSOC [<format specifier>]
+DISKDRIVE CREATE <assign list>
+DISKDRIVE DELETE
+DISKDRIVE GET [<property list>] [<get switches>]
+DISKDRIVE LIST [<list format>] [<list switches>]
+

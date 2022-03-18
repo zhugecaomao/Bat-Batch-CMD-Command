@@ -1,0 +1,4 @@
+描述:
+        枚举依存于此服务的服务
+用法:
+        sc <server> EnumDepend <service name> <bufsize>

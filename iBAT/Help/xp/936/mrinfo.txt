@@ -1,0 +1,10 @@
+
+用法: mrinfo [-n?] [-i address] [-t secs] [-r retries] destination
+       
+ -n           以数字格式显示 IP 地址
+ -i address   发送查询的本地界面地址
+ -t seconds   IGMP 查询的超时时间(以秒为单位) (缺省为 3 秒) 
+ -r retries   额外发送 SNMP 查询的次数 (缺省为 0)         
+ -?           打印使用方法
+ 目标的地址或名称
+

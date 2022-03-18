@@ -1,0 +1,8 @@
+改变安装模式。
+
+CHANGE USER {/EXECUTE | /INSTALL | /QUERY}
+
+  /EXECUTE  启用执行模式(默认)。
+  /INSTALL  启用安装模式。
+  /QUERY    显示当前设置。
+

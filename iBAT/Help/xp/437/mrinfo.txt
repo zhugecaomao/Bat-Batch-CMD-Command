@@ -1,0 +1,10 @@
+
+Usage: mrinfo [-n?] [-i address] [-t secs] [-r retries] destination
+       
+ -n           Display IP addresses in numeric format
+ -i address   Address of local interface to send query out
+ -t seconds   Timeout in seconds for IGMP queries (default = 3 seconds) 
+ -r retries   Number of extra times to send the SNMP queries (default = 0)         
+ -?           Print Usage
+ destination  Address or name of destination
+

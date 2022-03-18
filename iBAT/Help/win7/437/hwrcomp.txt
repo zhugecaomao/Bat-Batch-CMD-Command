@@ -1,0 +1,21 @@
+用法: hwrcomp [-lang <locale>]
+               [-type <type>]
+               [-comment <comment>]
+               [-check | -o <dictfile.hwrdict>]
+               <inputfile>
+
+-check                验证输入文件
+-lang <locale>        将此默认语言分配给字典文件。
+                      区域设置使用 ISO 代码，其形式为 <语言>-<区域>
+-type <type>          将此类型分配给字典文件
+-comment <comment>    将此备注编译到字典文件
+-o <dictfile.hwrdict> 输出到此文件名。
+                      如果缺少此选项，则请使用 <inputfile>.hwrdict
+
+示例:
+hwrcomp -check mylist1.txt
+  验证文件内容
+hwrcomp -lang en-US -type SECONDARY-DICTIONARY -o myrsrc1 mylist1.txt
+  将 mylist1.txt 编译到 myrsrc1.hwrdict，
+  分配语言 "English (US)" 和类型 "SECONDARY-DICTIONARY"
+

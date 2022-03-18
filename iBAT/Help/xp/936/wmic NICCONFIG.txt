@@ -1,0 +1,15 @@
+
+NICCONFIG - 网络适配器管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NICCONFIG ASSOC [<format specifier>]
+NICCONFIG CALL <method name> [<actual param list>]
+NICCONFIG CREATE <assign list>
+NICCONFIG DELETE
+NICCONFIG GET [<property list>] [<get switches>]
+NICCONFIG LIST [<list format>] [<list switches>]
+

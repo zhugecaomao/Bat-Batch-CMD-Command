@@ -1,0 +1,11 @@
+
+telnet [-a][-e escape char][-f log file][-l user][-t term][host [port]]
+ -a      企图自动登录。除了用当前已登陆的用户名以外，与 -l 选项相同。
+ -e      跳过字符来进入 telnet 客户提示。
+ -f      客户端登录的文件名
+ -l      指定远程系统上登录用的用户名称。
+         要求远程系统支持 TELNET ENVIRON 选项。
+ -t      指定终端类型。
+         支持的终端类型仅是: vt100, vt52, ansi 和 vtnt。
+ host    指定要连接的远程计算机的主机名或 IP 地址。
+ port    指定端口号或服务名。

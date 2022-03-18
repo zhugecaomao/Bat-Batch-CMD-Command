@@ -1,0 +1,39 @@
+A command Line utility to make timezone changes 
+
+tzchange.exe [/A string] [/C string] [/F string] [/V string] [/S 7 integers]
+             [/E 7 integers] [/M string] [/N string] [/B integer] [/Z integer]
+             [/B integer] [/R integer] [/D integer] [/T string] [/L string] [/U] 
+
+/A   Add timezone option, followed by timezone name to add, max 120 characters 
+/C   Switch timezone, followed by timezone name to switch, max 120 characters 
+/F   Edit timezone, followed by timezone name to edit, max 120 characters 
+/V   Verification timezone, followed by timezone name, max 120 characters 
+/M   Delete Timezone, followed by timezone name to delete, max 120 characters 
+/S   Daylight Start date, followed by 7 integer values specifying:
+       1. Month    [0-12] 0 for no daylight settings, 1-12 for Jan -> Dec 
+       2. DayofWeek[0-6]  for Sunday[0] -> Saturday[6] 
+       3. Day      [0-5]  0 for no daylight settings, 1-5 for day of month
+       4. Hour     [0-23] 
+       5. Minutes  [0-59] 
+       6. Seconds  [0-59] 
+       7. Milliseconds [0-999] 
+     The above 7 integers are interpreted strictly in the same order. 
+
+/E   Daylight End\Standard start date, followed by 7 integer values like above
+/N   New Display name, followed by the display name 
+/B   Bias in minutes, followed by an integer value between -780 and 720
+     This option also updates the time offset in Display Name.
+
+/R   Standard Bias in minutes, followed by an integer value between -780 and 720
+/D   Daylight bias in minutes, followed by an integer value between -780 and 720
+/T   Standard Name, followed by the standard name string, max 32 characters
+/L   Daylight Name, followed by the daylight name string, max 32 characters
+/U   Undo option [should not be combined with by any other option]
+/Z   Number of Undo operations, followed by integer [-1 and above],
+     Where -1 will Undo all previous timezone operations. This switch
+     is optional during Undo, a default of 1 is taken if not specified.
+
+/I   Index, followed by an integer, used only during Add operation.The index 
+     value should be between 3221225472[0xC0000000] and 4294967295[0xFFFFFFFF]
+
+/?   Help 

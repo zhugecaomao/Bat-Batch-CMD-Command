@@ -1,0 +1,21 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Displays a list of the available commands or detailed help information for a
+    specified command.
+
+Syntax:  HELP [<COMMAND>]
+
+    <COMMAND>   The command for which to display detail help.
+
+    If no command is specified, HELP will display all possible commands.
+
+Example:
+
+    HELP
+    HELP CREATE PARTITION PRIMARY
+
+DISKPART> 

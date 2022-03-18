@@ -1,0 +1,6 @@
+Converts .EXE (executable) files to binary format.
+
+EXE2BIN [drive1:][path1]input-file [[drive2:][path2]output-file]
+
+  input-file   Specifies the .EXE file to be converted.
+  output-file  Specifies the binary file to be created.

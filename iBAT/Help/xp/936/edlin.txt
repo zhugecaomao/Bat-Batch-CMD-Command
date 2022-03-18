@@ -1,0 +1,6 @@
+Invalid keyboard code specified
+Starts Edlin, a line-oriented text editor.
+
+EDLIN [drive:][path]filename [/B]
+
+  /B   Ignores end-of-file (CTRL+Z) characters.

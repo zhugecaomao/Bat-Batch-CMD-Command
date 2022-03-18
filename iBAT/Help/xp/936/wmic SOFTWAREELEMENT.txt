@@ -1,0 +1,14 @@
+
+SOFTWAREELEMENT - 安装在系统上的软件产品元素的管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SOFTWAREELEMENT ASSOC [<format specifier>]
+SOFTWAREELEMENT CREATE <assign list>
+SOFTWAREELEMENT DELETE
+SOFTWAREELEMENT GET [<property list>] [<get switches>]
+SOFTWAREELEMENT LIST [<list format>] [<list switches>]
+

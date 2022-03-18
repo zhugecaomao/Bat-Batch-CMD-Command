@@ -1,0 +1,4 @@
+
+此命令的语法为:
+
+secedit [/configure | /analyze | /import | /export | /validate | /generaterollback]

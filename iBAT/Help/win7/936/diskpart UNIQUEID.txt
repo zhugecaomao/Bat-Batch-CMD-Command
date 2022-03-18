@@ -1,0 +1,11 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.1.7600
+
+DISK        - 显示或设置磁盘的 GUID 分区表(GPT)标识符或主启动记录(MBR)签名。
+
+DISKPART> 

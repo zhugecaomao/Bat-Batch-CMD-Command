@@ -1,0 +1,21 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+dump           - Displays a configuration script.
+exportkey      - Exports the content information key.
+flush          - Flushes the contents of the local cache.
+help           - Displays a list of commands.
+importkey      - Imports a new content information key.
+reset          - Resets the BranchCache service.
+set            - Sets configuration parameters.
+show           - Displays configuration parameters.
+smb            - Changes to the `netsh branchcache smb' context.
+
+The following sub-contexts are available:
+ smb
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

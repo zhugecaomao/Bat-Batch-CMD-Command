@@ -1,0 +1,14 @@
+
+TIMEZONE - 时间区域数据管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+TIMEZONE ASSOC [<format specifier>]
+TIMEZONE CREATE <assign list>
+TIMEZONE DELETE
+TIMEZONE GET [<property list>] [<get switches>]
+TIMEZONE LIST [<list format>] [<list switches>]
+

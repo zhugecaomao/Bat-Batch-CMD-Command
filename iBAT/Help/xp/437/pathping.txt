@@ -1,0 +1,18 @@
+
+Usage: pathping [-g host-list] [-h maximum_hops] [-i address] [-n] 
+                [-p period] [-q num_queries] [-w timeout] [-P] [-R] [-T] 
+                [-4] [-6] target_name
+
+Options:
+    -g host-list     Loose source route along host-list.
+    -h maximum_hops  Maximum number of hops to search for target.
+    -i address       Use the specified source address. 
+    -n               Do not resolve addresses to hostnames.
+    -p period        Wait period milliseconds between pings.
+    -q num_queries   Number of queries per hop.
+    -w timeout       Wait timeout milliseconds for each reply.
+    -P               Test for RSVP PATH connectivity.
+    -R               Test if each hop is RSVP aware.
+    -T               Test connectivity to each hop with Layer-2 priority tags.
+    -4               Force using IPv4.
+    -6               Force using IPv6.

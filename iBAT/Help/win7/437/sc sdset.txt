@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Sets a service's security descriptor
+USAGE:
+        sc <server> sdset <service name> <SD in SDDL format>

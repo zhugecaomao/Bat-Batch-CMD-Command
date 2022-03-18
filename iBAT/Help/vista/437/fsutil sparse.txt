@@ -1,0 +1,6 @@
+---- SPARSE Commands Supported ----
+
+setflag         Set sparse
+queryflag       Query sparse
+queryrange      Query range
+setrange        Set sparse range

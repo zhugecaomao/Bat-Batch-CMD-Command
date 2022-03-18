@@ -1,0 +1,4 @@
+描述:
+        启动服务运行。
+用法:
+        sc <server> start [service name] <arg1> <arg2> ...

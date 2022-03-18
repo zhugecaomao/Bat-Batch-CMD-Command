@@ -1,0 +1,7 @@
+此命令的语法是:
+
+
+NET SEND 
+{name | * | /DOMAIN[:name] | /USERS} message
+
+

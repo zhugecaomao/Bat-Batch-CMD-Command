@@ -1,0 +1,13 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.0.6002
+
+DISK        - 将焦点移动到磁盘。
+PARTITION   - 将焦点移动到分区。
+VOLUME      - 将焦点移动到卷。
+
+DISKPART> 

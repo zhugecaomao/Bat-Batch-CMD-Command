@@ -1,0 +1,8 @@
+Usage: sdbinst [-?] [-q] [-u] [-g] [-p] [-n[:WIN32|WIN64]] foo.sdb | {guid} | "name"
+
+    -? - print this help text.
+    -p - Allow SDBs containing patches.
+    -q - Quiet mode. No message boxes will appear.
+    -u - Uninstall.
+    -g {guid} - GUID of file (uninstall only).
+    -n "name" - Internal name of file (uninstall only).

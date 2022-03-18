@@ -1,0 +1,12 @@
+rsh: remote terminal session not supported
+
+Runs commands on remote hosts running the RSH service. 
+
+RSH host [-l username] [-n] command
+
+  host            Specifies the remote host on which to run command.
+  -l username     Specifies the user name to use on the remote host. If 
+                  omitted, the logged on user name is used.
+  -n              Redirects the input of RSH to NULL.
+  command         Specifies the command to run.
+

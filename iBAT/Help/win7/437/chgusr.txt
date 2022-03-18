@@ -1,0 +1,8 @@
+Change Install Mode.
+
+CHANGE USER {/EXECUTE | /INSTALL | /QUERY}
+
+  /EXECUTE  Enable execute mode (default).
+  /INSTALL  Enable install mode.
+  /QUERY    Display current settings.
+

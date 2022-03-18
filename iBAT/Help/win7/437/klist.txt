@@ -1,0 +1,4 @@
+
+
+Usage: Klist.exe [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge
+

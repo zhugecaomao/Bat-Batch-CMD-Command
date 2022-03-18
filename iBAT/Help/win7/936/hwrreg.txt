@@ -1,0 +1,37 @@
+用法:
+  hwrreg [-check]
+         [-lang <locale>]
+         [-scope {all|me}]
+         [-noprompt]
+         <dictfile.hwrdict>
+
+-check          验证字典文件并显示其注册信息
+-lang <locale>  将此语言分配给已安装的字典。
+                区域设置使用 ISO 代码，其形式为 <语言>-<区域>
+-scope {all|me} 为此计算机上的所有用户安装还是仅为我自己安装
+-noprompt       不提示确认
+
+示例:
+hwrreg -lang en-US myrsrc1.hwrdict
+  安装 "English (US)" 语言的 myrsrc1.hwrdict，其作用域为 "me"
+
+
+用法: hwrreg [-lang <localename>]
+              [-scope {all|me}]
+              [-type <type>]
+              -list | -remove
+
+-lang <locale>  列出或删除为此语言注册的字典。
+                区域设置使用 ISO 代码，其形式为 <语言>-<区域>
+-scope {all|me} 列出或删除为所有用户安装的字典
+                或仅为我自己安装的字典(默认)
+-type <type>    列出或删除用此类型注册的字典
+-list           列出与其他选项匹配的所有已安装的字典
+-remove         提示删除匹配其他选项的任何字典
+
+示例:
+hwrreg -list -lang en-US -type PRIMARY-DICTIONARY
+  列出用此语言和类型为我自己安装的字典
+hwrreg -remove -lang en-US -type PRIMARY-DICTIONARY
+  删除用此语言和类型为我自己安装的字典
+

@@ -1,0 +1,15 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Locates new disks that may have been added to the computer.
+
+Syntax:  RESCAN
+
+Example:
+
+    RESCAN
+
+DISKPART> 

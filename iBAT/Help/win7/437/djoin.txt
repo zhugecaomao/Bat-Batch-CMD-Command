@@ -1,0 +1,31 @@
+Usage: djoin.exe [/OPTIONS]
+
+  /PROVISION  - Provision a computer account in the domain
+      /DOMAIN <Name> - <Name> of the domain to join
+      /MACHINE <Name> - <Name> of the computer joining the domain
+      /MACHINEOU <OU> - Optional <OU> where the account is created
+      /DCNAME <DC> - Optional <DC> to target for account creation
+      /REUSE - Reuse any existing account (password will be reset)
+      /SAVEFILE <FilePath> - Save provisioning data to a file at <FilePath>
+      /NOSEARCH - Skip account conflict detection, requires DCNAME (faster)
+      /DOWNLEVEL - Support using a Windows Server 2008 DC or earlier
+      /PRINTBLOB - Return base64 encoded metadata blob for an answer file
+      /DEFPWD - Use default machine account password (not recommended)
+       
+  /REQUESTODJ  - Request offline domain join at next boot
+      /LOADFILE <FilePath> - <FilePath> specified previously via /SAVEFILE
+      /WINDOWSPATH <Path> - <Path> to the Windows directory in an offline image
+      /LOCALOS - Allows /WINDOWSPATH to specify the locally running OS.
+                 This command must be run as a local Administrator.
+                 This option requires a reboot for changes to be applied.
+      
+Examples:
+
+To provision a computer account in the domain:
+djoin.exe /PROVISION /DOMAIN <DomainName> /MACHINE <MachineName>
+          /SAVEFILE <FilePath>
+          Note: Other parameters are optional
+          
+To request the local machine to perform an offline domain join:
+djoin.exe /REQUESTODJ /LOADFILE <FilePath> /WINDOWSPATH <Path>
+          Note: Other parameters are optional

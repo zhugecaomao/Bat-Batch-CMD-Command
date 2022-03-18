@@ -1,0 +1,21 @@
+
+EVENTTRIGGERS /parameter [arguments]
+
+描述:
+    此命令行工具允许管理员在本地或远程
+    系统上显示并配置“事件触发器”。
+
+参数列表:
+    /Create     创建一个新的事件触发器，它将监视并
+                根据按照给定条件发生的 NT 日志事件进行操作。
+
+    /Delete     按 ID 删除事件触发器。
+
+    /Query      查询并显示事件触发器的属性和设置。
+
+    /?          显示帮助/用法。
+
+示例:
+    EVENTTRIGGERS /Create /?
+    EVENTTRIGGERS /Delete /?
+    EVENTTRIGGERS /Query  /?

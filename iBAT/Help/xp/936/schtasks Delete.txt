@@ -1,0 +1,31 @@
+
+SCHTASKS /Delete [/S system [/U username [/P password]]] /TN taskname
+  [/F]
+
+描述:
+    删除一个或多个计划任务。
+
+参数列表:
+    /S         system       指定要连接到的远程系统。
+
+    /U         username     指定要执行的命令的
+                            用户上下文。
+
+    /P         password     指定给定用户上下文
+                            的密码。
+
+    /TN        taskname     指定要删除的计划任务。要
+                            删除所有任务，必须使用通
+                            配符 "*"。
+
+    /F                      (强制) 删除此任务，如果指定任务
+                            当前正在运行则取消
+                            警告。
+
+    /?                      显示帮助/用法。
+
+示例:
+    SCHTASKS /Delete /TN * /F
+    SCHTASKS /Delete /TN "Backup and Restore"
+    SCHTASKS /Delete /S system /U user /P password /TN "Start Restore"
+    SCHTASKS /Delete /S system /U user /P password /TN "Start Backup" /F

@@ -1,0 +1,8 @@
+Reset the session subsytem hardware and software to known initial values.
+
+RESET SESSION {sessionname | sessionid} [/SERVER:servername] [/V]
+
+  sessionname         Identifies the session with name sessionname.
+  sessionid           Identifies the session with ID sessionid.
+  /SERVER:servername  The server containing the session (default is current).
+  /V                  Display additional information.

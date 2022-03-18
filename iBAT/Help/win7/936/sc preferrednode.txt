@@ -1,0 +1,8 @@
+描述:
+        更改 Win32 服务的首选 NUMA 节点。
+        此设置仅对自身的进程服务有效。
+        若要删除现有设置，请将节点号设置为 -1。
+        如果提供了无效的首选节点号，则更改请求将失败。
+
+用法:
+        sc <server> preferrednode [service name] [node number]

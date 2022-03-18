@@ -1,0 +1,16 @@
+
+下列指令有效:
+
+此上下文中的命令:
+?              - 显示命令列表。
+dump           - 显示一个配置脚本。
+dynamic        - 更改到 `netsh ipsec dynamic' 上下文。
+help           - 显示命令列表。
+static         - 更改到 `netsh ipsec static' 上下文。
+
+下列的子上下文可用:
+ dynamic static
+
+若需要命令的更多帮助信息，请键入命令，接着是空格，
+后面跟 ?。
+

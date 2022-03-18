@@ -1,0 +1,24 @@
+
+The following commands are available:
+
+Commands in this context:
+6to4           - Changes to the `netsh interface 6to4' context.
+?              - Displays a list of commands.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+httpstunnel    - Changes to the `netsh interface httpstunnel' context.
+ipv4           - Changes to the `netsh interface ipv4' context.
+ipv6           - Changes to the `netsh interface ipv6' context.
+isatap         - Changes to the `netsh interface isatap' context.
+portproxy      - Changes to the `netsh interface portproxy' context.
+set            - Sets configuration information.
+show           - Displays information.
+tcp            - Changes to the `netsh interface tcp' context.
+teredo         - Changes to the `netsh interface teredo' context.
+
+The following sub-contexts are available:
+ 6to4 httpstunnel ipv4 ipv6 isatap portproxy tcp teredo
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

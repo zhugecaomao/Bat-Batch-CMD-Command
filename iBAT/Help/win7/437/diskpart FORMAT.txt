@@ -1,0 +1,71 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Formats the specified volume for use with Windows.
+
+Syntax:  FORMAT [[FS=<FS>] [REVISION=<X.XX>] | RECOMMENDED] [LABEL=<"label">]
+                [UNIT=<N>] [QUICK] [COMPRESS] [OVERRIDE] [DUPLICATE] [NOWAIT] 
+                [NOERR]
+
+    FS=<FS>     Specifies the type of file system. If no file system is given,
+                the default file system displayed by the FILESYSTEMS command is
+                used.
+
+    REVISION=<X.XX>
+
+                Specifies the file system revision (if applicable).
+
+    RECOMMENDED If specified, use the recommended file system and revision
+                instead of the default if a recommendation exists. The
+                recommended file system (if one exists) is displayed by the
+                FILESYSTEMS command.
+
+    LABEL=<"label">
+
+                Specifies the volume label.
+
+    UNIT=<N>    Overrides the default allocation unit size. Default settings
+                are strongly recommended for general use. The default
+                allocation unit size for a particular file system is displayed
+                by the FILESYSTEMS command.
+
+                NTFS compression is not supported for allocation unit sizes
+                above 4096.
+
+    QUICK       Performs a quick format.
+
+    COMPRESS    NTFS only: Files created on the new volume will be compressed
+                by default.
+
+    OVERRIDE    Forces the file system to dismount first if necessary. All 
+                opened handles to the volume would no longer be valid.
+
+    DUPLICATE   UDF Only: This flag applies to UDF format, version 2.5 or 
+                higher. 
+                This flag instructs the format operation to duplicate the file 
+                system meta-data to a second set of sectors on the disk. The 
+                duplicate meta-data is used by applications, for example repair
+                or recovery applications. If the primary meta-data sectors are 
+                found to be corrupted, the file system meta-data will be read 
+                from the duplicate sectors.
+    
+    NOWAIT      Forces the command to return immediately while the format
+                process is still in progress. If NOWAIT is not specified,
+                DiskPart will display format progress in percentage.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    A volume must be selected for this operation to succeed.
+
+Examples:
+
+    FORMAT FS=NTFS LABEL="New Volume" QUICK COMPRESS
+    FORMAT RECOMMENDED OVERRIDE
+
+DISKPART> 

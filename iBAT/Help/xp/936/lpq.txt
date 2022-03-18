@@ -1,0 +1,10 @@
+
+Displays the state of a remote lpd queue.
+
+Usage: lpq  -Sserver -Pprinter [-l]
+
+Options:
+     -S server    Name or ipaddress of the host providing lpd service
+     -P printer   Name of the print queue
+     -l           verbose output
+

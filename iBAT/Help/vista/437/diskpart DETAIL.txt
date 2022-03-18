@@ -1,0 +1,13 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.0.6002
+
+DISK        - Display the properties of the selected disk.
+PARTITION   - Display the properties of the selected partition.
+VOLUME      - Display the properties of the selected volume.
+
+DISKPART> 

@@ -1,0 +1,23 @@
+
+SCHTASKS /Run [/S system [/U username [/P [password]]]] /TN taskname
+
+Description:
+    Runs a scheduled task immediately.
+
+Parameter List:
+    /S     system        Specifies the remote system to connect to.
+
+    /U     username      Specifies the user context under
+                         which the schtasks.exe should execute.
+
+    /P     [password]    Specifies the password for the given
+                         user context. Prompts for input if omitted.
+
+    /TN    taskname      Identifies the scheduled task to run now.
+
+    /?                   Displays this help message.
+
+Examples:
+    SCHTASKS /Run /? 
+    SCHTASKS /Run /TN "Start Backup"
+    SCHTASKS /Run /S system /U user /P password /TN "Backup and Restore"

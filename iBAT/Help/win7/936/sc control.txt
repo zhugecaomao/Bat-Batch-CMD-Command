@@ -1,0 +1,10 @@
+描述:
+        发送 CONTROL 码到服务。
+用法:
+        sc <server> control [service name] <value>
+            <value> = 用户定义的控制码
+            <value> = <paramchange|
+                       netbindadd|netbindremove|
+                       netbindenable|netbinddisable>
+
+另请参阅 sc stop、sc pause 等。

@@ -1,0 +1,8 @@
+此命令的语法是:
+
+
+NET TIME 
+[\\computername | /DOMAIN[:domainname] | /RTSDOMAIN[:domainname]] [/SET]
+         [\\computername] /QUERYSNTP
+         [\\computername] /SETSNTP[:ntp server list]
+

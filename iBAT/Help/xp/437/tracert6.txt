@@ -1,0 +1,9 @@
+
+Usage: tracert6 [-d] [-h maximum_hops] [-w timeout] [-s srcaddr] target_name
+
+Options:
+-d             Do not resolve addresses to hostnames.
+-h max_hops    Maximum number of hops to search for target.
+-w timeout     Wait timeout milliseconds for each reply.
+-s srcaddr     Source address to use.
+-r             Use routing header to test reverse route also.

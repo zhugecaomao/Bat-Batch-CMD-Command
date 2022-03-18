@@ -1,0 +1,10 @@
+Displays the amount of used and free memory in your system.
+
+MEM [/PROGRAM | /DEBUG | /CLASSIFY]
+
+  /PROGRAM or /P   Displays status of programs currently loaded in memory.
+  /DEBUG or /D     Displays status of programs, internal drivers, and other
+                   information.
+  /CLASSIFY or /C  Classifies programs by memory usage. Lists the size of
+                   programs, provides a summary of memory in use, and lists
+                   largest memory block available.

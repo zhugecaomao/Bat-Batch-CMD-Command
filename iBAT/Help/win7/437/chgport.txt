@@ -1,0 +1,8 @@
+List or change COM port mappings for DOS application compatibility.
+
+CHANGE PORT [portx=porty | /D portx | /QUERY]
+
+  portx=porty  Map port x to port y.
+  /D portx    Delete mapping for port x.
+  /QUERY      Display current mapping ports.
+

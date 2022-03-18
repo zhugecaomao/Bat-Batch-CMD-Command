@@ -1,0 +1,10 @@
+用法:
+        rasdial entryname [username [password|*]] [/DOMAIN:domain]
+                [/PHONE:phonenumber] [/CALLBACK:callbacknumber]
+                [/PHONEBOOK:phonebookfile] [/PREFIXSUFFIX]
+
+        rasdial [entryname] /DISCONNECT
+
+        rasdial
+
+命令已完成。

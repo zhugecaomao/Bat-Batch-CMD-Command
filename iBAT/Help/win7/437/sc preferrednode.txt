@@ -1,0 +1,9 @@
+DESCRIPTION:
+        Changes the preferred NUMA node for a Win32 service. 
+        This setting is valid only for own process services.
+        To delete an existing setting, set the node number as -1.
+        If an invalid preferred node number is supplied, then the 
+        change request will fail.
+
+USAGE:
+        sc <server> preferrednode [service name] [node number]

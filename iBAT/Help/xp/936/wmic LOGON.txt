@@ -1,0 +1,14 @@
+
+LOGON - 登录会话。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+LOGON ASSOC [<format specifier>]
+LOGON CREATE <assign list>
+LOGON DELETE
+LOGON GET [<property list>] [<get switches>]
+LOGON LIST [<list format>] [<list switches>]
+

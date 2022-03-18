@@ -1,0 +1,14 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+capture        - Captures real-time diagnostic information.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+set            - Sets WFP diagnostic options.
+show           - Shows WFP configuration and state.
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

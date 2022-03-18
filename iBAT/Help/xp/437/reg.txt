@@ -1,0 +1,33 @@
+
+Console Registry Tool for Windows - version 3.0
+Copyright (C) Microsoft Corp. 1981-2001.  All rights reserved
+
+
+REG Operation [Parameter List]
+
+  Operation  [ QUERY   | ADD    | DELETE  | COPY    |
+               SAVE    | LOAD   | UNLOAD  | RESTORE |
+               COMPARE | EXPORT | IMPORT ]
+
+Return Code: (Except of REG COMPARE)
+
+  0 - Succussful
+  1 - Failed
+
+For help on a specific operation type:
+
+  REG Operation /?
+
+Examples:
+
+  REG QUERY /?
+  REG ADD /?
+  REG DELETE /?
+  REG COPY /?
+  REG SAVE /?
+  REG RESTORE /?
+  REG LOAD /?
+  REG UNLOAD /?
+  REG COMPARE /?
+  REG EXPORT /?
+  REG IMPORT /?

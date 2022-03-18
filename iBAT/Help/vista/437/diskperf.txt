@@ -1,0 +1,21 @@
+
+
+DISKPERF [-Y[D|V] | -N[D|V]] [\\computername]
+
+  -Y  Sets the system to start all disk performance counters
+      when the system is restarted.
+
+  -YD Enables the disk performance counters for physical drives.
+      when the system is restarted.
+  -YV Enables the disk performance counters for logical drives
+      or storage volumes when the system is restarted.
+  -N  Sets the system to disable all disk performance counters
+      when the system is restarted.
+
+  -ND Disables the disk performance counters for physical drives.
+  -NV Disables the disk performance counters for logical drives.
+  \\computername        Is the name of the computer you want to
+                        see or set disk performance counter use.
+                        The computer must be a Windows 2000 system.
+  NOTE: Disk performance counters are permanently enabled on
+        systems beyond Windows 2000.

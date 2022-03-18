@@ -1,0 +1,40 @@
+Reports on whether local computer exhibits Intel(tm) Pentium
+Floating Point Division Error
+
+pentnt [-?] [-H] [-h] [-C] [-c] [-F] [-f] [-O] [-o]
+
+        Run without arguments this program will tell you if the
+        system exhibits the Pentium floating point division error
+        and whether floating point emulation is forced and whether floating
+        point hardware is disabled.
+
+    -?  Print this help message
+    -h
+    -H
+
+    -c  Turn on conditional emulation. This means that floating
+    -C  point emulation will be forced on if and only if
+        the system detects the Pentium floating point division
+        error at boot. Reboot required before this takes effect.
+        This is what should generally be used.
+
+    -f  Turn on forced emulation.  This means that floating
+    -F  point hardware is disabled and floating point emulation
+        will always be forced on, regardless of whether the system
+        exhibits the Pentium division error. Useful for testing
+        software emulators and for working around floating point
+        hardware defects unknown to the OS. Reboot required before
+        this takes effect.
+
+    -o  Turn off forced emulation. Reenables floating point hardware
+    -O  if present. Reboot required before this takes effect.
+
+The Floating Point Division error that this program addresses only
+occurs on certain Intel Pentium processors. It only affects floating
+point operations. The problem is described in detail in a white paper
+available from Intel. If you are doing critical work with programs that
+perform floating point division and certain related functions that
+use the same hardware (including remainder and transcendtal functions),
+you may wish to use this program to force emulation.
+
+Type "pentnt -? | more" if you need to see all the help text

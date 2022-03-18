@@ -1,0 +1,8 @@
+Disconnects a terminal session.
+
+TSDISCON [sessionid | sessionname] [/SERVER:servername] [/V]
+
+  sessionid           The ID of the session.
+  sessionname         The name of the session.
+  /SERVER:servername  Specifies the Terminal server (default is current).
+  /V                  Displays information about the actions performed.

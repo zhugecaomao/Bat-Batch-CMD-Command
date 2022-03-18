@@ -1,0 +1,4 @@
+描述:
+        发送 INTERROGATE 控制请求到服务。
+用法:
+        sc <server> interrogate [service name]

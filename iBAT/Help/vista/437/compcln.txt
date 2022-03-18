@@ -1,0 +1,17 @@
+Windows Component Clean Copyright c 2008 Microsoft Corporation. All rights reserved.
+
+USAGE:
+
+COMPCLN.EXE [/h] | [/?] | [/o:<offline Windows directory path>] [/quiet] [/hide] [/verbose:<Log File>]
+
+COMMANDS:
+
+/?, /h                               Display this help message.
+
+/quiet                               Quiet mode, no user interaction.
+
+/verbose:<Log File>                  Provide verbose output to the log file.
+
+/hide                                Hides all packages cleaned.
+
+/o:<offline Windows directory path>  Specifies the path to the Windows directory of the offline Windows partition.

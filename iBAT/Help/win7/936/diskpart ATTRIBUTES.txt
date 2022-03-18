@@ -1,0 +1,12 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.1.7600
+
+VOLUME      - 操纵卷属性。
+DISK        - 操纵磁盘属性。
+
+DISKPART> 

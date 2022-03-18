@@ -1,0 +1,14 @@
+
+PRINTERCONFIG - 打印机设备配置管理。 
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+PRINTERCONFIG ASSOC [<format specifier>]
+PRINTERCONFIG CREATE <assign list>
+PRINTERCONFIG DELETE
+PRINTERCONFIG GET [<property list>] [<get switches>]
+PRINTERCONFIG LIST [<list format>] [<list switches>]
+

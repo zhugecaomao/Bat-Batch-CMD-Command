@@ -1,0 +1,15 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    定位可能已添加到计算机的新磁盘。
+    
+语法:  RESCAN
+
+示例:
+
+    RESCAN
+
+DISKPART> 

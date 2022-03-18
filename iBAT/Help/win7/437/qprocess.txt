@@ -1,0 +1,12 @@
+Displays information about processes.
+
+QUERY PROCESS [* | processid | username | sessionname | /ID:nn | programname]
+  [/SERVER:servername]
+
+  *                  Display all visible processes.
+  processid          Display process specified by processid.
+  username           Display all processes belonging to username.
+  sessionname        Display all processes running at sessionname.
+  /ID:nn             Display all processes running at session nn.
+  programname        Display all processes associated with programname.
+  /SERVER:servername The Remote Desktop Session Host server to be queried.

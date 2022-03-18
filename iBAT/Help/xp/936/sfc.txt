@@ -1,0 +1,15 @@
+
+Microsoft(R) Windows XP Windows File Checker 版本 5.1
+(C) 1999-2000 Microsoft Corp. 保留所有权利
+
+扫描所有受保护的系统文件并用正确的 Microsoft 版本替换不正确的版本。
+
+SFC [/SCANNOW] [/SCANONCE] [/SCANBOOT] [/REVERT] [/PURGECACHE] [/CACHESIZE=x]
+
+
+/SCANNOW        立即扫描所有受保护的系统文件。
+/SCANONCE       下次启动时扫描所有受保护的系统文件。
+/SCANBOOT       每次启动时扫描所有受保护的系统文件。
+/REVERT         将扫描返回到默认设置。
+/PURGECACHE     清除文件缓存。
+/CACHESIZE=x    设置文件缓存大小。

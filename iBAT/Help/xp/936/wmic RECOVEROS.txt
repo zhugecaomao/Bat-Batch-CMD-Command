@@ -1,0 +1,15 @@
+
+RECOVEROS - 当操作系统失败时，将从内存收集的信息。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+RECOVEROS ASSOC [<format specifier>]
+RECOVEROS CREATE <assign list>
+RECOVEROS DELETE
+RECOVEROS GET [<property list>] [<get switches>]
+RECOVEROS LIST [<list format>] [<list switches>]
+RECOVEROS SET [<assign list>]
+

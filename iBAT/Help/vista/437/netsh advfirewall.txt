@@ -1,0 +1,22 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+consec         - Changes to the `netsh advfirewall consec' context.
+dump           - Displays a configuration script.
+export         - Exports the current policy to a file.
+firewall       - Changes to the `netsh advfirewall firewall' context.
+help           - Displays a list of commands.
+import         - Imports a policy file into the current policy store.
+monitor        - Changes to the `netsh advfirewall monitor' context.
+reset          - Resets the policy to the default out-of-box policy.
+set            - Sets the per-profile or global settings.
+show           - Displays profile or global properties.
+
+The following sub-contexts are available:
+ consec firewall monitor
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

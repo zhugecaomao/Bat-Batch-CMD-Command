@@ -1,0 +1,35 @@
+
+Configures the Windows Recovery Environment (RE).
+
+REAGENTC.EXE [options]
+
+  where the following operations can be specified:
+
+  /setreimage /path <dir_name> [/target <dir_name>] [/bootkey <scan_code>]
+             Sets the location of the user-provided Windows RE image.
+             The optional /target switch specifies the path to the location
+             that contains the Windows installation.
+             The optional /bootkey switch specifies the scan code for an
+             OEM-specific launch button.
+
+  /setosimage [/path <dir_name> [/target <dir_name>]] [/customtool]
+             /path sets the location of the user-provided OS Setup files.
+             Alternatively /customtool specifies that a an imaging tool
+             was specified inside Windows RE.
+
+  /info [/target <dir_name>]
+             Displays Windows RE configuration information.
+             The optional /target switch specifies the path to the location
+             that contains the Windows installation.
+
+  /enable
+             Enable Windows RE for auto-failover and recovery.
+
+  /disable
+             Disable Windows RE auto-failover and recovery.
+
+  /boottore
+             Configure the BCD to launch Windows Recovery next time the system
+             starts up.
+
+REAGENTC.EXE: Operation successful

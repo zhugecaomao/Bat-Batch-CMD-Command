@@ -1,0 +1,14 @@
+
+SYSTEMSLOT - 包括端口、插口、附件和主要连接点的物理连接点管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SYSTEMSLOT ASSOC [<format specifier>]
+SYSTEMSLOT CREATE <assign list>
+SYSTEMSLOT DELETE
+SYSTEMSLOT GET [<property list>] [<get switches>]
+SYSTEMSLOT LIST [<list format>] [<list switches>]
+

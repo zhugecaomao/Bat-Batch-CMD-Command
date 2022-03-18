@@ -1,0 +1,56 @@
+
+用法:
+/SetRealm <DnsDomainName>
+        使此计算机成为 RFC1510 Kerberos 领域的成员
+/MapUser <Principal> [Account]
+        将 Kerberos 主体(“*”= 任何主体)
+        映射到帐户(“*”= 同名帐户)；
+        如果忽略帐户名， 
+        则删除特定主体的映射
+/AddKdc <RealmName> [KdcName]
+        定义给定领域的 KDC 条目。
+        如果忽略 KDC 名称，则可能使用 DNS 定位 KDC。
+/DelKdc <RealmName> [KdcName]
+        删除领域的 KDC 条目。
+        如果忽略 KDC 名称，将删除领域条目本身。
+/AddKpasswd <Realmname> <KpasswdName>
+        为领域添加 Kpasswd 服务器地址
+/DelKpasswd <Realmname> <KpasswdName>
+        删除领域的 Kpasswd 服务器地址
+/Server <Servername>
+        指定指向更改的 Windows 计算机的名称。
+/SetComputerPassword <Password>
+        为计算机的域帐户(或主机主体)
+        设置密码
+/RemoveRealm <RealmName>
+        从注册表中删除此领域的所有信息。
+/Domain [DomainName]
+        使用此域(如果未指定域名，则检测该域名)
+/ChangePassword <OldPasswd> <NewPasswd>
+        使用 Kpasswd 更改登录用户的密码。
+        使用“*”号提示输入密码。
+/ListRealmFlags (no args)
+        列出 ksetup 知道的可用领域标志
+/SetRealmFlags <realm> <flag> [flag] [flag] [...]
+        为特定领域设置领域标志
+/AddRealmFlags <realm> <flag> [flag] [flag] [...]
+        向领域添加其他领域标志
+/DelRealmFlags <realm> <flag> [flag] [flag] [...]
+        从领域中删除领域标志。
+/DumpState (no args)
+        分析给定计算机上的 kerberos 配置。
+/AddHostToRealmMap <host> <realm>
+        将 <host> 到 <realm> 的映射添加到注册表。
+/DelHostToRealmMap <host> <realm>
+        从注册表删除现有的 <host> 到 <realm> 的映射。
+/SetEncTypeAttr <domainname> <enctypes>
+        为 <domain> 到 <enctypes> 设置加密类型信任属性(应使用空格分隔多个类型)。
+        支持的加密类型是:
+          DES-CBC-CRC、DES-CBC-MD5、RC4-HMAC-MD5、
+          AES128-CTS-HMAC-SHA1-96、AES256-CTS-HMAC-SHA1-96
+/GetEncTypeAttr <domainname>
+        获取 <domain> 的加密类型信任属性。
+/AddEncTypeAttr <domainname> <enctypes>
+        将 <enctypes> 添加到 <domain> 的加密类型信任属性(应使用空格分隔多个类型)。
+/DelEncTypeAttr <domainname>
+        删除 <domain> 的加密类型信任属性。

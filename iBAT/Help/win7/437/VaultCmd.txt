@@ -1,0 +1,14 @@
+Creates, displays and deletes stored credentials.
+Following commands are supported.Use VaultCmd /<command> /? for further help 
+VaultCmd /create
+VaultCmd /lock
+VaultCmd /unlock
+VaultCmd /load
+VaultCmd /unload
+VaultCmd /list
+VaultCmd /listschema
+VaultCmd /listcreds
+VaultCmd /addcreds
+VaultCmd /deletecreds
+VaultCmd /listproperties
+VaultCmd /setproperties

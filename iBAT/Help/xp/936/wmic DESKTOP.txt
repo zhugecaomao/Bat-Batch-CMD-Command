@@ -1,0 +1,14 @@
+
+DESKTOP - 用户桌面管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+DESKTOP ASSOC [<format specifier>]
+DESKTOP CREATE <assign list>
+DESKTOP DELETE
+DESKTOP GET [<property list>] [<get switches>]
+DESKTOP LIST [<list format>] [<list switches>]
+

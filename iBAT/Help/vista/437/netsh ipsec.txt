@@ -1,0 +1,16 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+dump           - Displays a configuration script.
+dynamic        - Changes to the `netsh ipsec dynamic' context.
+help           - Displays a list of commands.
+static         - Changes to the `netsh ipsec static' context.
+
+The following sub-contexts are available:
+ dynamic static
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

@@ -1,0 +1,76 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    为带焦点的分区更改分区类型字段。
+
+语法:  SET ID={<BYTE> | <GUID>} [OVERRIDE] [NOERR]
+
+    ID={<BYTE> | <GUID>}
+
+                指定新分区类型。
+
+                对于主启动记录(MBR)磁盘，可以采用十六进制形式
+                为分区指定分区类型字节。
+                可以使用此参数指定任何分区类型字节，
+                类型 42 (LDM 分区)除外。
+
+                对于 GUID 分区表(GPT)磁盘，可以为分区指定
+                分区类型 GUID。已识别的 GUID 包括:
+
+                    EFI 系统分区:
+                        c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+
+                    基本数据分区:
+                        ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+
+                可以使用此参数指定任何
+                分区类型 GUID，以下几种类型除外:
+
+                    Microsoft 保留分区:
+                        e3c9e316-0b5c-4db8-817d-f92df00215ae
+
+                    动态磁盘上的 LDM 元数据分区:
+                        5808c8aa-7e8f-42e0-85d2-e1e90434cfb3
+
+                    动态磁盘上的 LDM 数据分区:
+                        af9b60a0-1431-4f62-bc68-3311714a69ad
+
+                除提及的限制之外，DiskPart 不会检查
+                分区类型是否有效，只是确保
+                该分区类型是十六进制形式的字节或 GUID。
+
+    OVERRIDE    使 DiskPart 能够强制将卷首先卸载(如果必要)。
+                卷的所有打开句柄都将无效。
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart
+                会继续处理命令，如同没有出现错误一样。
+                如果不使用 NOERR 参数，错误会导致 DiskPart 退出
+                并返回错误代码。
+
+    仅适合原始设备制造商(OEM)使用。
+
+    必须选择一个分区才能成功执行此操作。
+
+    警告:
+
+        使用此参数更改分区类型字段可能导致
+        计算机发生故障或无法启动。除非您是 OEM 或熟悉 GPT 磁盘的
+        IT 专业人员，否则不要使用此参数
+        更改 GPT 磁盘上的分区类型字段。不过，在 GPT 磁盘上可以始终使用
+        CREATE PARTITION EFI 命令创建 EFI 系统分区，使用
+        CREATE PARTITION MSR 命令创建 Microsoft 保留分区
+        以及使用不带 ID 参数的 CREATE PARTITION PRIMARY 命令
+        在 GPT 磁盘上创建主分区。
+
+    此命令在动态磁盘或 Microsoft 保留
+    分区上无法使用。
+
+   示例:
+
+    SET ID=07 OVERRIDE
+    SET ID=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+
+DISKPART> 

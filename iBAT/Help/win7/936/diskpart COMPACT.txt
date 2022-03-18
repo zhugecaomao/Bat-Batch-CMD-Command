@@ -1,0 +1,11 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.1.7600
+
+VDISK       - 尝试减少文件的物理大小。
+
+DISKPART> 

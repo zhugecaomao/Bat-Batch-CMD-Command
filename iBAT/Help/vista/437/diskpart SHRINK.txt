@@ -1,0 +1,50 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Reduces the size of the volume with focus by the specified amount. Makes
+    free disk space available from unused space at the end of the volume.
+
+Syntax:  SHRINK [DESIRED=<N>] [MINIMUM=<N>] [NOWAIT] [NOERR]
+        SHRINK QUERYMAX [NOERR]
+
+    DESIRED=<N> Specifies the desired amount of space in megabytes (MB) to
+                reduce the size of the volume by. If a desired amount is not
+                specified, the volume will be reduced by the maximum amount of
+                free space available on the volume.
+
+    MINIMUM=<N> Specifies the minimum amount of space in MB to reduce the size
+                of the volume by.
+
+    QUERYMAX    Returns the maximum number of bytes that the volume can be
+                reduced by (the free space available on the volume). This
+                value may change if applications are currently accessing the
+                volume.
+
+    NOWAIT      Forces the command to return immediately while the shrink
+                process is still in progress.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    If a MINIMUM amount is not specified, the volume will be reduced by either
+    the DESIRED amount (if specified), or by the maximum amount of free space
+    available on the volume. If a MINIMUM amount is specified but not enough
+    free space is available, the command will fail.
+
+    This command works on basic volumes, and on simple or spanned dynamic
+    volumes. You can reduce the size of a volume only if it is formatted using
+    the NTFS file system or if it does not have a file system.
+
+    A volume must be selected for this operation to succeed.
+
+Examples:
+
+    SHRINK DESIRED=500 MINIMUM=250
+    SHRINK QUERYMAX
+
+DISKPART> 

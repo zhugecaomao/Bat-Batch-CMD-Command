@@ -1,0 +1,15 @@
+
+DISKQUOTA - NTFS 卷磁盘空间使用情况。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+DISKQUOTA ASSOC [<format specifier>]
+DISKQUOTA CREATE <assign list>
+DISKQUOTA DELETE
+DISKQUOTA GET [<property list>] [<get switches>]
+DISKQUOTA LIST [<list format>] [<list switches>]
+DISKQUOTA SET [<assign list>]
+

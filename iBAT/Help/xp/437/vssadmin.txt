@@ -1,0 +1,13 @@
+vssadmin 1.0 - Volume Shadow Copy Service administrative command-line tool
+(C) Copyright 2001 Microsoft Corp.
+
+Usage:
+
+vssadmin list shadows [/set={shadow copy set guid}]
+        Lists all shadow copies in the system, grouped by shadow copy set Id.
+
+vssadmin list writers
+        Lists all writers in the system
+
+vssadmin list providers
+        Lists all currently installed shadow copy providers

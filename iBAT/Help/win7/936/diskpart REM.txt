@@ -1,0 +1,25 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    提供向脚本添加注释的方法。
+
+语法:  REM
+
+示例:
+
+    在此示例脚本中，REM 用于提供有关该脚本执行操作的注释。
+
+
+    REM These commands set up 3 drives.
+    CREATE PARTITION PRIMARY SIZE=2048
+    ASSIGN d:
+    CREATE PARTITION EXTEND
+    CREATE PARTITION LOGICAL SIZE=2048
+    ASSIGN e:
+    CREATE PARTITION LOGICAL
+    ASSIGN f:
+
+DISKPART> 

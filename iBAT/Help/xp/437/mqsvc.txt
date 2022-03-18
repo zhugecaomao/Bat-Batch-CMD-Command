@@ -1,0 +1,16 @@
+
++-- Service Controls --+
+|                      |
+| S: Stop              |
+| P: Pause             |
+| D: shutDown          |
+| C: Continue          |
+| I: Interrogate       |
+|                      |
++-- Manager Controls --+
+|                      |
+| Q: Quit              |
+| L: Print Last status |
+|                      |
++----------------------+ >..
+Status: state=(1) Stopped, accepts=(0x0) none >

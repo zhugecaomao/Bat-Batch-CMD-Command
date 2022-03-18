@@ -1,0 +1,12 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.0.6002
+
+PARTITION   - 创建分区。
+VOLUME      - 创建卷。
+
+DISKPART> 

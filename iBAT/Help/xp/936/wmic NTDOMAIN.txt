@@ -1,0 +1,15 @@
+
+NTDOMAIN - NT 域管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NTDOMAIN ASSOC [<format specifier>]
+NTDOMAIN CREATE <assign list>
+NTDOMAIN DELETE
+NTDOMAIN GET [<property list>] [<get switches>]
+NTDOMAIN LIST [<list format>] [<list switches>]
+NTDOMAIN SET [<assign list>]
+

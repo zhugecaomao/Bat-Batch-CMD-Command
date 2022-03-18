@@ -1,0 +1,15 @@
+
+JOB - 提供对使用计划服务安排的工作的访问。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+JOB ASSOC [<format specifier>]
+JOB CALL <method name> [<actual param list>]
+JOB CREATE <assign list>
+JOB DELETE
+JOB GET [<property list>] [<get switches>]
+JOB LIST [<list format>] [<list switches>]
+

@@ -1,0 +1,41 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Enables or disables the automount feature.
+
+Syntax:  AUTOMOUNT [ENABLE] [DISABLE] [SCRUB] [NOERR]
+
+    ENABLE      Enables Windows to automatically mount new basic volumes that
+                are added to the system and to assign them drive letters.
+
+    DISABLE     Prevents Windows from automatically mounting any new basic
+                volumes that are added to the system.
+
+    SCRUB       Removes volume mount point directories and registry settings
+                for volumes that are no longer in the system. This prevents
+                volumes that were previously in the system from being
+                automatically mounted and given their former volume mount
+                point(s) when they are added back to the system.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    When the automount feature is enabled (the default), Windows automatically
+    mounts the file system for a new basic volume when it is added to the
+    system and then assigns a drive letter to the volume. In storage area
+    network (SAN) configurations, disabling automount prevents Windows from
+    automatically mounting or assigning drive letters to any new basic volumes
+    that are visible to the system.
+
+Example:
+
+    AUTOMOUNT
+    AUTOMOUNT ENABLE
+    AUTOMOUNT DISABLE
+
+DISKPART> 

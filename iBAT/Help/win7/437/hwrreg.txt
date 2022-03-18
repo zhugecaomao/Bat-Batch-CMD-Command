@@ -1,0 +1,37 @@
+USAGE:
+  hwrreg [-check]
+         [-lang <locale>]
+         [-scope {all|me}]
+         [-noprompt] 
+         <dictfile.hwrdict>
+
+-check          Verify dictionary file and show its registration information
+-lang <locale>  Assign this language to the installed dictionary.
+                Locale is of the form <language>-<REGION> using ISO codes
+-scope {all|me} Install for all users on this machine or just for me
+-noprompt       Don't prompt for confirmation
+
+Example:
+hwrreg -lang en-US myrsrc1.hwrdict
+  installs myrsrc1.hwrdict with language 'English (US)' and default scope 'me'
+
+
+Usage: hwrreg [-lang <localename>]
+              [-scope {all|me}]
+              [-type <type>]
+              -list | -remove
+
+-lang <locale>  List or remove dictionaries registered for this language.
+                Locale is of the form <language>-<REGION> using ISO codes
+-scope {all|me} List or remove dictionaries installed for all users
+                or or just dictionaries installed for me (default)
+-type <type>    List or remove dictionaries registered with this type
+-list           List all installed dictionaries matching the other options
+-remove         Prompts for removal of any dictionary  matching other options
+ 
+Examples:
+hwrreg -list -lang en-US -type PRIMARY-DICTIONARY
+  lists dictionaries installed for me with this language and type
+hwrreg -remove -lang en-US -type PRIMARY-DICTIONARY
+  removes dictionaries installed for me with this language and type
+

@@ -1,0 +1,16 @@
+
+LOGICALDISK - 本地储存设备管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+LOGICALDISK ASSOC [<format specifier>]
+LOGICALDISK CALL <method name> [<actual param list>]
+LOGICALDISK CREATE <assign list>
+LOGICALDISK DELETE
+LOGICALDISK GET [<property list>] [<get switches>]
+LOGICALDISK LIST [<list format>] [<list switches>]
+LOGICALDISK SET [<assign list>]
+

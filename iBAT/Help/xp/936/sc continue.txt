@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Sends a CONTINUE control request to a service.
+USAGE:
+        sc <server> continue [service name]

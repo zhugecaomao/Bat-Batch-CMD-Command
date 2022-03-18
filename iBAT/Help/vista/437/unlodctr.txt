@@ -1,0 +1,24 @@
+
+
+UNLODCTR
+    Removes counter names and explain text for the specified extensible counter.
+
+Usage:
+
+    UNLODCTR <driver>
+        driver is the name of the device driver which is to have its
+            counter name definitions and explain text removed from the system's
+            registry.
+
+    UNLODCTR /m:<manifest>
+        manifest is the name of the manifest file that contains performance
+            counter definitions. These counters will be removed from local system.
+
+    UNLODCTR /g:{ProviderGuid}
+        ProviderGuid identifies the performance counter provider being unloaded.
+
+    UNLODCTR /p:<ProviderName>
+        ProviderName identifies the performance counter provider being unloaded.
+
+Note: any arguments with spaces in the names must be enclosed within
+Double Quotation marks.

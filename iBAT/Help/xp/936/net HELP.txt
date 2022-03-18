@@ -1,0 +1,8 @@
+此命令的语法是:
+
+
+NET HELP 
+command 
+      -or-
+NET command /HELP
+

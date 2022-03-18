@@ -1,0 +1,2 @@
+Could not access IPv6 protocol stack - the stack is not installed.
+To install, please use 'ipv6 install'.

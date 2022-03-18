@@ -1,0 +1,15 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    退出 DiskPart 命令解释器。
+
+语法:  EXIT
+
+示例:
+
+    EXIT
+
+DISKPART> 

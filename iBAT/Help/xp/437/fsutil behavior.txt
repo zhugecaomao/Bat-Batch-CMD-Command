@@ -1,0 +1,4 @@
+---- BEHAVIOR Commands Supported ----
+
+query           Query the file system behavior parameters
+set             Change the file system behavior parameters

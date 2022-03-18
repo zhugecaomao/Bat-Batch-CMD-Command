@@ -1,0 +1,68 @@
+BitLocker 驱动器准备工具版本 6.1.7600
+版权所有(C) 2006-2008 Microsoft Corporation。
+
+用法:
+
+BdeHdCfg[.exe]
+               [-driveinfo]
+               [-target {default | unallocated |
+                         TargetDriveLetter {shrink | merge}}]
+               [-newdriveletter DriveLetter]
+               [-size SizeInMegabytes]
+               [-quiet] [-restart] [{-? | /?}]
+
+描述:
+  此命令为 BitLocker 驱动器加密准备硬盘驱动器。
+
+  命令行参数不区分大小写。
+
+参数:
+  -driveinfo
+        显示有关有效目标驱动器的信息。
+
+  -target
+        指定目标驱动器和操作。
+
+        若要新建活动分区，请指定“shrink”。
+        若要使现有分区成为活动分区，请指定“merge” 。
+        若要使用磁盘上的未分配空间，请指定“unallocated”。
+        若要自动选择目标驱动器，请指定“default”。
+
+        示例: -target D: merge
+                  -target C: shrink
+                  -target unallocated
+                  -target default
+
+  -newdriveletter
+        将所需驱动器号指定为新驱动器。此选项
+        仅在新建了一个驱动器后才可用。
+
+        示例: -newdriveletter S:
+
+  -size
+        指定新驱动器所要求的大小。此选项仅在
+        新建了一个驱动器后才可用。
+
+        如果未指定，则驱动器准备工具假定所要求的
+        最小大小为 300 MB。
+
+        示例: -size 700
+
+  -quiet
+        指定在安静模式下运行。不显示驱动器准备
+        工具的任何输出。
+
+  -restart
+        在驱动器准备完毕后启用自动重新启动。
+
+        必须首先重新启动计算机，然后才能启用 BitLocker。
+
+  -? 或 /?
+        显示有关此命令的帮助。
+
+示例:
+    BdeHdCfg -target c: shrink -newdriveletter x: -size 300 -quiet -restart
+    BdeHdCfg -target d: merge -quiet -restart
+    BdeHdCfg -target unallocated -newdriveletter s:
+    BdeHdCfg -target default
+

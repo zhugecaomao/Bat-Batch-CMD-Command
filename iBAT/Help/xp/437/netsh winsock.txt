@@ -1,0 +1,13 @@
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+dump           - Displays a configuration script.
+help           - Displays a list of commands.
+reset          - Resets the Winsock Catalog to a clean state.
+show           - Displays information.
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+

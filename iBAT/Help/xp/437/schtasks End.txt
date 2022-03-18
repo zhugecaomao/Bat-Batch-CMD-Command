@@ -1,0 +1,25 @@
+
+SCHTASKS /End [/S system [/U username [/P password]]] /TN taskname
+
+Description:
+    Stops a running scheduled task.
+
+Parameter List:
+    /S           system           Specifies the remote system to connect
+                                  to.
+
+    /U           username         Specifies the user context under
+                                  which the command should execute.
+
+    /P           password         Specifies the password for the given
+                                  user context.
+
+    /TN          taskname         Specifies the scheduled task to 
+                                  terminate.
+
+    /?                            Displays this help/usage.
+
+Examples:
+    SCHTASKS /End /? 
+    SCHTASKS /End /TN "Start Backup"
+    SCHTASKS /End /S system /U user /P password /TN "Backup and Restore"

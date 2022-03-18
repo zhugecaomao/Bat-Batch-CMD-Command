@@ -1,0 +1,35 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    将带焦点的简单卷镜像到指定的磁盘。
+
+语法:  ADD DISK=<N> [ALIGN=<N>] [WAIT] [NOERR]
+
+    DISK=<N>    指定一个含有现有简单卷的磁盘以外的磁盘来包含镜像。
+                可以仅镜像简单卷。指定的磁盘必须具有不低于要镜像
+                的简单卷大小的未分配空间。
+
+    ALIGN=<N>   通常与硬件 RAID 逻辑单元号(LUN)阵列一起使用以提高性能。
+                将所有卷范围与最近的对齐边界对齐。
+                范围偏移将为 <N> 的倍数。
+
+    WAIT        返回前，等待卷完成与添加的磁盘的同步。如果不使用 wait
+                参数，DiskPart 会在创建镜像卷后返回，而不等待同步完成。
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart 会继续处理命令，
+                如同没有出现错误一样。
+                如果不使用 NOERR 参数，错误会导致 DiskPart 退出并返回
+                错误代码。
+
+    必须选择一个卷才能成功执行此操作。
+
+    Windows Vista 的任何版本都不支持容错卷(如 RAID-5)和镜像卷。
+
+示例:
+
+    ADD DISK=2
+
+DISKPART> 

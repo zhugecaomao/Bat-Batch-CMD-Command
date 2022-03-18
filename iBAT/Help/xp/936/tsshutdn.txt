@@ -1,0 +1,14 @@
+在控制方式下关闭服务器。
+
+TSSHUTDN [wait_time] [/SERVER:servername] [/REBOOT] [/POWERDOWN]
+         [/DELAY:logoffdelay] [/V]
+
+  wait_time           结束所有用户会话前用户通知后
+                      等待的秒数(默认值是 60)。
+  /SERVER:servername  要关闭的服务器(默认值是当前值)。
+  /REBOOT             用户会话终止后重新启动服务器。
+  /POWERDOWN          服务器准备关闭。
+  /DELAY:logoffdelay  注销所有连接的会话后要等待的
+                      秒数(默认值是 30)。
+  /V                  显示有关正在执行的操作的信息。
+

@@ -1,0 +1,89 @@
+
+Microsoft _ Logman.exe (5.1.2600.5512)
+_ Microsoft Corporation. All rights reserved.
+
+Logman manages the "Performance Logs and Alerts" service for creating and 
+managing Event Trace Session logs and Performance logs. 
+
+Usage:
+logman VERB <collection_name> 
+                                [options]
+
+Verbs:
+  create <counter|trace>        Create a new collection. 
+  start                         Start an existing collection and set the 
+                                begin time to manual. 
+  stop                          Stop an existing collection and set the end 
+                                time to manual. 
+  delete                        Delete an existing collection. 
+  query [collection_name|providers]  Query collection properties. If no 
+                                collection_name is given all collections are 
+                                listed. The keyword 'providers' will list all 
+                                of the registered Event Trace providers. 
+  update                        Update an existing collection properties. 
+
+Parameters:
+  <collection_name>             Name of the collection. 
+
+Options:
+  -?                            Displays context sensitive help. 
+  -s <computer>                 Perform the command on specified remote 
+                                system. 
+  -config <filename>            Settings file containing command options. 
+  -b <yyyy-M-d H:mm:ss[上午|下午]>   Begin the collection at specified time. 
+  -e <yyyy-M-d H:mm:ss[上午|下午]>   End the collection at specified time. 
+  -m <[start] [stop]>           Change to manual start or stop rather than a 
+                                scheduled begin or end time. 
+  -[-]r                         Repeat the collection daily at the specified 
+                                begin and end times. 
+  -o <path|dsn!log>             Path of the output log file or the DSN and 
+                                log set name in a SQL database. 
+  -f <bin|bincirc|csv|tsv|sql>  Specifies the log format for the collection. 
+  -[-]a                         Append to an existing log file. 
+  -[-]v [nnnnnn|mmddhhmm]       Attach file versioning information to the end 
+                                of the log name. 
+  -[-]rc <filename>             Run the command specified each time the log 
+                                is closed. 
+  -[-]max <value>               Maximum log file size in MB or number of 
+                                records for SQL logs. 
+  -[-]cnf [[[hh:]mm:]ss]        Create a new file when the specified time has 
+                                elapsed or when the max size is exceeded. 
+  -c <path [path ...]>          Performance counters to collect. 
+  -cf <filename>                File listing performance counters to collect, 
+                                one per line. 
+  -si <[[hh:]mm:]ss>            Sample interval for performance counter 
+                                collections. 
+  -ln <logger_name>             Logger name for Event Trace Sessions. 
+  -[-]rt                        Run the Event Trace Session in real-time 
+                                mode. 
+  -p <provider [flags [level]]> A single Event Trace provider to enable. 
+  -pf <filename>                File listing multiple Event Trace providers 
+                                to enable. 
+  -[-]ul                        Run the Event Trace Session in user mode. 
+  -bs <value>                   Event Trace Session buffer size in kb. 
+  -ft <[[hh:]mm:]ss>            Event Trace Session flush timer. 
+  -nb <min max>                 Number of Event Trace Session buffers. 
+  -fd                           Flushes all the active buffers of an existing 
+                                Event Trace Session to disk. 
+  -[-]u [user [password]]       User to Run As. Entering a * for the password 
+                                produces a prompt for the password. The 
+                                password is not displayed when you type it at 
+                                the password prompt. 
+  -rf <[[hh:]mm:]ss>            Run the collection for specified period of 
+                                time. 
+  -y                            Answer yes to all questions without 
+                                prompting. 
+  -ets                          Send commands to Event Trace Sessions 
+                                directly without saving or scheduling. 
+  -mode <trace_mode [trace_mode ...]>   Event Trace Session logger mode. 
+
+Note:
+  Where [-] is listed, an extra - negates the option.
+  For example --r turns off the -r option.
+
+Examples:
+  logman create counter perf_log -c "\Processor(_Total)\% Processor Time"
+  logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile 
+  logman start perf_log 
+  logman update perf_log -si 10 -f csv -v mmddhhmm
+  logman update trace_log -p "Windows Kernel Trace" (disk,net) 

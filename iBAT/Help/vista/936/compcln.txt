@@ -1,0 +1,17 @@
+Windows Component Clean 版权所有 ? 2008 Microsoft Corporation。保留所有权利。
+
+用法:
+
+COMPCLN.EXE [/h] | [/?] | [/o:<offline Windows directory path>] [/quiet] [/hide] [/verbose:<Log File>]
+
+命令:
+
+/?, /h                               显示此帮助消息。
+
+/quiet                               安静模式，无需用户交互。
+
+/verbose:<Log File>                  向日志文件提供详细输出。
+
+/hide                                隐藏所有已清除的程序包。
+
+/o:<offline Windows directory path>  指定脱机 Windows 分区 Windows 目录的路径。

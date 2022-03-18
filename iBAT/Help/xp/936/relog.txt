@@ -1,0 +1,35 @@
+
+Microsoft(R) Relog.exe (5.1.2600.0)
+(C) Microsoft Corporation. All rights reserved.
+
+Relog 通过更改采样速度和/或转换文件格式，从现有性能日志的数据创建新的性能日志
+。支持所有性能日志格式，包括 Windows NT 4.0 压缩日志。 
+
+用法:
+relog <文件名 [文件名 ...]> 
+                                [选项]
+
+参数:
+  <文件名 [文件名 ...]>         要重新记录的性能文件。 
+
+选项:
+  -?                            显示跟上下文相关的帮助。 
+  -a                            将结果附到现有的二进制文件。 
+  -c <path [path ...]>          从输入日志筛选出的计数器。 
+  -cf <文件名>                  列出从输入日志筛选出的性能计数器。默认值是原始
+                                日志文件中的所有计数器。 
+  -f <CSV|TSV|BIN|SQL>          输出文件格式。 
+  -t <值>                       只将每个 nth 记录写入输出文件。默认值是写入每个
+                                记录。 
+  -o                            输出文件路径或 SQL 数据库。 
+  -b <yyyy-M-d H:mm:ss[上午|下午]>   第一个记录写入输出文件的开始时间。 
+  -e <yyyy-M-d H:mm:ss[上午|下午]>   最后一个记录写入输出文件的结束时间。 
+  -config <文件名>              含有命令选项的设置文件。 
+  -q                            列出输入文件中的性能计数器。 
+  -y                            不用提示对所有问题都回答 yes。 
+
+例如:
+  relog logfile.csv -c "\Processor(_Total)\% Processor Time" -o logfile.blg 
+  relog logfile.blg -cf counters.txt -f blg 
+  relog logfile.blg -f csv -o logfile.csv -t 2 
+  relog logfile.blg -q -o counters.txt 

@@ -1,0 +1,15 @@
+
+Microsoft DiskPart version 5.1.3565
+
+Copyright (C) 1999-2003 Microsoft Corporation.
+On computer: iBat
+
+DISKPART> 
+Microsoft DiskPart version 5.1.3565
+
+BASIC       - Convert a disk from dynamic to basic.
+DYNAMIC     - Convert a disk from basic to dynamic.
+GPT         - Convert a disk from MBR to GPT.
+MBR         - Convert a disk from GPT to MBR.
+
+DISKPART> 

@@ -1,0 +1,9 @@
+Enable, disable, or drain session logins.
+
+CHANGE LOGON {/QUERY | /ENABLE | /DISABLE | /DRAIN | /DRAINUNTILRESTART}
+
+  /QUERY    Query current session login mode.
+  /ENABLE   Enable user login from sessions.
+  /DISABLE  Disable user login from sessions.
+  /DRAIN    Disable new user logons, but allow reconnections to existing sessions.
+  /DRAINUNTILRESTART    Disable new user logons until the server is restarted, but allow reconnections to existing sessions.

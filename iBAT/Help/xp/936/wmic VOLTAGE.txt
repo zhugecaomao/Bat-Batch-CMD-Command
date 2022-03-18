@@ -1,0 +1,14 @@
+
+VOLTAGE - 电压感应器 (电子电量计) 数据管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+VOLTAGE ASSOC [<format specifier>]
+VOLTAGE CREATE <assign list>
+VOLTAGE DELETE
+VOLTAGE GET [<property list>] [<get switches>]
+VOLTAGE LIST [<list format>] [<list switches>]
+

@@ -1,0 +1,83 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    On basic GUID partition table (GPT) disks, assigns the GPT attribute(s) to
+    the partition with focus.
+
+Syntax:  GPT ATTRIBUTES=<N>
+
+    ATTRIBUTES=<N>
+
+                The hexadecimal value indicating the attributes to apply to the
+                partition with focus. The GPT attribute field is a 64-bit field
+                that contains two subfields. The higher field is interpreted
+                only in the context of a particular partition type GUID, while
+                the lower field is common to all partition types.
+
+                The following attribute can be set on any partition:
+
+                0x0000000000000001 marks the partition as required. This
+                indicates to all disk management utilities that the partition
+                should not be deleted. The EFI System partition contains only
+                those binaries necessary to start the operating system. This
+                makes it easy for original equipment manufacturer (OEM) or 
+                operating system-specific binaries to be placed in other 
+                partitions.
+
+                For basic data partitions, the following attributes are defined:
+
+                0x8000000000000000
+                GPT_BASIC_DATA_ATTRIBUTE_NO_DRIVE_LETTER 
+                Prevents the partition from having a drive
+                letter automatically assigned. By default, each partition is
+                assigned a new drive letter and a volume GUID pathname. Both 
+                the drive letter and the volume GUID pathname can be used to 
+                open the volume using Win32 APIs. Setting this attribute ensures
+                that when a disk is moved to a new computer, a new drive letter
+                will not be automatically generated. Instead, the user can
+                manually assign drive letters.
+
+                0x4000000000000000
+                GPT_BASIC_DATA_ATTRIBUTE_HIDDEN 
+                Defines the partition's volume as hidden. 
+                Setting this attribute specifies that the volume will not be 
+                assigned a drive letter or a volume GUID pathname. Both 
+                the drive letter and the volume GUID pathname can be used to 
+                open the volume using Win32 APIs. A hidden partition's 
+                volume is not reported by Win32 APIs such as FindFirstVolume 
+                and FindNextVolume.
+
+                0x2000000000000000
+                GPT_BASIC_DATA_ATTRIBUTE_SHADOW_COPY
+                Defines the partition as being a Volume Snapshot Service 
+                shadow copy volume. Fle system filters use this flag to 
+                prevent the filter from attaching to the volume.
+
+                0x1000000000000000 
+                GPT_BASIC_DATA_ATTRIBUTE_READ_ONLY
+                Prevents the volume from being written to. 
+
+                Other attributes may be added by Microsoft at any time.
+
+    GPT partition attributes give additional information about the use of the
+    partition. 
+    
+    A basic GPT partition must be selected for this operation to succeed.
+
+    Caution:
+
+        Changing the GPT attributes might cause your basic data volumes to
+        fail to be assigned drive letters, or prevent the file system from 
+        mounting. Unless you are an original equipment manufacturer (OEM) 
+        or an IT professional experienced with GPT disks, do not change GPT 
+        attributes.
+
+Example:
+
+    GPT ATTRIBUTES=0x8000000000000000
+    GPT ATTRIBUTES=0xF000000000000001
+
+DISKPART> 

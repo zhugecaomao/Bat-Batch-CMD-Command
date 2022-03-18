@@ -1,0 +1,15 @@
+
+Microsoft DiskPart 版本 5.1.3565
+
+版权所有 (C) 1999-2003 Microsoft Corporation.
+位于计算机: iBat
+
+DISKPART> 
+Microsoft DiskPart 版本 5.1.3565
+
+BASIC       - 将磁盘从动态转换成基本。
+DYNAMIC     - 将磁盘从基本转换成动态。
+GPT         - 将磁盘从 MBR 转换成 GPT。
+MBR         - 将磁盘从 GPT 转换成 MBR。
+
+DISKPART> 

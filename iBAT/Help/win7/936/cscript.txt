@@ -1,0 +1,19 @@
+Microsoft (R) Windows Script Host Version 5.8
+版权所有(C) Microsoft Corporation 1996-2001。保留所有权利。
+
+用法：CScript scriptname.extension [option...] [arguments...]
+
+选项：
+ //B         批模式：不显示脚本错误及提示信息
+ //D         启用 Active Debugging
+ //E:engine  使用执行脚本的引擎
+ //H:CScript 将默认的脚本宿主改为 CScript.exe
+ //H:WScript 将默认的脚本宿主改为 WScript.exe （默认）
+ //I         交互模式（默认，与 //B 相对)
+ //Job:xxxx  执行一个 WSF 工作
+ //Logo      显示徽标（默认）
+ //Nologo    不显示徽标：执行时不显示标志
+ //S         为该用户保存当前命令行选项
+ //T:nn      超时设定秒：允许脚本运行的最长时间
+ //X         在调试器中执行脚本
+ //U         用 Unicode 表示来自控制台的重定向 I/O

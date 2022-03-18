@@ -1,0 +1,7 @@
+---- 支持的 USN 命令 ----
+
+createjournal   创建一个 USN 日志
+deletejournal   删除一个 USN 日志
+enumdata        枚举 USN 数据
+queryjournal    查询一个卷的 USN 的数据
+readdata        读取一个文件的 USN 数据

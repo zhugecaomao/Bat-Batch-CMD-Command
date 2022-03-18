@@ -1,0 +1,14 @@
+显示有关终端会话的信息
+
+QUERY SESSION [sessionname | username | sessionid]
+              [/SERVER:servername] [/MODE] [/FLOW] [/CONNECT] [/COUNTER]
+
+  sessionname         用名称 sessionname 识别会话。
+  username            用用户 username 识别会话。
+  sessionid           用 ID sessionid 识别会话。
+  /SERVER:servername  要查询的服务器(默认值是当前服务器)。
+  /MODE               显示当前线路设置。
+  /FLOW               显示当前流程控制设置。
+  /CONNECT            显示当前连接设置。
+  /COUNTER            显示当前终端服务计数器信息。
+

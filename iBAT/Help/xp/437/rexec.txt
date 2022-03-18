@@ -1,0 +1,12 @@
+
+Runs commands on remote hosts running the REXEC service. Rexec 
+authenticates the user name on the remote host before executing the 
+specified command.
+
+REXEC host [-l username] [-n] command
+
+  host            Specifies the remote host on which to run command.
+  -l username     Specifies the user name on the remote host.
+  -n              Redirects the input of REXEC to NULL.
+  command         Specifies the command to run.
+

@@ -1,0 +1,6 @@
+---- 支持的 OBJECTID 命令 ----
+
+query           查询对象标识符
+set             更改对象标识符
+delete          删除对象标识符
+create          删除对象标识符

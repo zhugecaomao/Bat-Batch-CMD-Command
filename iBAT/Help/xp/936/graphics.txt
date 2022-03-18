@@ -1,0 +1,14 @@
+Invalid keyboard code specified
+Loads a program that can print graphics.
+
+GRAPHICS [type] [[drive:][path]filename] [/R] [/B] [/LCD]
+  [/PRINTBOX:STD | /PRINTBOX:LCD]
+
+  type         Specifies a printer type (see User's Guide and Reference).
+  [drive:][path]filename
+               Specifies the file containing information on supported printers.
+  /R           Prints white on black as seen on the screen.
+  /B           Prints the background in color for COLOR4 and COLOR8 printers.
+  /LCD         Prints using LCD aspect ratio.
+  /PRINTBOX:STD | /PRINTBOX:LCD
+               Specifies the print-box size, either STD or LCD.

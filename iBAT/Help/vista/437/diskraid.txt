@@ -1,0 +1,21 @@
+
+Microsoft DiskRAID version 6.0.6002
+Copyright (C) 2003-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+Usage:  DISKRAID [/? | [/s <script>] [/v]]
+
+    Launches the DiskRAID application.
+
+    /?          specifies that DiskRAID should display this usage text.
+
+    /s <script> specifies that DiskRAID should execute commands from the script
+                file at the location specified.
+
+    /v          specifies that DiskRAID should run in verbose mode, printing
+                out additional information about each command being executed.
+
+Examples:
+
+    DISKRAID
+    DISKRAID /v

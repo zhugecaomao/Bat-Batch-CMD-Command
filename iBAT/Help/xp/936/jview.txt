@@ -1,0 +1,21 @@
+Microsoft (R) Command-line Loader for Java Version 5.00.3805
+Copyright (C) Microsoft Corp 1996-2000. 版权所有。
+
+用法: JView [options] <classname> [arguments]
+
+选项:
+    /?                 显示用法正文
+    /cp <classpath>    设定类别路径
+    /cp:p <path>       将路径预先附加到类别路径
+    /cp:a <path>       将路径附加到类别路径
+    /n <namespace>     运行的名称空格
+    /p                 如果出现错误，在终止前暂停
+    /v                 验证所有的类别
+    /d:<name>=<value>  定义系统属性
+    /a                 执行 AppletViewer
+
+类别名称:
+    要执行的 .CLASS 文件。
+
+变元:
+    要传送给类别文件的命令行变元

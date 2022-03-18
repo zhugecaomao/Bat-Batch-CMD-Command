@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Starts a service running.
+USAGE:
+        sc <server> start [service name] <arg1> <arg2> ...

@@ -1,0 +1,31 @@
+
+SCHTASKS /Delete [/S system [/U username [/P password]]] /TN taskname
+  [/F]
+
+Description:
+    Deletes one or more scheduled tasks.
+
+Parameter List:
+    /S         system       Specifies the remote system to connect to.
+
+    /U         username     Specifies the user context under
+                            which the command should execute.
+
+    /P         password     Specifies the password for the given
+                            user context.
+
+    /TN        taskname     Specifies the name of the scheduled task to
+                            delete. Wildcard "*" may be used to delete
+                            all tasks.
+
+    /F                      (Force) Deletes the task and suppresses
+                            warnings if the specified task is currently
+                            running.
+
+    /?                      Displays this help/usage.
+
+Examples:
+    SCHTASKS /Delete /TN * /F
+    SCHTASKS /Delete /TN "Backup and Restore"
+    SCHTASKS /Delete /S system /U user /P password /TN "Start Restore"
+    SCHTASKS /Delete /S system /U user /P password /TN "Start Backup" /F

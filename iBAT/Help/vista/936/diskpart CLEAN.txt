@@ -1,0 +1,23 @@
+
+Microsoft DiskPart 版本 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+     从带焦点的磁盘删除任意和所有分区或格式化卷。
+
+语法:  CLEAN [ALL]
+
+    ALL         指定将磁盘上的每个扇区都设置为 0，这会
+                完全删除该磁盘上包含的所有数据。
+
+    在主启动记录(MBR)磁盘上，只有 MBR 分区信息和隐藏的
+    扇区信息会被覆盖。在 GUID 分区表(GPT)磁盘上，包括
+    保护性 MBR 在内的 GPT 分区信息都会被覆盖。该磁盘上
+    没有隐藏的扇区信息。
+
+示例:
+
+    CLEAN
+
+DISKPART> 

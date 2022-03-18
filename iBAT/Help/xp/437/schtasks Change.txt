@@ -1,0 +1,40 @@
+
+SCHTASKS /Change [/S system [/U username [/P password]]] {[/RU runasuser]
+    [/RP runaspassword] [/TR taskrun]} /TN taskname
+
+Description:
+    Changes the program to run, or user account and password used
+    by a scheduled task.
+
+Parameter List:
+    /S       system           Specifies the remote system to connect to.
+
+    /U       username         Specifies the user context under
+                              which the command should execute.
+
+    /P       password         Specifies the password for the given
+                              user context.
+
+    /RU      username         Changes the user name (user context) under
+                              which the scheduled task has to run.
+                              For the system account, valid values are 
+                              "", "NT AUTHORITY\SYSTEM" or "SYSTEM".
+
+    /RP      password         Specifies a new password for the existing
+                              user context or the password for a new
+                              user account. Password will not effect for
+                              the system account.
+
+    /TR      taskrun          Specifies a new program that the scheduled
+                              task runs. Type the path and file name of 
+                              the program.
+
+    /TN      taskname         Specifies which scheduled task to change.
+
+    /?                        Displays this help/usage.
+
+Examples:
+    SCHTASKS /Change /RP password /TN "Backup and Restore"
+    SCHTASKS /Change /TR restore.exe /TN "Start Restore"
+    SCHTASKS /Change /S system /U user /P password /RU newuser 
+             /TN "Start Backup"

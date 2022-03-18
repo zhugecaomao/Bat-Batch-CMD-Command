@@ -1,0 +1,20 @@
+
+
+UNLODCTR
+    Removes counter names and explain text for the specified extensible counter.
+
+
+Usage:
+
+     UNLODCTR [\\computername] driver
+
+     computername is the name of the remote computer.
+         Local machine is used if computername is not specified.
+
+     driver is the name of the device driver which is to have its
+         counter name definitions and explain text removed from the system's
+         registry.
+
+
+Note: any arguments with spaces in the names must be enclosed within
+Double Quotation marks.

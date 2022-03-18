@@ -1,0 +1,10 @@
+:
+AuditSystem
+
+:
+   PnPUnattend.exe [auditSystem | /help /? /h] [/s] [/L]
+       auditSystem   
+       /help /? /h    
+       /s             
+       /L             
+

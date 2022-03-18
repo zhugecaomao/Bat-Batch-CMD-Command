@@ -1,0 +1,14 @@
+
+MEMLOGICAL - System memory management (configuration layout and availability of memory).  
+
+HINT: BNF for Alias usage.
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+USAGE:
+
+MEMLOGICAL ASSOC [<format specifier>]
+MEMLOGICAL CREATE <assign list>
+MEMLOGICAL DELETE
+MEMLOGICAL GET [<property list>] [<get switches>]
+MEMLOGICAL LIST [<list format>] [<list switches>]
+

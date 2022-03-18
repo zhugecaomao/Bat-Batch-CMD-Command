@@ -1,0 +1,14 @@
+创建、显示和删除存储的凭据。
+支持以下命令。使用 VaultCmd /<命令> /? 获得进一步的帮助 
+VaultCmd /create
+VaultCmd /lock
+VaultCmd /unlock
+VaultCmd /load
+VaultCmd /unload
+VaultCmd /list
+VaultCmd /listschema
+VaultCmd /listcreds
+VaultCmd /addcreds
+VaultCmd /deletecreds
+VaultCmd /listproperties
+VaultCmd /setproperties

@@ -1,0 +1,12 @@
+Sets the version number that MS-DOS reports to a program.
+
+Display current version table:  SETVER [drive:path]
+Add entry:                      SETVER [drive:path] filename n.nn
+Delete entry:                   SETVER [drive:path] filename /DELETE [/QUIET]
+
+  [drive:path]    Specifies location of the SETVER.EXE file.
+  filename        Specifies the filename of the program.
+  n.nn            Specifies the MS-DOS version to be reported to the program.
+  /DELETE or /D   Deletes the version-table entry for the specified program.
+  /QUIET          Hides the message typically displayed during deletion of
+                  version-table entry.

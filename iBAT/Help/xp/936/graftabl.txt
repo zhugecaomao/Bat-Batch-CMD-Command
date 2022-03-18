@@ -1,0 +1,7 @@
+请在图形模式下启用 Windows 显示扩展字符集。
+
+GRAFTABL [xxx]
+GRAFTABL /STATUS
+
+   xxx      指定代码页。
+   /STATUS  显示选定的同 GRAFTABL 一起使用的当前代码页。

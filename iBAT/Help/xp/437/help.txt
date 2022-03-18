@@ -1,0 +1,5 @@
+Provides help information for Windows XP commands.
+
+HELP [command]
+
+    command - displays help information on that command.

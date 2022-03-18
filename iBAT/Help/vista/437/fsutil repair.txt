@@ -1,0 +1,6 @@
+---- REPAIR Commands Supported ----
+
+query          Query the self healing state of the volume
+set            Set the self healing state of the volume
+wait           Wait for repair(s) to complete
+initiate       Initiate the repair of a file

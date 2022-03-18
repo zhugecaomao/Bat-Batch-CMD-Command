@@ -1,0 +1,12 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.1.7600
+
+VOLUME      - Manipulate volume attributes.
+DISK        - Manipulate disk attributes.
+
+DISKPART> 

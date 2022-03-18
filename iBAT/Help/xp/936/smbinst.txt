@@ -1,0 +1,1 @@
+smbinst [-uninstall] INF: Uninstalls the MSSMBios Driver

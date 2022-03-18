@@ -1,0 +1,15 @@
+描述:
+        更改失败时操作
+用法:
+        sc <server> failure [service name] <option1> <option2>...
+
+选项:
+        reset=   <重置失败计数为 0 (可以是无限)
+                  之前无错的时间长度(以秒计)>
+                  (必须与 actions= 一起使用)
+        reboot=  <失败时重新启动之前的消息广播>
+        command= <失败时运行的命令行>
+        actions= <失败操作和其延迟时间(以微秒计)，
+                  以 / (斜杠) 分隔 -- 如 run/5000/reboot/800
+                  有效的操作是 <run|restart|reboot> >
+                  (必须与 reset= option 一起使用)

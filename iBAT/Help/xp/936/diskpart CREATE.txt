@@ -1,0 +1,13 @@
+
+Microsoft DiskPart 版本 5.1.3565
+
+版权所有 (C) 1999-2003 Microsoft Corporation.
+位于计算机: iBat
+
+DISKPART> 
+Microsoft DiskPart 版本 5.1.3565
+
+PARTITION   - 创建分区。
+VOLUME      - 创建卷。
+
+DISKPART> 

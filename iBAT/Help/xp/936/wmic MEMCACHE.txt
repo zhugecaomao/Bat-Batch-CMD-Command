@@ -1,0 +1,14 @@
+
+MEMCACHE - 缓存内存管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+MEMCACHE ASSOC [<format specifier>]
+MEMCACHE CREATE <assign list>
+MEMCACHE DELETE
+MEMCACHE GET [<property list>] [<get switches>]
+MEMCACHE LIST [<list format>] [<list switches>]
+

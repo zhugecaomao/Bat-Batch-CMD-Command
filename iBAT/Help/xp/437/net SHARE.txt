@@ -1,0 +1,13 @@
+The syntax of this command is:
+
+
+NET SHARE 
+sharename
+          sharename=drive:path [/USERS:number | /UNLIMITED]
+                               [/REMARK:"text"]
+                               [/CACHE:Manual | Documents| Programs | None ]
+          sharename [/USERS:number | /UNLIMITED]
+                    [/REMARK:"text"]
+                    [/CACHE:Manual | Documents | Programs | None]
+          {sharename | devicename | drive:path} /DELETE
+

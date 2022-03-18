@@ -1,0 +1,7 @@
+---- 支持的 FSINFO 命令 ----
+
+drives          列出所有驱动器
+drivetype       查询一个驱动器的驱动器类型
+volumeinfo      查询卷信息
+ntfsinfo        查询 NTFS 特定卷信息
+statistics      查询文件系统统计

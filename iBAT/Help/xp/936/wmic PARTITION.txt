@@ -1,0 +1,14 @@
+
+PARTITION - 物理磁盘分区区域的管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+PARTITION ASSOC [<format specifier>]
+PARTITION CREATE <assign list>
+PARTITION DELETE
+PARTITION GET [<property list>] [<get switches>]
+PARTITION LIST [<list format>] [<list switches>]
+

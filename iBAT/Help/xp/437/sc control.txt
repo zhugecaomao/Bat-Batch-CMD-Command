@@ -1,0 +1,10 @@
+DESCRIPTION:
+        Sends a CONTROL code to a service.
+USAGE:
+        sc <server> control [service name] <value>
+            <value> = user-defined control code
+            <value> = <paramchange|
+                       netbindadd|netbindremove|
+                       netbindenable|netbinddisable>
+
+See also sc stop, sc pause, etc.

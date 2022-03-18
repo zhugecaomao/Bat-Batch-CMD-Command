@@ -1,0 +1,16 @@
+
+OS - 已安装的操作系统管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+OS ASSOC [<format specifier>]
+OS CALL <method name> [<actual param list>]
+OS CREATE <assign list>
+OS DELETE
+OS GET [<property list>] [<get switches>]
+OS LIST [<list format>] [<list switches>]
+OS SET [<assign list>]
+

@@ -1,0 +1,15 @@
+
+DATAFILE - DataFile 管理。 
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+DATAFILE ASSOC [<format specifier>]
+DATAFILE CALL <method name> [<actual param list>]
+DATAFILE CREATE <assign list>
+DATAFILE DELETE
+DATAFILE GET [<property list>] [<get switches>]
+DATAFILE LIST [<list format>] [<list switches>]
+

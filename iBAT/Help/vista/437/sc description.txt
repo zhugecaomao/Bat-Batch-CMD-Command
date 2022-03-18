@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Sets the description string for a service.
+USAGE:
+        sc <server> description [service name] [description]

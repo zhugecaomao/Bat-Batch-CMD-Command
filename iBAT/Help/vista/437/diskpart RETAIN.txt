@@ -1,0 +1,21 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Prepares an existing dynamic simple volume to be used as a boot or system
+    volume.
+
+Syntax:  RETAIN
+
+    This command creates a partition entry for the dynamic simple volume with
+    focus.
+
+    A dynamic simple volume must be selected for this operation to succeed.
+
+Example:
+
+    RETAIN
+
+DISKPART> 

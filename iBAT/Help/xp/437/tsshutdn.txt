@@ -1,0 +1,13 @@
+Shut down a server in a controlled manner.
+
+TSSHUTDN [wait_time] [/SERVER:servername] [/REBOOT] [/POWERDOWN]
+         [/DELAY:logoffdelay] [/V]
+
+  wait_time           Seconds to wait after user notification before
+                      terminating all user sessions (default is 60).
+  /SERVER:servername  The server to shut down (default is current).
+  /REBOOT             Reboot the server after user sessions are terminated.
+  /POWERDOWN          The server will prepare for powering off.
+  /DELAY:logoffdelay  Seconds to wait after logging off all connected
+                      sessions (default is 30).
+  /V                  Display information about actions being performed.

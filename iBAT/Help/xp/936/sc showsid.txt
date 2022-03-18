@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Displays the service SID string corresponding to an arbitrary name. The name can be that of an existing or non-existent service.
+USAGE:
+        sc showsid [name]

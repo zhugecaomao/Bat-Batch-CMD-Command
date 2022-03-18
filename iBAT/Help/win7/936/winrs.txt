@@ -1,0 +1,58 @@
+
+用法
+=====
+(全部大写的字符 = 必须由用户提供的值。)
+
+winrs [-/SWITCH[:VALUE]] COMMAND
+
+COMMAND - 可以作为 cmd.exe 外壳程序中的命令来执行的任何字符串。
+
+开关
+========
+(所有开关都接受短形式或长形式。例如 -r 和
+-remote 都有效。)
+
+-r[emote]:ENDPOINT      - 使用 NetBIOS 名称或标准连接 URL: [TRANSPORT://]TARGET[:PORT] 的目标终结点。如果未指定该点，
+则使用 -r:localhost。
+
+-un[encrypted]          - 指定不加密到远程外壳程序的消息。这在以下情况下有用: 疑难解答、已使用 IPSec 加密网络通讯，或者强制使用物理安全性。默认情况下，使用 Kerberos 或 NTLM 密钥加密消息。选择 HTTPS 传输时忽略该开关。
+
+-u[sername]:USERNAME    - 在命令行上指定用户名。如果未指定该用户名，则工具将使用协商身份验证或提示指定名称。
+如果指定 -username，则还必须指定 -password。
+
+-p[assword]:PASSWORD    - 在命令行上指定密码。如果未指定 -password 而指定 -username，则工具将提示指定密码。如果指定 -password，则还必须指定 -user。
+
+-t[imeout]:SECONDS      - 不推荐使用该选项。
+
+-d[irectory]:PATH       - 指定远程外壳程序的启动目录。如果未指定，则远程外壳程序将在用户的主目录下启动，该主目录由环境变量 %USERPROFILE% 定义。
+
+-env[ironment]:STRING=VALUE   - 指定外壳程序启动时要设置的单个环境变量，这允许更改外壳程序的默认环境。必须多次使用该开关来指定多个环境变量。
+
+-noe[cho]               - 指定应禁用该回显。可能需要此操作来确保不在本地显示用户对远程提示的响应。默认情况下，回显为 "on"。
+
+-nop[rofile]            - 指定不应加载用户的配置文件。默认情况下，服务器将试图加载用户配置文件。如果远程用户不是目标系统上的本地管理员，则需要使用该选项 (默认设置将导致错误)。
+
+-a[llow]d[elegate]      - 指定可以将用户凭据用于访问远程共享，例如，不是目标终结点所在的计算机上创建的远程共享。
+
+-comp[ression]          - 启用压缩。远程计算机上的旧安装可能不支持压缩，因此默认情况下处于禁用状态。
+
+-[use]ssl               - 在使用远程终结点时使用 SSL 连接。指定该传输 "https:" 以外的设置时，将使用默认的 WinRM 默认端口。
+
+-?- 帮助
+
+若要终止远程命令，用户可以键入 Ctrl-C 或 Ctrl-Break，该键入将被发送到远程外壳程序。第二次 Ctrl-C 将强制终止 winrs.exe。
+
+若要管理活动的远程外壳程序或 WinRS 配置，请使用 WinRM 工具。管理活动的外壳程序的 URI 别名为 shell/cmd。WinRS 配置的 URI 别名为 winrm/config/winrs。键入 "WinRM -?" 可以在 WinRM 工具中找到示例用法。
+
+示例:
+winrs -r:https://myserver.com command
+winrs -r:myserver.com -usessl command
+winrs -r:myserver command
+winrs -r:http://127.0.0.1 command
+winrs -r:http://169.51.2.101:80 -unencrypted command
+winrs -r:https://[::FFFF:129.144.52.38] command
+winrs -r:http://[1080:0:0:0:8:800:200C:417A]:80 command
+winrs -r:https://myserver.com -t:600 -u:administrator -p:$%fgh7 ipconfig
+winrs -r:myserver -env:PATH=^%PATH^%;c:\tools -env:TEMP=d:\temp config.cmd
+winrs -r:myserver netdom join myserver /domain:testdomain /userd:johns /passwordd:$%fgh789
+winrs -r:myserver -ad -u:administrator -p:$%fgh7 dir \\anotherserver\share

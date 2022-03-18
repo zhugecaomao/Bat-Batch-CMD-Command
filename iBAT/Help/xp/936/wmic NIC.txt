@@ -1,0 +1,14 @@
+
+NIC - 网络界面控制器 (NIC) 管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NIC ASSOC [<format specifier>]
+NIC CREATE <assign list>
+NIC DELETE
+NIC GET [<property list>] [<get switches>]
+NIC LIST [<list format>] [<list switches>]
+

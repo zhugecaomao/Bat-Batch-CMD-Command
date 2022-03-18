@@ -1,0 +1,51 @@
+
+BOOTCFG /parameter [arguments]
+
+Description:
+    This command line tool can be used to configure, query, change or 
+    delete the boot entry settings in the BOOT.INI file.
+
+Parameter List:
+    /Copy       Makes a copy of an existing boot entry.
+
+    /Delete     Deletes an existing boot entry from the BOOT.INI file.
+
+    /Query      Displays the current boot entries and their settings.
+
+    /Raw        Allows the user to specify any switch to be added.
+
+    /Timeout    Allows the user to change the Timeout value.
+
+    /Default    Allows the user to change the Default boot entry.
+
+    /EMS        Allows the user to configure the /redirect switch
+                for headless support.
+
+    /Debug      Allows the user to specify the port and baudrate for 
+                remote debugging.
+
+    /Addsw      Allows the user to add predefined switches.
+
+    /Rmsw       Allows the user to remove predefined switches.
+
+    /Dbg1394    Allows the user to configure 1394 port for debugging.
+
+    /?          Displays this help message.
+
+Examples:
+    BOOTCFG /Copy /?
+    BOOTCFG /Delete /?
+    BOOTCFG /Query /?
+    BOOTCFG /Raw /?
+    BOOTCFG /Timeout /?
+    BOOTCFG /EMS /?
+    BOOTCFG /Debug /?
+    BOOTCFG /Addsw /?
+    BOOTCFG /Rmsw /?
+    BOOTCFG /Dbg1394 /?
+    BOOTCFG /Default /?
+    BOOTCFG /?
+
+WARNING: BOOT.INI is used for boot options on Windows XP and earlier
+         operating systems.  Use the BCDEDIT command line tool to modify
+         Windows Vista boot options.

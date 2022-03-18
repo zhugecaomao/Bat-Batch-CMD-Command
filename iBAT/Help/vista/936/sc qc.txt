@@ -1,0 +1,4 @@
+描述:
+        查询服务的配置信息
+用法:
+        sc <server> qc [service name] <bufferSize>

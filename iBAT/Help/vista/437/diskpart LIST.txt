@@ -1,0 +1,13 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart version 6.0.6002
+
+DISK        - Display a list of disks.
+PARTITION   - Display a list of partitions on the selected disk.
+VOLUME      - Display a list of volumes.
+
+DISKPART> 

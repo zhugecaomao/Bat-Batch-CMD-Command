@@ -1,0 +1,15 @@
+
+ENVIRONMENT - 系统环境设置管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+ENVIRONMENT ASSOC [<format specifier>]
+ENVIRONMENT CREATE <assign list>
+ENVIRONMENT DELETE
+ENVIRONMENT GET [<property list>] [<get switches>]
+ENVIRONMENT LIST [<list format>] [<list switches>]
+ENVIRONMENT SET [<assign list>]
+

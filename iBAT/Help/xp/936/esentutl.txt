@@ -1,0 +1,18 @@
+
+Microsoft(R) Windows(TM) Database Utilities
+Version 5.1
+Copyright (C) Microsoft Corporation. All Rights Reserved.
+
+DESCRIPTION:  Maintenance utilities for Microsoft(R) Windows databases.
+
+MODES OF OPERATION:
+      Defragmentation:  ESENTUTL /d <database name> [options]
+             Recovery:  ESENTUTL /r [options]
+            Integrity:  ESENTUTL /g <database name> [options]
+               Repair:  ESENTUTL /p <database name> [options]
+             Checksum:  ESENTUTL /k <database name> [options]
+            File Dump:  ESENTUTL /m[mode-modifier] <filename>
+
+<<<<<  Press a key for more help  >>>>>
+D=Defragmentation, R=Recovery, G=inteGrity, K=checKsum, P=rePair, M=file duMp
+=> ^C

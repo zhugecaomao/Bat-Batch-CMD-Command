@@ -1,0 +1,14 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+Microsoft DiskPart 版本 6.1.7600
+
+DISK        - 将焦点移动到磁盘。例如，SELECT DISK。
+PARTITION   - 将焦点移动到分区。例如，SELECT PARTITION。
+VOLUME      - 将焦点移动到卷。例如，SELECT VOLUME。
+VDISK       - 将焦点转移到虚拟磁盘。例如，SELECT VDISK。
+
+DISKPART> 

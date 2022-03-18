@@ -1,0 +1,5 @@
+list                          - Lists all the commands available.
+help                          - Displays help.
+?                             - Displays help.
+trace                         - Enable or disable tracing for DHCP client  and DHCP QEC.
+

@@ -1,0 +1,14 @@
+
+NTEVENT - NT 事件日志的项目
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NTEVENT ASSOC [<format specifier>]
+NTEVENT CREATE <assign list>
+NTEVENT DELETE
+NTEVENT GET [<property list>] [<get switches>]
+NTEVENT LIST [<list format>] [<list switches>]
+

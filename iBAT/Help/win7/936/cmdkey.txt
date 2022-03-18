@@ -1,0 +1,28 @@
+
+创建，显示和删除保存的用户名和密码。
+
+此命令的语法为:
+
+CMDKEY [{/add | /generic}:targetname {/smartcard | /user:username {/pass{:password}}} | /delete{:targetname | /ras} | /list{:targetname}]
+
+示例:
+
+  要列出可用的凭据:
+     cmdkey /list
+     cmdkey /list:targetname
+
+  要创建域凭据:
+     cmdkey /add:targetname /user:username /pass:password
+     cmdkey /add:targetname /user:username /pass
+     cmdkey /add:targetname /user:username
+     cmdkey /add:targetname /smartcard
+     
+  要创建普通凭据:
+     /add 开关可以由 /generic 替代，来创建普通凭据
+
+  要删除现有凭据:
+     cmdkey /delete:targetname
+
+  要删除 RAS 凭据:
+     cmdkey /delete /ras
+     

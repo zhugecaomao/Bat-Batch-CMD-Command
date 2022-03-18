@@ -1,0 +1,29 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    On basic master boot record (MBR) disks, marks the partition with focus as
+    active.
+
+Syntax:  ACTIVE
+
+    This informs the basic input/output system (BIOS) that the partition is a
+    valid system partition.
+
+    A partition must be selected for this operation to succeed.
+
+    Caution:
+
+        DiskPart verifies only that the partition is capable of containing the
+        operating system startup files. DiskPart does not check the contents of
+        the partition. If you mistakenly mark a partition as active and it does
+        not contain the operating system startup files, your computer might not
+        start.
+
+Example:
+
+    ACTIVE
+
+DISKPART> 

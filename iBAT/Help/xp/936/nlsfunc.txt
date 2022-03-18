@@ -1,0 +1,7 @@
+Invalid keyboard code specified
+Loads country-specific information.
+
+NLSFUNC [[drive:][path]filename]
+
+  [drive:][path]filename   Specifies the file containing country-specific
+                           information.

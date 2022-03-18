@@ -1,0 +1,14 @@
+
+SOUNDDEV - 声音设备管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+SOUNDDEV ASSOC [<format specifier>]
+SOUNDDEV CREATE <assign list>
+SOUNDDEV DELETE
+SOUNDDEV GET [<property list>] [<get switches>]
+SOUNDDEV LIST [<list format>] [<list switches>]
+

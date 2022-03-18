@@ -1,0 +1,6 @@
+
+FORCEDOS [/D directory] filename [parameters]
+/D directory    为要使用的指定目录指定
+                当前目录。
+filename        指定要启动的程序。
+parameters      指定传递给程序的参数。

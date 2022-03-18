@@ -1,0 +1,81 @@
+
+SCHTASKS /Change [/S system [/U username [/P [password]]]] /TN taskname
+     { [/RU runasuser] [/RP runaspassword] [/TR taskrun] [/ST starttime]
+       [/RI interval] [ {/ET endtime | /DU duration} [/K] ]
+       [/SD startdate] [/ED enddate] [/ENABLE | /DISABLE] [/IT] [/Z] }
+
+Description:
+    Changes the program to run, or user account and password used
+    by a scheduled task.
+
+Parameter List:
+    /S       system      Specifies the remote system to connect to.
+
+    /U       username    Specifies the user context under which schtasks.exe 
+                         should execute.
+
+    /P       [password]  Specifies the password for the given user context. 
+                         Prompts for input if omitted.
+
+    /TN      taskname    Specifies which scheduled task to change.
+
+    /RU      username    Changes the user name (user context) under which the 
+                         scheduled task has to run. For the system account, 
+                         valid values are "", "NT AUTHORITY\SYSTEM" or "SYSTEM".
+                         For v2 tasks, "NT AUTHORITY\LOCALSERVICE" and 
+                         "NT AUTHORITY\NETWORKSERVICE" are also available as well 
+                         as the well known SIDs for all three. 
+    /RP      password    Specifies a new password for the existing user 
+                         context or the password for a new user account. 
+                         This password is ignored for the system account.
+
+    /TR      taskrun     Specifies the new program that the 
+                         scheduled task will run.
+
+    /ST      starttime   Specifies the start time to run the task. The time 
+                         format is HH:mm (24 hour time) for example, 14:30 
+                         for 2:30 PM.
+
+    /RI      interval    Specifies the repetition interval in
+                         minutes. Valid range: 1 - 599940 minutes.
+
+    /ET      endtime     Specifies the end time to run the task. The time 
+                         format is HH:mm (24 hour time) for example, 14:50 
+                         for 2:50 PM.
+
+    /DU      duration    Specifies the duration to run the task. The time 
+                         format is HH:mm. This is not applicable with /ET.
+
+    /K                   Terminates the task at the endtime or duration time.
+
+    /SD      startdate   Specifies the first date on which the task runs. 
+                         The format is yyyy/mm/dd.
+
+    /ED      enddate     Specifies the last date when the task should run. 
+                         The format is yyyy/mm/dd.
+
+    /IT                  Enables the task to run interactively only if the 
+                         /RU user is currently logged on at the time the job 
+                         runs. This task runs only if the user is logged in.
+
+    /RL      level       Sets the Run Level for the job. Valid values are 
+                         LIMITED and HIGHEST. The default is to not change it.
+
+    /ENABLE              Enables the scheduled task.
+
+    /DISABLE             Disables the scheduled task.
+
+    /Z                   Marks the task for deletion after its final run.
+
+    /DELAY   delaytime   Specifies the wait time to delay the running of the 
+                         task after the trigger is fired.  The time format is
+                         mmmm:ss.  This option is only valid for schedule types
+                         ONSTART, ONLOGON, ONEVENT.
+
+    /?                   Displays this help message.
+
+Examples:
+    SCHTASKS /Change /RP password /TN "Backup and Restore"
+    SCHTASKS /Change /TR restore.exe /TN "Start Restore"
+    SCHTASKS /Change /S system /U user /P password /RU newuser 
+             /TN "Start Backup" /IT

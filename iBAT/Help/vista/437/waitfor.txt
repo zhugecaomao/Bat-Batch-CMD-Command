@@ -1,0 +1,43 @@
+
+WaitFor has two ways of working: 
+
+Syntax 1: to send a signal
+    WAITFOR [/S system [/U user [/P [password]]]] /SI signal
+
+Syntax 2: to wait for a signal
+    WAITFOR [/T timeout] signal 
+
+Description:
+    This tool sends, or waits for, a signal on a system. When /S is not
+    specified, the signal will be broadcasted to all the systems in a
+    domain. If /S is specified, then the signal will be sent only
+    to the specified system.
+
+Parameter List:
+    /S     system         Specifies remote system to send signal to.
+
+    /U     [domain\]user  Specifies the user context under which
+                          the command should execute.
+
+    /P     [password]     Specifies the password for the given user context.
+
+    /SI                   Sends the signal across the net to waiting machines
+
+    /T     timeout        Number of seconds to wait for signal. Valid range
+                          is 1 - 99999. Default is to wait forever for signal.
+
+    signal                The name of the signal to wait for or to send.
+
+    /?                    Displays this help message.
+
+    NOTE: A system can wait for multiple unique signal names.
+    The signal name cannot exceed 225 characters and cannot
+    contain characters other than a-z, A-Z, 0-9 and ASCII 
+    characters in the range 128-255.
+
+Examples:
+    WAITFOR /?
+    WAITFOR SetupReady 
+    WAITFOR CopyDone /T 100 
+    WAITFOR /SI SetupReady 
+    WAITFOR /S system  /U user /P password /SI CopyDone

@@ -1,0 +1,30 @@
+
+配置 Windows 恢复环境(RE)。
+
+REAGENTC.EXE [options]
+
+  其中可以指定以下操作:
+
+  /setreimage /path <dir_name> [/target <dir_name>] [/bootkey <scan_code>]
+             设置用户提供的 Windows RE 映像的位置。
+             可选 /target 开关指定包含 Windows 安装位置的路径。
+             可选 /bootkey 开关指定特定于 OEM 的启动按钮的扫描代码。
+
+  /setosimage [/path <dir_name> [/target <dir_name>]] [/customtool]
+             /path 设置用户提供的 OS 安装程序文件的位置。
+             另外 /customtool 指定在 Windows RE 中指定的映像工具。
+
+  /info [/target <dir_name>]
+             显示 Windows RE 配置信息。
+             可选 /target 开关指定包含 Windows 安装位置的路径。
+
+  /enable
+             启用 Windows RE 自动故障转移和恢复。
+
+  /disable
+             禁用 Windows RE 自动故障转移和恢复。
+
+  /boottore
+             配置 BCD 以在下次系统启动时启动 Windows 恢复。
+
+REAGENTC.EXE: 操作成功

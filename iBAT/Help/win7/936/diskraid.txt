@@ -1,0 +1,20 @@
+
+Microsoft DiskRAID 版本 6.1.7600
+版权所有(C) 2003-2007 Microsoft Corporation。
+位于计算机: iBat-PC
+
+用法:  DISKRAID [/? | [/s <script>] [/v]]
+
+    启动 DiskRAID 应用程序。
+
+    /?          指定 DiskRAID 应显示此用法文本。
+
+    /s <script> 指定 DiskRAID 应执行位于指定位置的脚本文件中的命令。
+
+    /v          指定 DiskRAID 应在详细模式下运行，
+                打印输出有关正在执行的每个命令的附加信息。
+
+示例:
+
+    DISKRAID
+    DISKRAID /v

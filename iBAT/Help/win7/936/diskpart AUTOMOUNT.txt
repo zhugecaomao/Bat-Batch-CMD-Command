@@ -1,0 +1,41 @@
+
+Microsoft DiskPart 版本 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+在计算机上: iBat-PC
+
+DISKPART> 
+    启用或禁用自动装载功能。
+
+语法:  AUTOMOUNT [ENABLE] [DISABLE] [SCRUB] [NOERR]
+
+    ENABLE      使 Windows 可以自动将驱动器号分配给已添加到系统的卷。
+
+    DISABLE     防止 Windows 自动将驱动器号分配给已添加到系统的卷。
+
+    SCRUB       删除不再位于系统中的卷的装入文件夹路径名称、驱动器号、装入
+                文件夹目录和注册表设置。这可防止在将之前位于
+                系统中的卷重新引入到系统时自动为这些
+                卷分配它们以前的驱动器号和装入文件夹路径名称。
+
+    NOERR       仅用于脚本。遇到错误时，DiskPart 会继续
+                处理命令，如同没有出现错误一样。如果
+                不使用 NOERR 参数，错误会导致 DiskPart
+                退出并返回错误代码。
+
+    启用自动装载功能(默认在 Windows Server 的同一版本上)时，Windows 会在将卷
+    添加到系统时自动使该卷联机，并且为该卷分配一个
+    驱动器号和卷 GUID 路径名称。在存储区域网络(SAN)配置中，禁用自动装载
+    可防止 Windows 自动使该卷联机，并防止为系统中可见的任何新卷分配一个
+    驱动器号和卷 GUID 路径名称。
+
+    请注意，在 Windows Vista 之前发布的 Windows 版本上，自动装载功能只能用于
+    基本磁盘卷。从 Windows Vista 开始，自动装载功能可用于基本磁盘卷和
+    动态磁盘卷。
+
+示例:
+
+    AUTOMOUNT
+    AUTOMOUNT ENABLE
+    AUTOMOUNT DISABLE
+
+DISKPART> 

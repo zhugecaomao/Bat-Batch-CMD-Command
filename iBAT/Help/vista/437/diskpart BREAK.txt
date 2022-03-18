@@ -1,0 +1,42 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Breaks the mirrored volume with focus into two simple volumes.
+
+Syntax:  BREAK DISK=<N> [NOKEEP] [NOERR]
+
+    DISK=<N>    Specifies the disk that contains the mirrored volume. This disk
+                is given focus and does not retain the drive letter or any
+                mount points. If the mirror on the specified disk is used as a
+                system or boot partition, the command fails.
+
+    NOKEEP      Specifies that only one of the mirrored volumes is retained;
+                the simple volume on disk N is deleted and converted to free
+                space. Neither the volume nor the free space receives the
+                focus.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    Applies to dynamic disks only. Breaks the mirrored volume with focus into
+    two simple volumes. One simple volume retains the drive letter and any
+    mount points of the mirrored volume. The other simple volume receives the
+    focus so you can assign it a drive letter.
+
+    By default, the contents of both halves of the mirror are retained. Each
+    half becomes a simple volume. By using the NOKEEP parameter, you retain
+    only one half of the mirror as a simple volume, and the other half is
+    deleted and converted to free space. Neither volume receives the focus.
+
+    A mirrored volume must be selected for this operation to succeed.
+
+Example:
+
+    BREAK DISK=2
+
+DISKPART> 

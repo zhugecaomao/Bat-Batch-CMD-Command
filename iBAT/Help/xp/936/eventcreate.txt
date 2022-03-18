@@ -1,0 +1,53 @@
+
+EVENTCREATE [/S system [/U username [/P [password]]]] /ID eventid
+            [/L logname] [/SO srcname] /T type /D description
+
+描述:
+    该命令行工具使管理员能够创建
+    一个自定义事件 ID 和消息于某指定事件日志里。
+
+参数列表:
+    /S    system           指定要连接到的远程系统。
+
+    /U    [domain\]user    指定用户上下文，命令在此上下
+                           文中执行。
+
+    /P    [password]       指定给定用户上下文
+                           的密码。如果省略则提示输入。
+
+    /L    logname          指定要在其中创建事件
+                           事件日志。
+
+    /T    type             指定要创建的事件类型。
+                           有效的类型是: ERROR，WARNING, INFORMATION。
+
+    /SO   source           为此事件指定要使用的
+                           资源。有效资源可以是任何字符串
+                           并应该代表应用程序或
+                           生成事件的组件。
+
+    /ID   id               指定事件的 ID。
+                           有效的自定义消息 ID 在范围
+                           1 - 1000 以内。
+
+    /D    description      为新创建的事件指定
+                           描述。
+
+    /?                     显示帮助/用法。
+
+
+示例:
+    EVENTCREATE /T ERROR /ID 100
+        /L APPLICATION /D "在应用程序中创建事件日志"
+
+    EVENTCREATE /T ERROR /ID 999 /L APPLICATION
+        /SO WinWord /D "在应用程序日志中新建源 Winword"
+
+    EVENTCREATE /S system /T ERROR /ID 100
+        /L APPLICATION /D "没有用户凭据的远程机器"
+
+    EVENTCREATE /S system /U user /P password /ID 100 /T ERROR
+        /L APPLICATION /D "有用户凭据的远程机器"
+
+    EVENTCREATE /S system /U domain\user /ID 100 /T WARNING
+        /SO MyBatchFile.cmd /D "维护脚本用户登录失败"

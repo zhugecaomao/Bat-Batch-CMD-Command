@@ -1,0 +1,18 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Displays information about the current file system for the selected
+    volume, and the supported file systems for formatting the volume.
+
+Syntax:  FILESYSTEMS
+
+    A volume must be selected for this operation to succeed.
+
+Example:
+
+    FILESYSTEMS
+
+DISKPART> 

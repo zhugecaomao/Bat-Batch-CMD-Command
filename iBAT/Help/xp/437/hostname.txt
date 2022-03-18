@@ -1,0 +1,2 @@
+sethostname: Use the Network Control Panel Applet to set hostname.
+hostname -s is not supported.

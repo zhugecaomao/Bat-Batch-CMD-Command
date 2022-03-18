@@ -1,0 +1,5 @@
+描述:
+        获取与特定服务相关的键名，
+        将显示名称用作输入
+用法:
+        sc <server> GetKeyName <service display name> <bufsize>

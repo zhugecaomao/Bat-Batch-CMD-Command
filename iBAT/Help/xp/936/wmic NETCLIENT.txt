@@ -1,0 +1,14 @@
+
+NETCLIENT - 网络客户端管理。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+NETCLIENT ASSOC [<format specifier>]
+NETCLIENT CREATE <assign list>
+NETCLIENT DELETE
+NETCLIENT GET [<property list>] [<get switches>]
+NETCLIENT LIST [<list format>] [<list switches>]
+

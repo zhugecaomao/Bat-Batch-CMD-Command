@@ -1,0 +1,62 @@
+
+Windows Management Instrumentation
+
+Usage:  winmgmt [/backup <filename>] [/restore <filename> <flag>]
+                [/resyncperf] [/standalonehost [<level>]] [/sharedhost]
+                [/verifyrepository [<path>]] [/salvagerepository]
+                [/resetrepository]
+
+/backup <filename>
+        Causes WMI to back up the repository to the specified file name. The
+        filename argument should contain the full path to the file location.
+        This process requires a write lock on the repository so that write
+        operations to the repository are suspended until the backup process is
+        completed.
+
+/restore <filename> <flag>
+        Manually restores the WMI repository from the specified backup file.
+        The filename argument should contain the full path to the backup file
+        location. To perform the restore operation, WMI saves the existing
+        repository to write back if the operation fails. Then the repository is
+        restored from the backup file that is specified in the filename
+        argument. If exclusive access to the repository cannot be achieved,
+        existing clients are disconnected from WMI. The flag argument must be a
+        1 (force - disconnect users and restore) or 0 (default - restore if no
+        users connected) and specifies the restore mode.
+
+/resyncperf
+        Registers the system performance libraries with WMI.
+
+/standalonehost [<level>]
+        Moves the Winmgmt service to a standalone Svchost process that has a
+        fixed DCOM endpoint. The default endpoint is "ncacn_ip_tcp.0.24158".
+        However, the endpoint may be changed by running Dcomcnfg.exe. The level
+        argument is the authentication level for the Svchost process. If level
+        is not specified, the default is 4 (RPC_C_AUTHN_LEVEL_PKT).
+
+/sharedhost
+        Moves the Winmgmt service into the shared Svchost process.
+
+/verifyrepository [<path>]
+        Performs a consistency check on the WMI repository. When you add the
+        /verifyrepository switch without the <path> argument, then the live
+        repository currently used by WMI is verified. When you specify the path
+        argument, you can verify any saved copy of the repository. In this
+        case, the path argument should contain the full path to the saved
+        repository copy. The saved repository should be a copy of the entire
+        repository folder.
+
+/salvagerepository
+        Performs a consistency check on the WMI repository, and if an
+        inconsistency is detected, rebuilds the repository.  The content of the
+        inconsistent repository is merged into the rebuilt repository, if it
+        can be read. The salvage operation always works with the repository
+        that the WMI service is currently using. MOF files that contain the
+        #pragma autorecover preprocessor statement are restored to the
+        repository.
+
+/resetrepository
+        The repository is reset to the initial state when the operating system
+        is first installed. MOF files that contain the #pragma autorecover
+        preprocessor statement are restored to the repository.
+

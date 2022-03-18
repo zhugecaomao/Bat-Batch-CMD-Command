@@ -1,0 +1,29 @@
+Device Console Help:
+devcon [-r] [-m:\\<machine>] <command> [<arg>...]
+-r if specified will reboot machine after command is complete, if needed.
+<machine> is name of target machine.
+<command> is command to perform (see below).
+<arg>... is one or more arguments if required by command.
+For help on a specific command, type: devcon help <command>
+classfilter          Allows modification of class filters.
+classes              List all device setup classes.
+disable              Disable devices that match the specific hardware or instance ID.
+driverfiles          List driver files installed for devices.
+drivernodes          Lists all the driver nodes of devices.
+enable               Enable devices that match the specific hardware or instance ID.
+find                 Find devices that match the specific hardware or instance ID.
+findall              Find devices including those that are not present.
+help                 Display this information.
+hwids                Lists hardware ID's of devices.
+install              Manually install a device.
+listclass            List all devices for a setup class.
+reboot               Reboot local machine.
+remove               Remove devices that match the specific hardware or instance ID.
+rescan               Scan for new hardware.
+resources            Lists hardware resources of devices.
+restart              Restart devices that match the specific hardware or instance ID.
+sethwid              Modify Hardware ID's of listed root-enumerated devices.
+stack                Lists expected driver stack of devices.
+status               List running status of devices.
+update               Manually update a device.
+updateni             Manually update a device (non interactive).

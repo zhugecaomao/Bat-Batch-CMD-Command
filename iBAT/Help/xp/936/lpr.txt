@@ -1,0 +1,14 @@
+
+Sends a print job to a network printer
+
+Usage: lpr -S server -P printer [-C class] [-J job] [-o option] [-x] [-d] filename
+
+Options:
+     -S server    Name or ipaddress of the host providing lpd service
+     -P printer   Name of the print queue
+     -C class     Job classification for use on the burst page
+     -J job       Job name to print on the burst page
+     -o option    Indicates type of the file (by default assumes a text file)
+                  Use "-o l" for binary (e.g. postscript) files
+     -x           Compatibility with SunOS 4.1.x and prior 
+     -d           Send data file first

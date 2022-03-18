@@ -1,0 +1,33 @@
+
+Microsoft DiskPart 版本 5.1.3565
+
+版权所有 (C) 1999-2003 Microsoft Corporation.
+位于计算机: iBat
+
+DISKPART>
+Microsoft DiskPart 版本 5.1.3565
+
+ADD         - 将镜像添加到一个简单卷。
+ACTIVE      - 将当前基本分区标记为活动启动分区。
+ASSIGN      - 给所选卷指派一个驱动器号或装载点。
+BREAK       - 中断镜像集。
+CLEAN       - 从磁盘清除配置信息或所有信息。
+CONVERT     - 在不同的磁盘格式之间转换。
+CREATE      - 创建卷或分区。
+DELETE      - 删除对象。
+DETAIL      - 提供对象详细信息。
+EXIT        - 退出 DiskPart
+EXTEND      - 扩展卷。
+HELP        - 打印命令列表。
+IMPORT      - 导入磁盘组。
+LIST        - 打印对象列表。
+INACTIVE    - 将当前基本分区标记为非活动分区。
+ONLINE      - 使当前标为脱机的磁盘联机。
+REM         - 不起任何作用。用来注解脚本。
+REMOVE      - 删除驱动器号或装载点指派。
+REPAIR      - 修复 RAID-5 卷。
+RESCAN      - 重新扫描计算机，查找磁盘和卷。
+RETAIN      - 在一个简单卷下放置一个保留分区。
+SELECT      - 将焦点移到一个对象。
+
+DISKPART>

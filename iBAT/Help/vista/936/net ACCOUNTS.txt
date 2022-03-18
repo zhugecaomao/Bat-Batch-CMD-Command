@@ -1,0 +1,7 @@
+此命令的语法是:
+
+NET ACCOUNTS
+[/FORCELOGOFF:{minutes | NO}] [/MINPWLEN:length]
+              [/MAXPWAGE:{days | UNLIMITED}] [/MINPWAGE:days]
+              [/UNIQUEPW:number] [/DOMAIN]
+

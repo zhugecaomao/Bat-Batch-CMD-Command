@@ -1,0 +1,36 @@
+
+Microsoft DiskPart version 6.0.6002
+Copyright (C) 1999-2007 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Repairs the RAID-5 volume with focus by replacing the failed RAID-5 member
+    with the specified dynamic disk.
+
+Syntax:  REPAIR DISK=<N> [ALIGN=<N>] [NOERR]
+
+    DISK=<N>    Specifies the dynamic disk that will replace the failed RAID-5
+                member. The specified disk must have free space equal to or
+                larger than the total size of the failed RAID-5 member.
+
+    ALIGN=<N>   Typically used with hardware RAID Logical Unit Number (LUN)
+                arrays to improve performance. Aligns all volume or partition
+                extents to the closest alignment boundary. N is the number of
+                kilobytes (KB) from the beginning of the disk to the closest
+                alignment boundary.
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    The specified dynamic disk must have free space greater than or equal to
+    the total size of the failed RAID-5 member.
+
+    A RAID-5 volume must be selected for this operation to succeed.
+
+Example:
+
+    REPAIR DISK=1
+
+DISKPART> 

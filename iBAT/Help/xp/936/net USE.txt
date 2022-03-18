@@ -1,0 +1,17 @@
+此命令的语法是:
+
+
+NET USE 
+[devicename | *] [\\computername\sharename[\volume] [password | *]]
+        [/USER:[domainname\]username]
+        [/USER:[dotted domain name\]username]   
+        [/USER:[username@dotted domain name]      
+        [/SMARTCARD]
+        [/SAVECRED]
+        [[/DELETE] | [/PERSISTENT:{YES | NO}]]
+
+NET USE {devicename | *} [password | *] /HOME
+
+NET USE [/PERSISTENT:{YES | NO}]
+
+

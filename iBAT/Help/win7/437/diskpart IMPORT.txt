@@ -1,0 +1,25 @@
+
+Microsoft DiskPart version 6.1.7600
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: iBat-PC
+
+DISKPART> 
+    Imports a foreign disk group into the local computer's online disk group.
+
+Syntax:  IMPORT [NOERR]
+
+    NOERR       For scripting only. When an error is encountered, DiskPart
+                continues to process commands as if the error did not occur.
+                Without the NOERR parameter, an error causes DiskPart to exit
+                with an error code.
+
+    The command imports every disk that is in the same group as the disk with
+    focus.
+
+    A dynamic disk must be selected for this operation to succeed.
+
+Example:
+
+    IMPORT
+
+DISKPART> 

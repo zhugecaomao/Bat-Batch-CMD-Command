@@ -1,0 +1,42 @@
+
+SCHTASKS /Query [/S system [/U username [/P [password]]]]
+         [/FO format | /XML [xml_type]] [/NH] [/V] [/TN taskname] [/?]
+
+描述: 
+    允许管理员显示本地或远程系统上的计划任务。
+
+参数列表:
+    /S    system         指定要连接到的远程系统。
+
+    /U    username       指定 schtasks.exe 要执行的用户上下文。
+
+    /P    [password]     指定给定的用户上下文密码。如果省略则
+                         提示输入。
+
+    /FO   format         为输出指定格式。有效值: TABLE、LIST、CSV。
+
+    /NH                  指定在输出中不显示列标题。
+                         只对 TABLE 格式有效。
+                         
+
+    /V                   显示详细任务输出。
+
+    /TN   taskname       指定要检索其信息
+                         的任务名称，否则会检索所有任务名称的信息。
+
+    /XML  [xml_type]     以 XML 格式显示任务定义。
+
+                         如果 xml_type 为 ONE，则输出为一个有效 XML 文件。
+
+                         如果 xml_type 不存在，则输出将为
+
+                         所有 XML 任务定义的串联。
+
+    /?                   显示此帮助消息。
+
+示例:
+    SCHTASKS /Query 
+    SCHTASKS /Query /? 
+    SCHTASKS /Query /S system /U user /P password
+    SCHTASKS /Query /FO LIST /V /S system /U user /P password
+    SCHTASKS /Query /FO TABLE /NH /V

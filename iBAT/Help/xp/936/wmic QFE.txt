@@ -1,0 +1,14 @@
+
+QFE - 快速故障排除。
+
+提示: BNF 的别名用法。
+(<alias> [WMIObject] | <alias> [<path where>] | [<alias>] <path where>) [<verb clause>].
+
+用法:
+
+QFE ASSOC [<format specifier>]
+QFE CREATE <assign list>
+QFE DELETE
+QFE GET [<property list>] [<get switches>]
+QFE LIST [<list format>] [<list switches>]
+

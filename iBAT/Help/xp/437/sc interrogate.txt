@@ -1,0 +1,4 @@
+DESCRIPTION:
+        Sends an INTERROGATE control request to a service.
+USAGE:
+        sc <server> interrogate [service name]

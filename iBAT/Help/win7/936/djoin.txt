@@ -1,0 +1,31 @@
+用法: djoin.exe [/OPTIONS]
+
+  /PROVISION  - 在域中设置计算机帐户
+      /DOMAIN <Name> - 要加入域的 <Name>
+      /MACHINE <Name> - 加入域的计算机的 <Name>
+      /MACHINEOU <OU> - 创建帐户的可选 <OU>
+      /DCNAME <DC> - 用于创建帐户的可选 <DC>
+      /REUSE - 重复使用任何现有帐户(将重置密码)
+      /SAVEFILE <FilePath> - 将设置数据保存到文件，位置是 <FilePath>
+      /NOSEARCH - 跳过帐户冲突检测，要求有 DCNAME (更快)
+      /DOWNLEVEL - 支持使用 Windows Server 2008 DC 或更早版本
+      /PRINTBLOB - 返回答案文件的 base64 编码的元数据 blob
+      /DEFPWD - 使用默认的计算机帐户密码(不推荐使用)
+       
+  /REQUESTODJ  - 请求在下次启动时脱机加入域
+      /LOADFILE <FilePath> - 以前通过 /SAVEFILE 指定的 <FilePath>
+      /WINDOWSPATH <Path> - 指向脱机映像的 Windows 目录的 <Path>
+      /LOCALOS - 允许 /WINDOWSPATH 指定本地运行的操作系统
+                 必须以本地管理员身份运行此命令。
+                 需要重新启动此选项才能应用更改。
+      
+示例:
+
+在域中设置计算机帐户:
+djoin.exe /PROVISION /DOMAIN <DomainName> /MACHINE <MachineName>
+          /SAVEFILE <FilePath>
+          注意: 其他参数为可选参数
+          
+请求本地计算机执行脱机加入域:
+djoin.exe /REQUESTODJ /LOADFILE <FilePath> /WINDOWSPATH <Path>
+          注意: 其他参数为可选参数

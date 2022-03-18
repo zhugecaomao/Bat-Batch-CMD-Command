@@ -1,0 +1,30 @@
+Auditusr - sets per user auditing policy.
+/? prints command-line help.
+If no parameters are given then the current settings will be displayed.
+Specify one of:
+/is <security principal>:<list of comma-delimited categories>
+   adds or changes an include-success entry
+/if <security principal>:<list of comma-delimited categories>
+   adds or changes an include-failure entry
+/es <security principal>:<list of comma-delimited categories>
+   adds or changes an exclude-success entry
+/ef <security principal>:<list of comma-delimited categories>
+   adds or changes an exclude-failure entry
+/r <security principal>
+   removes all per-user auditing entries for that security principal
+/ra
+   removes all per-user auditing entries
+/e <filename>
+   exports current per-user auditing settings to a file
+/i <filename>
+   imports current per-user auditing settings from a file
+Valid categories are:
+系统事件
+登录/注销
+对象访问
+特权使用
+详细追踪
+策略改动
+帐户管理
+目录服务访问
+帐户登录
