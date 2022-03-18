@@ -1,2 +1,3 @@
-# Bat Study
- 自学批处理
+# Bat-Batch-CMD-Command
+
+Record
